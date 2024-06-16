@@ -1,0 +1,585 @@
+1
+00:00:01,880 --> 00:00:03,410
+Welcome back.
+欢迎回来。
+
+2
+00:00:03,410 --> 00:00:08,560
+In this video, we'll talk about some more methods on the String class.
+在这段视频中，我们将谈论更多关于字符串类的一些方法。
+
+3
+00:00:08,720 --> 00:00:14,240
+Before we discuss about the methods on the String class, let's pick up the exercise from the previous
+在我们讨论字符串类的方法之前，让我们继续前面的练习。
+
+4
+00:00:14,240 --> 00:00:14,500
+video.
+视频。
+
+5
+00:00:14,510 --> 00:00:20,130
+We have a string and we would want to print each of the individual characters on separate lines, right.
+我们有一个字符串，我们想在不同的行中打印每个单独的字符，对吗？
+
+6
+00:00:20,170 --> 00:00:22,910
+If you are able to do it already, that's cool.
+如果你已经能够做到这一点，那就很好。
+
+7
+00:00:22,910 --> 00:00:25,220
+If you are not, I'll give you a hint right now.
+如果你没有，我现在就给你一个提示。
+
+8
+00:00:25,550 --> 00:00:32,009
+So, how do I find out the length of the string? someString.length( ),
+那么，我怎样才能找出字符串的长度呢？ someString.length( )。
+
+9
+00:00:32,369 --> 00:00:32,580
+right.
+对。
+
+10
+00:00:32,580 --> 00:00:41,310
+This gives you that it's 27. The index of this string would run from 0 to 26, length minus 1.
+这给你的是27。这个字符串的索引将从0到26，长度减去1。
+
+11
+00:00:41,400 --> 00:00:45,660
+I would want to print individual characters at each of those locations.
+我想在每个位置打印单个字符。
+
+12
+00:00:45,720 --> 00:00:46,050
+Okay.
+好的。
+
+13
+00:00:46,050 --> 00:00:46,710
+Did an idea
+有什么想法吗？
+
+14
+00:00:46,980 --> 00:00:50,100
+strike you? Try and pause the video and try and work it out.
+你想到了吗？试着暂停一下视频，并试着把它弄出来。
+
+15
+00:00:50,430 --> 00:00:50,760
+Okay.
+好的。
+
+16
+00:00:50,790 --> 00:00:52,140
+If it did not,
+如果没有。
+
+17
+00:00:52,150 --> 00:00:59,610
+then another clue. How do I find out what's the specific character at a specific location? someString.
+那么另一条线索。我怎样才能找出特定位置的特定字符呢？ someString.
+
+18
+00:00:59,730 --> 00:01:03,230
+charAt(5).
+charAt(5)。
+
+19
+00:01:03,280 --> 00:01:10,060
+This gives me the character at index 5 which is i, right. So, 0 is this. So, starting with that, if you
+这给了我索引5的字符，也就是i，对。所以，0是这个。所以，从这个开始，如果你
+
+20
+00:01:10,060 --> 00:01:12,350
+start counting, this will be 5.
+开始计数，这将是5。
+
+21
+00:01:12,390 --> 00:01:14,320
+So, it gives me a charAt(5).
+所以，它给了我一个charAt(5)。
+
+22
+00:01:14,410 --> 00:01:19,180
+So, now does this strike you? Do you think you can solve this on yourself? Try and
+那么，现在你觉得这样做对吗？你认为你能自己解决这个问题吗？试试吧
+
+23
+00:01:19,290 --> 00:01:20,770
+pause the video and try it.
+暂停视频，试试吧。
+
+24
+00:01:20,860 --> 00:01:22,430
+Okay.
+好的。
+
+25
+00:01:22,450 --> 00:01:24,160
+Now the solution is very simple, right. So,
+现在的解决方案是非常简单的，对。所以。
+
+26
+00:01:24,390 --> 00:01:36,260
+i= 0; i<someString.length( ). So I am running a loop from, i is 0 to one less than the
+i= 0; i<someString.length( )。所以我正在运行一个循环，从i是0到比长度少一个的
+
+27
+00:01:36,260 --> 00:01:36,520
+length.
+长度。
+
+28
+00:01:36,570 --> 00:01:44,430
+So, from 0 to 26, in this specific example and i++ and all that we would need to do
+所以，从0到26，在这个具体的例子中，i++，我们所需要做的是
+
+29
+00:01:45,120 --> 00:01:53,900
+is System.out.println and what should we do?
+是System.out.println，我们应该怎么做？
+
+30
+00:01:53,920 --> 00:01:55,030
+What should we print?
+我们应该打印什么？
+
+31
+00:01:55,390 --> 00:02:01,520
+someString.charAt(i). Isn't this cool?
+someString.charAt(i)。这不是很酷吗？
+
+32
+00:02:02,950 --> 00:02:03,970
+Okay.
+好的。
+
+33
+00:02:04,000 --> 00:02:08,770
+You can see all the characters printed on individual lines.
+你可以看到所有的字符都打印在各个行上。
+
+34
+00:02:08,770 --> 00:02:11,500
+This is a lot of text again.
+这又是大量的文本。
+
+35
+00:02:12,050 --> 00:02:18,020
+So, all that we did is very simple. We created a loop starting from 0.
+所以，我们所做的一切是非常简单的。我们创建了一个从0开始的循环。
+
+36
+00:02:18,030 --> 00:02:29,140
+I mean from 0 to length-1 and we incremented i and we printed the character at that specific location.
+我的意思是，从0到length-1，我们增加i，然后我们在那个特定的位置打印字符。
+
+37
+00:02:29,140 --> 00:02:29,740
+Isn't that cool?
+这不是很酷吗？
+
+38
+00:02:30,010 --> 00:02:34,070
+Okay. Now, let's move on to what we want to discuss in this specific video.
+好的。现在，让我们继续讨论这个具体视频中我们想要讨论的内容。
+
+39
+00:02:34,360 --> 00:02:37,070
+Let's take the same string from the previous example
+让我们来看看前面例子中的同一个字符串
+
+40
+00:02:37,210 --> 00:02:44,130
+and now I would want to find out if a specific string is present in this.
+现在我想找出一个特定的字符串是否存在于这个字符串中。
+
+41
+00:02:44,200 --> 00:02:48,550
+So, I would want to see if a word called 'lot' is present in this specific string.
+因此，我想看看这个特定的字符串中是否有一个叫做 "lot "的词。
+
+42
+00:02:48,550 --> 00:02:58,570
+How do I do that? The way I can do that is by using a someString.indexOf, indexOf and pass in the
+我如何做到这一点呢？我可以通过使用someString.indexOf, indexOf并传入
+
+43
+00:02:58,750 --> 00:03:03,820
+string. What does it return? It returns the starting index of 'l'.
+字符串。它的返回结果是什么？它返回'l'的起始索引。
+
+44
+00:03:04,420 --> 00:03:06,020
+So, it returns 10.
+所以，它返回10。
+
+45
+00:03:06,100 --> 00:03:14,930
+So, if I do a someString.charAt(10), it would return me 'l'.
+所以，如果我做一个someString.charAt(10)，它将返回'l'。
+
+46
+00:03:15,030 --> 00:03:18,360
+So, this is returning the index of 'l'.
+所以，这是在返回'l'的索引。
+
+47
+00:03:18,360 --> 00:03:25,800
+So, it's searching for 'lot' in the string and returning the index of the first character of the substring.
+所以，它是在字符串中搜索'lot'，并返回子串的第一个字符的索引。
+
+48
+00:03:25,800 --> 00:03:29,160
+Now, let's say I would want to search for a character.
+现在，让我们假设我想搜索一个字符。
+
+49
+00:03:29,220 --> 00:03:31,950
+So, I'm not searching for a string, but a character.
+所以，我不是在搜索一个字符串，而是搜索一个字符。
+
+50
+00:03:32,460 --> 00:03:34,530
+So, let's say I am searching for 'i'.
+所以，我们说我要搜索'i'。
+
+51
+00:03:34,860 --> 00:03:35,960
+How can I do that?
+我怎样才能做到这一点呢？
+
+52
+00:03:36,360 --> 00:03:42,810
+charAt, the same name, this is an overloaded method which accepts a character parameter and this returns
+charAt，同样的名字，这是一个重载方法，接受一个字符参数，并返回
+
+53
+00:03:42,930 --> 00:03:46,510
+the index of this. Because that's the first 'i'. Oops!
+这个的索引。因为那是第一个'i'。哎呀!
+
+54
+00:03:47,010 --> 00:03:49,960
+Actually, I should use indexOf, right.
+实际上，我应该用indexOf，对。
+
+55
+00:03:49,980 --> 00:03:50,850
+So, it's not charAt.
+所以，这不是charAt。
+
+56
+00:03:51,300 --> 00:03:53,410
+I should use indexOf('i').
+我应该用indexOf('i')。
+
+57
+00:03:53,960 --> 00:03:57,090
+So, it returns 2. So, indexOf is the same method.
+所以，它返回2。所以，indexOf是同一个方法。
+
+58
+00:03:57,090 --> 00:04:04,860
+It's an overloaded method and we would use indexOf to find the index of a string, a substring as well
+它是一个重载方法，我们可以使用indexOf来查找一个字符串的索引，一个子串以及
+
+59
+00:04:04,860 --> 00:04:06,150
+as a specific character.
+以及一个特定的字符。
+
+60
+00:04:06,150 --> 00:04:09,340
+So, 'i' in this string is at location, index 2.
+所以，这个字符串中的'i'位于位置，索引2。
+
+61
+00:04:09,440 --> 00:04:15,490
+Now, you might want to find out what is the index of the last 'i' which is present in here.
+现在，你可能想知道最后一个'i'的索引是什么，它存在于这里。
+
+62
+00:04:15,630 --> 00:04:24,680
+You can do that too very easily using lastIndexOf, lastIndexOf and this returns 25.
+你也可以使用lastIndexOf，lastIndexOf很容易做到这一点，它返回25。
+
+63
+00:04:24,750 --> 00:04:30,390
+One thing you should be careful about is the Camel casing. So, indexOf, O is caps,
+有一点你应该注意的是Camel的大小写。所以，indexOf，O是大写的。
+
+64
+00:04:30,390 --> 00:04:35,650
+CharAt, A is caps, indexOf, lastIndexOf, I and O are caps.
+CharAt, A是大写字母，indexOf, lastIndexOf, I和O是大写字母。
+
+65
+00:04:35,790 --> 00:04:39,210
+So, be careful about the Camel casing of these methods.
+所以，要注意这些方法的Camel大小写。
+
+66
+00:04:39,210 --> 00:04:45,040
+The names should exactly match. You cannot use a different case. That applies to anything in Java.
+名称应该完全匹配。你不能使用不同的大小写。这适用于Java中的任何东西。
+
+67
+00:04:45,060 --> 00:04:52,020
+It's case sensitive except for whatever is going in your literal characters or literal strings.
+除了在你的字面字符或字面字符串中的东西，它是区分大小写的。
+
+68
+00:04:52,110 --> 00:04:57,610
+The other functions in String help you to check a few things on the String.
+String中的其他函数可以帮助你检查String中的一些东西。
+
+69
+00:04:57,750 --> 00:05:02,550
+So, let's say I want to find out if this string contains a word called 'again'.
+所以，假设我想找出这个字符串是否包含一个叫做'再次'的词。
+
+70
+00:05:02,580 --> 00:05:03,520
+How can I do that?
+我怎样才能做到这一点呢？
+
+71
+00:05:03,600 --> 00:05:10,200
+I can do, use indexOf, but the other option is to do someString.contain( ).
+我可以做，使用indexOf，但另一个选择是做someString.contain( )。
+
+72
+00:05:10,230 --> 00:05:16,890
+So, if I want to present, I want to check whether a text is present, so I just need to say "text" and you can
+所以，如果我想呈现，我想检查一个文本是否存在，所以我只需要说 "文本"，你就可以
+
+73
+00:05:16,890 --> 00:05:18,640
+see that it returns true.
+你可以看到它返回true。
+
+74
+00:05:18,690 --> 00:05:22,680
+I would want to find out if this string starts with a specific string.
+我想找出这个字符串是否以一个特定的字符串开始。
+
+75
+00:05:22,680 --> 00:05:25,770
+I can say someString.startsWith
+我可以说 someString.startsWith
+
+76
+00:05:28,380 --> 00:05:37,070
+("This"). This would return true. The same thing if I give some other thing, it would return a false back. The
+("这个")。这将返回真。同样的事情，如果我给一些其他的东西，它将返回false。同样的
+
+77
+00:05:37,070 --> 00:05:40,790
+same similar method is endsWith( ). So, endsWith,
+同样类似的方法是 endsWith( )。所以， endsWith。
+
+78
+00:05:42,060 --> 00:05:45,090
+let's say, some garbage, it returns false.
+比方说，一些垃圾，它会返回false。
+
+79
+00:05:45,150 --> 00:05:49,370
+If I give the right string, so endsWith("in"): yes,
+如果我给出正确的字符串，那么 endsWith("in")：是。
+
+80
+00:05:49,520 --> 00:05:50,940
+endsWith("ain"):
+endsWith("ain")。
+
+81
+00:05:51,060 --> 00:05:51,750
+yes,
+是的。
+
+82
+00:05:51,760 --> 00:05:53,520
+endsWith("again"):
+endsWith("再次")。
+
+83
+00:05:53,520 --> 00:05:54,330
+yes.
+是的。
+
+84
+00:05:54,390 --> 00:05:55,620
+If I do something wrong,
+如果我做错了什么。
+
+85
+00:05:56,670 --> 00:05:57,520
+false.
+false。
+
+86
+00:05:57,590 --> 00:06:03,720
+So, you can use this to find out if a string endsWith or startsWith a specific substring.
+所以，你可以用这个方法来找出一个字符串是否与一个特定的子串结束或开始。
+
+87
+00:06:03,720 --> 00:06:09,530
+The last utility method is to check if a string is empty. So, you can check if a string is empty by using
+最后一个实用方法是检查一个字符串是否为空。所以，你可以通过使用以下方法来检查一个字符串是否为空
+
+88
+00:06:09,530 --> 00:06:12,010
+the someString.empty( ).
+someString.empty( )。
+
+89
+00:06:12,080 --> 00:06:13,770
+Actually it is, isEmpty( ).
+实际上，它是，isEmpty( )。
+
+90
+00:06:15,320 --> 00:06:17,870
+Okay. So, someString.IsEmpty( ) returns
+好的，所以，someString.IsEmpty( )返回
+
+91
+00:06:17,900 --> 00:06:20,330
+if it's empty or not.
+如果它是空的或不是。
+
+92
+00:06:20,390 --> 00:06:25,370
+So, any string which has some content is not empty.
+所以，任何有一些内容的字符串都不是空的。
+
+93
+00:06:25,730 --> 00:06:29,520
+However, this string is empty.
+然而，这个字符串是空的。
+
+94
+00:06:30,480 --> 00:06:32,850
+So, that's the isEmpty( ) method.
+所以，这就是isEmpty( )方法。
+
+95
+00:06:32,940 --> 00:06:37,640
+The last useful method inside String to check the content is Equal.
+String中最后一个检查内容的有用方法是Equal。
+
+96
+00:06:37,640 --> 00:06:43,410
+So, you want to find out whether two strings are equal, then you can say, "true".equals("true").
+所以，你想知道两个字符串是否相等，那么你可以说，"true".equals("true")。
+
+97
+00:06:43,410 --> 00:06:57,210
+So, this is string, so or you can say some "value" is equals some ("value"). So, you can also use a string variable
+所以，这是字符串，所以或者你可以说一些 "值 "等于一些（"值"）。所以，你也可以用一个字符串变量
+
+98
+00:06:57,210 --> 00:07:09,590
+on the other side. So, I can say string str = "value" and I can say, Oops! string, i said str str.
+在另一边。所以，我可以说string str = "value"，我可以说，Oops！string，我说的是str str。
+
+99
+00:07:09,600 --> 00:07:14,640
+It should have been string str = "value" and I should say str.equals
+它应该是字符串str = "value"，我应该说str.equals
+
+100
+00:07:17,120 --> 00:07:17,730
+("value").
+("value")。
+
+101
+00:07:19,750 --> 00:07:21,020
+It would return true.
+它将返回真。
+
+102
+00:07:21,040 --> 00:07:28,570
+So, if I want to compare if two strings are equal, I can use either equals or if I want to compare them
+因此，如果我想比较两个字符串是否相等，我可以使用等号，或者如果我想比较它们
+
+103
+00:07:28,600 --> 00:07:30,490
+without worrying about the case,
+而不用担心大小写的问题。
+
+104
+00:07:30,490 --> 00:07:33,620
+so for example, this value has a capital thing.
+所以，例如，这个值有一个大写的东西。
+
+105
+00:07:33,730 --> 00:07:35,660
+If I do this, it would return false.
+如果我这样做，它就会返回错误。
+
+106
+00:07:35,680 --> 00:07:41,980
+Because this is caps and this is small, but if you want to ignore the fact that, that you can say
+因为这是大写字母，这是小写字母，但是如果你想忽略这个事实，那你可以说
+
+107
+00:07:42,070 --> 00:07:49,390
+equalsIgnoreCase("VAlue") and it returns true. So, it ignores the case. It does a kind of an uppercase on both
+equalsIgnoreCase("VAlue")，它将返回true。所以，它忽略了大小写。它对这两个字做了一种大写的处理
+
+108
+00:07:49,390 --> 00:07:51,350
+of these and check whether they're same.
+并检查它们是否相同。
+
+109
+00:07:51,370 --> 00:07:58,120
+So, in this video, we looked at the exercise from the previous video, we wrote a simple loop upto the
+所以，在这个视频中，我们看了上一个视频的练习，我们写了一个简单的循环，直到
+
+110
+00:07:58,120 --> 00:08:03,010
+length of the string, and we printed all the characters by using charAt.
+字符串的长度，并使用charAt打印所有的字符。
+
+111
+00:08:03,300 --> 00:08:09,340
+After that we looked at a variety of methods in the string API to find out specific things from your
+之后，我们研究了字符串API中的各种方法，以便从你的字符串中找出特定的东西。
+
+112
+00:08:09,340 --> 00:08:16,540
+string, whether it startsWith specific thing, endsWith something, whether it has a specific substring present
+字符串中找出特定的东西，是否以特定的东西开始，是否以特定的东西结束，是否有一个特定的子串存在
+
+113
+00:08:16,540 --> 00:08:21,310
+in it using contains, and how do you compare a string with another string.
+以及如何将一个字符串与另一个字符串进行比较。
+
+114
+00:08:21,310 --> 00:08:25,330
+We talked about equals and equalsIgnoreCase methods.
+我们谈到了equals和equalsIgnoreCase方法。
+
+115
+00:08:25,510 --> 00:08:31,010
+One important thing is we have not really tried to modify the content of the string until now.
+有一件很重要的事情是，到现在为止我们还没有真正尝试过修改字符串的内容。
+
+116
+00:08:31,240 --> 00:08:35,980
+In the next video, we would start trying to modify the value of a specific string.
+在下一个视频中，我们将开始尝试修改一个特定字符串的值。
+
+117
+00:08:36,100 --> 00:08:37,090
+Until then, bye bye.
+在那之前，拜拜了。
+

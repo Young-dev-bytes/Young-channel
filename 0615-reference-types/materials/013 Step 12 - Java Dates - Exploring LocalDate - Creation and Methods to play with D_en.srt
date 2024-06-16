@@ -1,0 +1,406 @@
+1
+00:00:02,660 --> 00:00:03,150
+In this video,
+
+2
+00:00:03,410 --> 00:00:09,530
+let's get started with the LocalDate. LocalDate today = LocalDate.
+
+3
+00:00:09,710 --> 00:00:15,800
+now( ). Make sure that you have the import in place because if you don't have the import, so you need to
+
+4
+00:00:15,800 --> 00:00:19,010
+have the java.time.* in your imports.
+
+5
+00:00:19,010 --> 00:00:24,310
+So, if you restart JShell, you need to again import it in. So, import java.time.*.
+
+6
+00:00:24,320 --> 00:00:26,470
+That's when you would be able to do LocalDate
+
+7
+00:00:26,480 --> 00:00:28,020
+today = LocalDate.now( )
+
+8
+00:00:28,020 --> 00:00:29,570
+and you can see that it's printing the
+
+9
+00:00:29,750 --> 00:00:34,520
+today's date. So, 2018-02-01.
+
+10
+00:00:34,550 --> 00:00:40,070
+One of the important things about the LocalDate, is offers a lot of ways of getting information about
+
+11
+00:00:40,070 --> 00:00:40,580
+this date.
+
+12
+00:00:40,580 --> 00:00:45,440
+So, once we have created today, now I can get a lot of information about today.
+
+13
+00:00:45,530 --> 00:00:50,000
+Let's look at those methods now. So, let's say I would want to get the year.
+
+14
+00:00:50,120 --> 00:00:54,720
+I can say getYear( ) and print 2018.
+
+15
+00:00:54,720 --> 00:01:03,200
+I want to getDayOfWeek( ). It's printing Thursday.
+
+16
+00:01:03,200 --> 00:01:04,150
+So it says,
+
+17
+00:01:04,160 --> 00:01:05,690
+it says, today is a Thursday
+
+18
+00:01:05,990 --> 00:01:12,500
+and if I want DayOfMonth( ), so that prints 1, because today is the first day of February.
+
+19
+00:01:12,500 --> 00:01:14,230
+So, today's date is 1st February
+
+20
+00:01:14,420 --> 00:01:21,580
+and if I want to print DayOfYear( ), it prints 32 because today is the 32nd day of the year.
+
+21
+00:01:22,070 --> 00:01:28,580
+So, you can see that there are a number of methods which help you get information about the specific
+
+22
+00:01:28,730 --> 00:01:29,510
+date.
+
+23
+00:01:29,540 --> 00:01:30,440
+So, I am able to get
+
+24
+00:01:30,440 --> 00:01:32,930
+which day of the year, which day of the month,
+
+25
+00:01:33,140 --> 00:01:40,010
+which day of the week, and all that kind of information just by creating a simple variable using the
+
+26
+00:01:40,250 --> 00:01:42,110
+now( ) static method.
+
+27
+00:01:42,290 --> 00:01:45,120
+You can also get details about the month.
+
+28
+00:01:45,360 --> 00:01:46,090
+It's February
+
+29
+00:01:46,280 --> 00:01:50,490
+and if you want the number, you can get, getMonthValue which would return 2.
+
+30
+00:01:50,930 --> 00:01:57,620
+So, those are all the important methods in the API which would help you get information about the specific
+
+31
+00:01:57,620 --> 00:01:58,370
+date.
+
+32
+00:01:58,400 --> 00:02:04,220
+Now you might sometimes want to get some more generic information, right whether the year is a leap year,
+
+33
+00:02:05,000 --> 00:02:10,070
+how many days are there in that specific year, how many days are there in that specific month.
+
+34
+00:02:10,100 --> 00:02:15,680
+The cool thing is, Java 8 DateTime API provides you all that stuff very easily.
+
+35
+00:02:15,710 --> 00:02:22,710
+So, if I want to find out isLeapYear( ). All that I need to do is today.isLeapYear( ). Nope, it's false.
+
+36
+00:02:22,790 --> 00:02:30,320
+So, I am right now in 2018 which is not really a leap year, right. So, it returns false. I can find more information
+
+37
+00:02:30,320 --> 00:02:35,670
+about it. So, you can say today.lengthOfYear( ).
+
+38
+00:02:35,780 --> 00:02:38,980
+So, how many days are there in the current year? 365.
+
+39
+00:02:39,580 --> 00:02:42,600
+I can say lengthOfMonth( ), 28.
+
+40
+00:02:42,920 --> 00:02:49,080
+So, these methods help you get meta information about the year or the month we are in:
+
+41
+00:02:49,130 --> 00:02:50,610
+how many days are there in the month,
+
+42
+00:02:50,630 --> 00:02:58,880
+how many days are there in the year, whether it's a leap year and things like that. And also, the date API provides
+
+43
+00:02:58,880 --> 00:03:04,800
+ways to add number of days or number of months or number of years to your date. So,
+
+44
+00:03:04,940 --> 00:03:12,030
+I would want to find out what is the date after 100 days. So, I can say today.plusDays(100).
+
+45
+00:03:12,040 --> 00:03:14,270
+What's the date after 100 days?
+
+46
+00:03:14,360 --> 00:03:17,920
+It says 2018-05-12,
+
+47
+00:03:17,920 --> 00:03:18,890
+right.
+
+48
+00:03:18,890 --> 00:03:24,320
+So, it says 12th May 2018 is plus 100 days from now.
+
+49
+00:03:24,370 --> 00:03:33,470
+You can also do plusMonths( ). So, plusMonths(100). So, 100 months from now is 1st of June, June
+
+50
+00:03:33,910 --> 00:03:37,300
+2026 or you can even do plusYears( ),
+
+51
+00:03:37,340 --> 00:03:38,910
+100 years from now.
+
+52
+00:03:39,000 --> 00:03:39,380
+Okay.
+
+53
+00:03:39,410 --> 00:03:43,910
+I will not be alive then, so 2118.
+
+54
+00:03:43,930 --> 00:03:50,950
+These are all the methods you can use to add days, or months, or years to your date and you can also have
+
+55
+00:03:51,670 --> 00:03:52,780
+subtraction, right.
+
+56
+00:03:52,810 --> 00:03:58,220
+So, today.minusYears(100) or minusMonths( ) and 
+minusDays( ).
+
+57
+00:03:58,240 --> 00:04:05,110
+So, these are all the things to change the date. So, you can add the number of days, add number of months,
+
+58
+00:04:05,170 --> 00:04:07,990
+or a specific number of years to the date.
+
+59
+00:04:08,080 --> 00:04:15,510
+One of the important things that you'd need to remember is all these do not change today value. LocalDate
+
+60
+00:04:15,510 --> 00:04:15,820
+Time
+
+61
+00:04:15,820 --> 00:04:17,829
+class is immutable.
+
+62
+00:04:17,829 --> 00:04:21,990
+So, what we are doing in here is, we are creating new variables. The
+
+63
+00:04:22,089 --> 00:04:24,220
+today itself does not get affected.
+
+64
+00:04:24,220 --> 00:04:27,930
+So, today minusYears(100) would be a new variable.
+
+65
+00:04:27,940 --> 00:04:34,740
+So, I can say LocalDateTime, actually it's LocalDate. 
+LocalDate hundredYearsBefore
+
+66
+00:04:38,730 --> 00:04:41,860
+= today.minusYears(100).
+
+67
+00:04:41,860 --> 00:04:46,070
+The value of today on the other hand would still remain today.
+
+68
+00:04:46,180 --> 00:04:49,540
+It creates a new variable called hundredYearsBefore with the value.
+
+69
+00:04:49,570 --> 00:04:57,190
+So, this is immutable class again. All the methods would create new instances with the new value. Until
+
+70
+00:04:57,220 --> 00:04:57,610
+now,
+
+71
+00:04:57,640 --> 00:05:00,990
+in this video, we have looked at a wide variety of things, right. 
+
+72
+00:05:01,000 --> 00:05:07,720
+So, we looked at how to get specific information: which day of the year, which month, which year, and all that kind
+
+73
+00:05:07,720 --> 00:05:08,550
+of stuff.
+
+74
+00:05:08,560 --> 00:05:13,000
+We also looked at getting generic information; leap year, is it a leap year,
+
+75
+00:05:13,030 --> 00:05:13,470
+what is,
+
+76
+00:05:13,540 --> 00:05:16,030
+what is the number of days in the current year.
+
+77
+00:05:16,030 --> 00:05:18,990
+what is the number of days in current month.
+
+78
+00:05:19,000 --> 00:05:25,660
+And, we also looked at different operations to add  number of days, months, years, and subtract years, and
+
+79
+00:05:25,660 --> 00:05:26,610
+stuff like that.
+
+80
+00:05:27,820 --> 00:05:35,740
+The interesting thing to note is that very similar APIs exist on the LocalDateTime class as well.
+
+81
+00:05:35,740 --> 00:05:37,320
+So, on LocalDateTime class,
+
+82
+00:05:37,330 --> 00:05:48,500
+if I create a instance of it right now, DateTime.now( ), there are very similar methods present.
+
+83
+00:05:48,550 --> 00:05:52,040
+However, in addition to the usual ones,
+
+84
+00:05:52,150 --> 00:06:00,190
+so let's say I want to do a plus, the LocalDateTime not only allows plusDays, plusMonths, plusYears,
+
+85
+00:06:00,280 --> 00:06:06,940
+and plusWeeks, but it also allows plusSeconds, plusHours, and plusMinutes.
+
+86
+00:06:06,940 --> 00:06:12,150
+So, all that I had to do was now.plus( ) and press tab and it would show all the options present. So,
+
+87
+00:06:12,190 --> 00:06:18,550
+LocalDateTime provides all the options that are present for the LocalDate plus it allows you options
+
+88
+00:06:18,910 --> 00:06:26,140
+to play with hours, minutes, and seconds, and nanoseconds as well. So, over here what you are seeing in here
+
+89
+00:06:26,410 --> 00:06:27,960
+is nanoseconds.
+
+90
+00:06:28,120 --> 00:06:34,660
+So, that's basically what the LocalDateTime provides. So, similar to adding, you would also be able to get
+
+91
+00:06:34,780 --> 00:06:39,250
+different information, right. So, now.get( ), you would be able to get minute, you'd be able to
+
+92
+00:06:39,250 --> 00:06:40,130
+get second,
+
+93
+00:06:40,270 --> 00:06:42,580
+you'll be able to get nano,
+
+94
+00:06:42,580 --> 00:06:45,520
+and you'd be able to get the hour as well.
+
+95
+00:06:45,520 --> 00:06:51,250
+I'd recommend you to try and play around with the LocalDateTime API on your own and try and find out more
+
+96
+00:06:51,250 --> 00:06:53,830
+things about it. In this video,
+
+97
+00:06:53,860 --> 00:06:58,660
+we looked at few of the important methods that are present on the LocalDate class.
+
+98
+00:06:58,690 --> 00:07:00,300
+We looked at how to play with it.
+
+99
+00:07:00,310 --> 00:07:03,780
+We also looked at a few methods which are present in the LocalDateTime.
+
+100
+00:07:03,880 --> 00:07:09,850
+In the next video, we will explore a few more things about the LocalDate and the LocalDateTime classes.
+
+101
+00:07:09,850 --> 00:07:10,740
+Until then, bye bye.
+

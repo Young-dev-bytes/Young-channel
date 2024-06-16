@@ -1,0 +1,350 @@
+1
+00:00:01,960 --> 00:00:04,210
+Welcome back.
+欢迎回来。
+
+2
+00:00:04,240 --> 00:00:09,430
+You would have heard a number of times that string is immutable.
+你可能已经听过很多次，字符串是不可变的。
+
+3
+00:00:09,430 --> 00:00:13,050
+That means the value of string cannot be changed.
+这意味着字符串的值不能被改变。
+
+4
+00:00:13,060 --> 00:00:14,020
+Is that really true?
+这真的是真的吗？
+
+5
+00:00:14,260 --> 00:00:15,990
+Yep, it is true.
+是的，它是真的。
+
+6
+00:00:16,000 --> 00:00:23,500
+So, in this video, let's explore that a little bit further and look at other ways of getting a modified
+所以，在这个视频中，让我们进一步探讨这个问题，并看看从一个特定的字符串中获得一个修改过的
+
+7
+00:00:23,500 --> 00:00:25,830
+string from a specific string.
+字符串的其他方法。
+
+8
+00:00:26,000 --> 00:00:37,210
+Okay. Now, let's type in a simple piece of code String str =  "in28Minutes" and let's say
+好的。现在，让我们输入一段简单的代码 String str = "in28Minutes" ，假设
+
+9
+00:00:37,240 --> 00:00:43,180
+I'm concatenating str.concat("is awesome").
+我把str.concat("is awesome")连接起来。
+
+10
+00:00:43,420 --> 00:00:48,450
+Okay, some self-praise there. But I guess you can ignore that.
+好吧，那里有些自我表扬。但我想你可以忽略这一点。
+
+11
+00:00:48,460 --> 00:00:53,210
+So, what we are doing is str, str.concat("is awesome").
+所以，我们正在做的是str，str.concat("is awesome")。
+
+12
+00:00:53,230 --> 00:01:00,160
+Concat is a function to concat a string content of that specific string with another string.
+Concat是一个函数，用于将一个特定字符串的内容与另一个字符串连接起来。
+
+13
+00:01:00,160 --> 00:01:01,070
+So, here it's
+所以，这里是
+
+14
+00:01:01,210 --> 00:01:07,320
+we said "in28Minutes is awesome". Because there is no space either at the end or here.
+我们说 "in28Minutes is awesome"。因为在结尾和这里都没有空格。
+
+15
+00:01:07,390 --> 00:01:09,870
+It's becoming like a single word.
+它变得像一个单字。
+
+16
+00:01:10,020 --> 00:01:13,060
+I would try and print the content of str.
+我将尝试打印str的内容。
+
+17
+00:01:13,090 --> 00:01:15,070
+What do you think the content of str would be?
+你认为str的内容会是什么？
+
+18
+00:01:17,540 --> 00:01:18,080
+Aha!
+啊哈!
+
+19
+00:01:18,100 --> 00:01:20,170
+It's "in28minutes".
+它是 "in28minutes"。
+
+20
+00:01:20,290 --> 00:01:25,540
+So, the thing is, the content of str has not really changed.
+所以，问题是，str的内容并没有真正改变。
+
+21
+00:01:25,570 --> 00:01:29,640
+So, even though I am calling str.concat("is awesome),
+所以，即使我调用str.concat("is awesome)。
+
+22
+00:01:29,770 --> 00:01:31,450
+the str remains the same.
+但str的内容仍然是一样的。
+
+23
+00:01:31,450 --> 00:01:42,550
+What it does is, it returns another string. So, String anotherString = str.concat, this
+它所做的是，它返回另一个字符串。所以，String anotherString = str.concat，这个
+
+24
+00:01:42,550 --> 00:01:42,850
+time,
+次。
+
+25
+00:01:42,850 --> 00:01:43,960
+let's be very careful.
+让我们非常小心。
+
+26
+00:01:43,960 --> 00:01:50,000
+I'll give a space and say " is awesome". Now, what would happen?
+我会给一个空格，然后说" 是真棒"。现在，会发生什么？
+
+27
+00:01:50,080 --> 00:01:53,560
+You can see that anotherString is assigned this value
+你可以看到，anotherString被分配了这个值
+
+28
+00:01:53,560 --> 00:01:56,960
+and if I print str, it's "in28minutes".
+并且如果我打印str，它是 "in28minutes"。
+
+29
+00:01:56,950 --> 00:02:03,100
+So, whenever I'm trying to modify a value of a string, what we're doing is not really modifying that
+所以，每当我试图修改一个字符串的值时，我们所做的并不是真的修改那个
+
+30
+00:02:03,100 --> 00:02:04,540
+specific string.
+特定的字符串。
+
+31
+00:02:04,540 --> 00:02:09,889
+So, if I'm doing str.concat for a specific string, what we are doing is, we'll create a new
+所以，如果我为一个特定的字符串做str.concat，我们正在做的是，我们将创建一个新的
+
+32
+00:02:09,910 --> 00:02:18,370
+string and return it back. The original string remains unaffected. So, str remains "in28minutes".
+字符串并将其返回。原来的字符串不受影响。所以，str仍然是 "in28minutes"。
+
+33
+00:02:18,380 --> 00:02:23,800
+We are creating anotherString, with the value of the new concatenation.
+我们正在创建另一个字符串，用新的连接值。
+
+34
+00:02:23,830 --> 00:02:33,130
+So, let's say now, I'd say String, instead of calling another string, I'll say string2 = anotherString.
+所以，我们现在说，我说String，而不是调用另一个字符串，我会说string2 = anotherString。
+
+35
+00:02:33,130 --> 00:02:37,390
+I feel that there is, let's say, I would want to append  a "."(dot).
+我觉得有，比方说，我想附加一个"."（点）。
+
+36
+00:02:40,730 --> 00:02:44,700
+I'm saying string2 = anotherString.concat.
+我说string2 = anotherString.concat。
+
+37
+00:02:44,750 --> 00:02:47,750
+What happens is a new string is created, string2 with
+发生的情况是一个新的字符串被创建，string2带有
+
+38
+00:02:47,750 --> 00:02:50,440
+"in28Minutes is awesome" with a dot.
+"in28Minutes is awesome "加上一个点。
+
+39
+00:02:50,660 --> 00:02:54,880
+But if you type in str, it remains "in28Minutes".
+但是如果你输入str，它仍然是 "in28Minutes"。
+
+40
+00:02:54,950 --> 00:02:59,720
+If you type in anotherString, it remains this
+如果你输入另一个字符串，它仍然是这样的
+
+41
+00:02:59,870 --> 00:03:11,950
+and if I type in string2, the value is with a dot. This behavior of a String class is called immutability.
+而如果我输入string2，其值是带点的。字符串类的这种行为被称为不变性。
+
+42
+00:03:12,040 --> 00:03:15,830
+Once an instance of a String class is created with a specific value,
+一旦一个字符串类的实例以特定的值被创建，你将永远无法改变。
+
+43
+00:03:16,090 --> 00:03:21,040
+you will never be able to change the value of that specific variable.
+你将永远无法改变这个特定变量的值。
+
+44
+00:03:21,040 --> 00:03:25,000
+This "in28Minutes" will always remain "in28Minutes".
+这个 "in28Minutes "将永远是 "in28Minutes"。
+
+45
+00:03:25,000 --> 00:03:32,800
+If you try and execute a method on it, it would create a new string. But the original value remains as
+如果你试图对它执行一个方法，它将创建一个新的字符串。但是原来的值仍然是
+
+46
+00:03:32,800 --> 00:03:36,160
+it is. It remains "in28Minutes".
+它是这样的。它仍然是 "in28Minutes"。
+
+47
+00:03:36,200 --> 00:03:36,590
+Okay.
+好的。
+
+48
+00:03:36,670 --> 00:03:42,940
+Now that we discussed this in great detail, let's focus on the other methods that are present in String
+现在我们已经非常详细地讨论了这个问题，让我们把重点放在String类中的其他方法上
+
+49
+00:03:42,940 --> 00:03:47,700
+class to get modified values from the String class.
+类中的其他方法来获取String类中的修改值。
+
+50
+00:03:47,710 --> 00:03:50,710
+Let's start with a simple strings, "in28Minutes is awesome.".
+让我们从一个简单的字符串开始，"in28Minutes is awesome." 。
+
+51
+00:03:50,710 --> 00:03:52,270
+Let's assign that.
+让我们把它赋值。
+
+52
+00:03:52,270 --> 00:03:55,410
+So, now we have a new string, "in28Minutes is awesome."
+所以，现在我们有一个新的字符串，"in28Minutes is awesome."
+
+53
+00:03:55,480 --> 00:03:59,000
+and let's say I would want to make it all uppercase.
+假设我想把它变成全大写字母。
+
+54
+00:03:59,020 --> 00:04:00,490
+How do I do that?
+我如何做到这一点呢？
+
+55
+00:04:00,490 --> 00:04:07,180
+You can have a function called toUpperCase, "in 28Minutes is awesome." and similar to that
+你可以有一个叫做toUpperCase的函数，"in28Minutes is awesome. "和类似的函数
+
+56
+00:04:07,630 --> 00:04:09,730
+guess, what is the function to do a lowercase?
+猜猜看，做小写的函数是什么？
+
+57
+00:04:10,700 --> 00:04:11,780
+Yeah, you're right.
+是的，你说对了。
+
+58
+00:04:11,780 --> 00:04:13,770
+It's lowercase.
+它是小写的。
+
+59
+00:04:13,780 --> 00:04:17,769
+Let's say there is some space at the end of a string and the start of a string.
+比方说，在一个字符串的末尾和一个字符串的开头有一些空格。
+
+60
+00:04:17,769 --> 00:04:20,760
+Let's say there's a string called str2,
+比方说，有一个叫str2的字符串。
+
+61
+00:04:21,040 --> 00:04:25,850
+there is some space at the start and some space at the end
+开头有一些空格，结尾有一些空格
+
+62
+00:04:25,850 --> 00:04:27,260
+and I would want to remove that.
+我想把它删除。
+
+63
+00:04:27,260 --> 00:04:30,910
+How do I do that? str2.trim( ).
+我怎么做呢？str2.trim( )。
+
+64
+00:04:31,450 --> 00:04:38,210
+It removes spaces at the start of a string and at the end of the string. In this video, what we looked
+它可以删除字符串开头和结尾的空格。在这个视频中，我们所看到的
+
+65
+00:04:38,210 --> 00:04:44,420
+at is the fact that, String class is immutable. Any instance of a String class, once it's created in memory,
+是这样一个事实，即String类是不可改变的。任何一个字符串类的实例，一旦在内存中被创建，其内容就不能被改变。
+
+66
+00:04:44,840 --> 00:04:48,050
+the content of that cannot be changed.
+它的内容就不能被改变。
+
+67
+00:04:48,050 --> 00:04:53,810
+We looked at all the different operations which are present in String like toUppercase, toLowercase,
+我们研究了所有存在于字符串中的不同操作，如toUppercase、toLowercase。
+
+68
+00:04:54,200 --> 00:05:02,690
+trim, and concatenate which would help us to get a new string with a modified value of an existing string.
+trim和concatenate，它们可以帮助我们用现有字符串的修改值得到一个新的字符串。
+
+69
+00:05:02,720 --> 00:05:07,630
+I'll see you in the next video where we would be talking about a few more utility methods in the String class.
+我们将在下一个视频中看到你，在那里我们将讨论字符串类中的其他一些实用方法。
+
+70
+00:05:07,720 --> 00:05:08,540
+Until then, bye bye.
+在那之前，拜拜了。
+

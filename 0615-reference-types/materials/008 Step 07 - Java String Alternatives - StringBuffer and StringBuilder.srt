@@ -1,0 +1,330 @@
+1
+00:00:02,770 --> 00:00:03,890
+Welcome back.
+欢迎回来。
+
+2
+00:00:03,890 --> 00:00:08,690
+In this quick video, we would want to look at a couple of alternatives for the String class.
+在这个快速视频中，我们想看看String类的几个替代方案。
+
+3
+00:00:08,860 --> 00:00:12,720
+One of the problems with the String class is String is immutable.
+String类的一个问题是String是不可变的。
+
+4
+00:00:12,760 --> 00:00:21,510
+So, as soon as I create a string like this, let's say I am doing "123" + "123" +"1234"+
+所以，只要我创建一个这样的字符串，比如说我在做 "123"+"123"+"1234"+
+
+5
+00:00:22,260 --> 00:00:28,260
+"123456". Think about how many strings we are creating.
+"123456". 想想看，我们正在创建多少个字符串。
+
+6
+00:00:28,260 --> 00:00:30,830
+So, this creates the entire concatenated string.
+所以，这就创建了整个串联的字符串。
+
+7
+00:00:30,900 --> 00:00:35,430
+So, when we are doing this operation, what we are doing is, we are creating individual string instances
+所以，当我们做这个操作时，我们正在做的是，我们正在创建单独的字符串实例
+
+8
+00:00:35,430 --> 00:00:44,780
+for 1, 2, 3, and 4. So, four values in here. Because the concatenation runs from left to right, first
+1、2、3、4的单个字符串实例。所以，这里有四个值。因为连接是从左到右进行的，首先
+
+9
+00:00:44,830 --> 00:00:49,440
+these two are concatenated and 123 + 123 becomes  123123.
+这两个被连接起来，123+123变成123123。
+
+10
+00:00:49,450 --> 00:00:51,390
+So, this is the 5th instance
+所以，这是第五个实例
+
+11
+00:00:51,430 --> 00:00:57,650
+and after that another instance concatenating all these three and sixth instance and then a seventh
+之后是另一个实例，将这三个值串联起来，然后是第六个实例和第七个实例。
+
+12
+00:00:57,670 --> 00:00:58,730
+instance.
+实例。
+
+13
+00:00:58,750 --> 00:01:07,060
+So, just to do a simple concatenation, we had to create seven instances of this string, right. The first
+所以，只是为了做一个简单的连接，我们必须为这个字符串创建七个实例，对吧。前面的
+
+14
+00:01:07,060 --> 00:01:12,190
+four are definitely needed because those are values, but there are three additional instances of objects
+前四个是绝对需要的，因为这些是值，但还有三个额外的对象实例
+
+15
+00:01:12,190 --> 00:01:13,860
+that are being created
+正在被创建
+
+16
+00:01:14,260 --> 00:01:17,220
+and that's a very costly operation. Creating objects
+而这是一个非常昂贵的操作。创建对象
+
+17
+00:01:17,380 --> 00:01:19,450
+is very very costly.
+是非常非常昂贵的。
+
+18
+00:01:19,450 --> 00:01:21,990
+If this is the case, if it's four simple strings,
+如果是这种情况，如果是四个简单的字符串。
+
+19
+00:01:22,000 --> 00:01:31,150
+but imagine the case when I have to append 200 strings. How many useless objects would be created? To avoid
+但想象一下，如果我不得不追加200个字符串。会有多少无用的对象被创建？为了避免
+
+20
+00:01:31,150 --> 00:01:35,640
+that, Java provides another class called StringBuffer.
+Java提供了另一个叫做StringBuffer的类。
+
+21
+00:01:36,000 --> 00:01:42,720
+So, StringBuffer is another class in Java which you can use to create strings.
+所以，StringBuffer是Java中的另一个类，你可以用它来创建字符串。
+
+22
+00:01:42,760 --> 00:01:46,310
+However StringBuffer is not as easy to use as a String, right. So,
+然而StringBuffer并不像String那样容易使用，对吧。所以。
+
+23
+00:01:46,540 --> 00:01:49,300
+if it was a String, I can just say this. Oops!
+如果它是一个字符串，我就可以这样说。Oops!
+
+24
+00:01:49,540 --> 00:01:53,950
+That's not allowed with a StringBuffer. You have to actually use new StringBuffer
+这在StringBuffer中是不允许的。你必须实际使用new StringBuffer
+
+25
+00:01:57,590 --> 00:01:59,690
+("TEst")
+("TEst")
+
+26
+00:01:59,690 --> 00:02:02,540
+The important thing is StringBuffer is mutable.
+重要的是，StringBuffer是可变的。
+
+27
+00:02:02,600 --> 00:02:11,930
+That means if I do a sb. let's say, append and say append("123") and I leave a space in here.
+这意味着如果我做一个sb.比方说，append，说append("123")，我在这里留下一个空格。
+
+28
+00:02:13,540 --> 00:02:15,900
+What would happen? sb
+会发生什么？
+
+29
+00:02:16,110 --> 00:02:20,370
+value also gets changed. So, sb new have, sb has the new value, right. Now,
+值也会被改变。所以，sb新的有，sb有新的值，对。现在。
+
+30
+00:02:20,610 --> 00:02:24,120
+so the value inside the string buffer is changing.
+所以字符串缓冲区内的值是变化的。
+
+31
+00:02:24,120 --> 00:02:33,540
+So, it's actually saying "TEst 123". sb.setCharAt, let's say I would want to replace this character
+所以，它实际上是在说 "TEst 123"。sb.setCharAt，假设我想把这个字符替换为
+
+32
+00:02:33,660 --> 00:02:37,840
+with a 'e'. So, I can say charAt, index is
+用一个'e'。所以，我可以说charAt，索引是
+
+33
+00:02:37,940 --> 00:02:38,330
+(1,'e').
+(1,'e').
+
+34
+00:02:38,500 --> 00:02:46,230
+Now, if I do sb, it would show "TEst 123" because we have replaced this character.
+现在，如果我做sb，它将显示 "TEst 123"，因为我们已经替换了这个字符。
+
+35
+00:02:46,350 --> 00:02:50,660
+One thing you would notice that with StringBuffer is that, we are actually changing the value inside
+你会注意到StringBuffer的一个特点是，我们实际上是在改变StringBuffer里面的值。
+
+36
+00:02:50,660 --> 00:02:51,650
+the StringBuffer .
+StringBuffer。
+
+37
+00:02:52,160 --> 00:02:53,600
+So, that's an important thing.
+所以，这是一个重要的事情。
+
+38
+00:02:53,660 --> 00:02:58,720
+So, in StringBuffer you can actually change the values. Whenever you do a lot of concatenations,
+所以，在StringBuffer中，你实际上可以改变值。每当你做大量的连接时。
+
+39
+00:02:58,730 --> 00:03:01,520
+it's preferred that you'd use a StringBuffer.
+你最好使用一个StringBuffer。
+
+40
+00:03:01,700 --> 00:03:08,240
+There is another class which is offered in Java which is called StringBuilder. StringBuilder is
+在Java中还有一个类，它被称为StringBuilder。StringBuilder是
+
+41
+00:03:08,240 --> 00:03:16,070
+very very similar to StringBuffer. But it's offered in the later versions of Java because StringBuffer is
+与StringBuffer非常相似。但它是在Java的后期版本中提供的，因为StringBuffer是一个
+
+42
+00:03:16,320 --> 00:03:17,990
+a synchronised class.
+一个同步的类。
+
+43
+00:03:17,990 --> 00:03:18,920
+So, what does that mean?
+那么，这意味着什么呢？
+
+44
+00:03:19,010 --> 00:03:24,980
+That means, that StringBuffer is a class which is ready for multithreading. But if you are ready for
+这意味着，StringBuffer是一个可以用于多线程的类。但如果你准备好了
+
+45
+00:03:24,980 --> 00:03:29,660
+multithreading, it means that there is a penalty which is imposed on you.
+多线程，就意味着有一个惩罚是强加给你的。
+
+46
+00:03:29,660 --> 00:03:35,040
+That means when you're running in a single-threaded scenarios where you don't really need all the complexities
+这意味着当你在一个单线程的场景中运行时，你并不真的需要所有关于多线程的复杂问题
+
+47
+00:03:35,070 --> 00:03:41,450
+around multithreading, StringBuffer might get really slow and in those kind of situations, you can use
+围绕多线程，StringBuffer可能会变得非常慢，在这种情况下，你可以使用
+
+48
+00:03:41,450 --> 00:03:42,420
+StringBuilder.
+StringBuilder。
+
+49
+00:03:42,480 --> 00:03:46,640
+We'd talk about multithreading and all that kind of stuff a little later in this course in a separate
+我们将在本课程稍后的单独章节中讨论多线程和所有这些东西。
+
+50
+00:03:46,640 --> 00:03:47,330
+section.
+节中讨论多线程和所有这些东西。
+
+51
+00:03:47,450 --> 00:03:54,740
+But for now, you can think that if you don't really worry about multithreading, then you can use a String
+但是现在，你可以认为，如果你不太担心多线程，那么你可以使用一个String
+
+52
+00:03:54,950 --> 00:03:55,580
+Builder.
+生成器。
+
+53
+00:03:55,610 --> 00:04:02,300
+So, instead of a StringBuffer, you can use a StringBuilder. So, I can say StringBuilder sb =
+所以，你可以使用一个StringBuffer，而不是一个StringBuilder。所以，我可以说StringBuilder sb =
+
+54
+00:04:02,300 --> 00:04:05,540
+new StringBuilder with your string.
+new StringBuilder与你的字符串。
+
+55
+00:04:05,720 --> 00:04:10,250
+If you further explore the APIs of StringBuffer and String Builder, you would see that there are
+如果你进一步探索StringBuffer和String Builder的API，你会发现它们提供的方法是有变化的。
+
+56
+00:04:10,250 --> 00:04:13,030
+variations in the methods that they offer and things like that.
+它们所提供的方法和类似的东西是不同的。
+
+57
+00:04:13,340 --> 00:04:18,560
+But effectively, the thing which you'd need to remember is this. If you're concatenating a lot of strings
+但实际上，你需要记住的是这一点。如果你要串联大量的字符串
+
+58
+00:04:18,709 --> 00:04:24,240
+and creating a lot of instances of strings, then it's recommended to go for the alternatives, either the
+并创建大量的字符串实例，那么建议你选择其他的方法，要么选择
+
+59
+00:04:24,240 --> 00:04:31,340
+StringBuilder or the StringBuffer. If you don't worry about multithreading, then you would really be
+StringBuilder或StringBuffer。如果你不担心多线程的问题，那么你真的会被建议使用
+
+60
+00:04:31,340 --> 00:04:37,670
+advised to go with the StringBuilder class. If you want your code to be thread-safe, then you'd go for
+建议你使用StringBuilder类。如果你希望你的代码是线程安全的，那么你会选择
+
+61
+00:04:37,670 --> 00:04:38,780
+the StringBuffer
+StringBuffer
+
+62
+00:04:38,780 --> 00:04:44,270
+class. We will discuss more about multithreading when we encounter that in a subsequent section.
+类。当我们在后面的章节中遇到多线程时，我们将讨论更多关于多线程的问题。
+
+63
+00:04:44,270 --> 00:04:49,160
+In this video, we discussed the alternatives to String, StringBuilder, and StringBuffer and things
+在这个视频中，我们讨论了String、StringBuilder和StringBuffer的替代品，以及类似的东西。
+
+64
+00:04:49,160 --> 00:04:49,610
+like that.
+诸如此类的东西。
+
+65
+00:04:49,980 --> 00:04:51,710
+I'll see you in the next video.
+我们将在下一个视频中见。
+
+66
+00:04:51,710 --> 00:04:52,510
+Until then, bye bye.
+在那之前，拜拜了。
+

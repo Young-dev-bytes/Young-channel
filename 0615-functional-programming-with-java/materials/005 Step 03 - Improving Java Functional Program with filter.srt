@@ -1,0 +1,555 @@
+1
+00:00:02,740 --> 00:00:04,540
+Welcome back.
+欢迎回来。
+
+2
+00:00:04,990 --> 00:00:11,980
+In the last two steps, we implemented a simple problem in a structured approach and the functional approach
+在上两步中，我们用结构化方法和功能化方法实现了一个简单的问题
+
+3
+00:00:12,370 --> 00:00:19,230
+and you might be thinking now that the functional approach is much more complex than this structured
+你现在可能会想，功能化方法要比结构化方法复杂得多
+
+4
+00:00:19,240 --> 00:00:20,230
+approach.
+方法复杂得多。
+
+5
+00:00:20,230 --> 00:00:25,300
+And that's true with the implementation that we have right now.
+而我们现在的实现也是如此。
+
+6
+00:00:25,930 --> 00:00:31,040
+Let's see what we can do to simplify the implementation that we have.
+让我们看看我们能做些什么来简化我们的实现。
+
+7
+00:00:31,450 --> 00:00:35,060
+So, let's first remove all this stuff that we have in here.
+所以，让我们先把这里的所有东西都删除。
+
+8
+00:00:35,200 --> 00:00:40,960
+So, let's actually remove the earlier code that we have inside the functional method.
+所以，让我们实际上删除我们在功能方法中的早期代码。
+
+9
+00:00:40,970 --> 00:00:49,720
+I'm using Ctrl D or command D to remove a line and now let's see the need for this specific print method.
+我使用Ctrl D或命令D来删除一行，现在让我们看看这个特定的打印方法的必要性。
+
+10
+00:00:49,720 --> 00:00:56,600
+What we are doing in here is, we would want to call FP Functional colon colon print.
+我们在这里要做的是，我们要调用FP Functional colon colon print。
+
+11
+00:00:57,120 --> 00:01:01,060
+We would want to call a static method in this specific class.
+我们想在这个特定的类中调用一个静态方法。
+
+12
+00:01:01,560 --> 00:01:07,660
+And what happens is, for each element in this stream, this static method is called with that element.
+发生的情况是，对于这个流中的每个元素，这个静态方法都会被调用。
+
+13
+00:01:07,660 --> 00:01:10,150
+So, this stream contains a list of numbers.
+所以，这个流包含一个数字列表。
+
+14
+00:01:10,180 --> 00:01:12,790
+So, first 12 is sent to this method,
+所以，第一个12被送到这个方法、
+
+15
+00:01:12,820 --> 00:01:15,040
+next nine is sent to this method,
+下一个9被送到这个方法、
+
+16
+00:01:15,040 --> 00:01:19,020
+next 13 is sent to this method and we saw everything is printed out to the console.
+下一个13被送到这个方法，我们看到所有的东西都被打印到了控制台。
+
+17
+00:01:19,050 --> 00:01:20,020
+That's cool.
+这很酷。
+
+18
+00:01:20,020 --> 00:01:27,480
+Now, instead of doing this, you can actually replace this piece of code by directly specifying System.out
+现在，你可以不这样做，而是直接在这里指定System.out
+
+19
+00:01:27,480 --> 00:01:28,360
+in here.
+来代替这段代码。
+
+20
+00:01:28,930 --> 00:01:33,050
+So, System.out and what is this static method? println.
+那么，System.out和这个静态方法是什么？ println。
+
+21
+00:01:33,640 --> 00:01:43,330
+So, System.out contains a static method called println and that's a easier way of doing it. Instead
+所以，System.out包含一个叫println的静态方法，这是个更简单的方法。这是一个更简单的方法，而不是
+
+22
+00:01:43,330 --> 00:01:45,220
+of creating a new method called print,
+而不是创建一个叫 print 的新方法、
+
+23
+00:01:45,280 --> 00:01:49,450
+what we can do is, directly call System.out::println.
+我们可以做的是，直接调用System.out::println。
+
+24
+00:01:49,480 --> 00:01:53,140
+And now, this method is no longer needed.
+现在，这个方法已经不再需要了。
+
+25
+00:01:53,140 --> 00:01:54,460
+So, let's comment it out.
+所以，让我们把它注释掉。
+
+26
+00:01:55,760 --> 00:02:03,070
+Now, you can see that this piece of code is a little more simpler than the structured approach.
+现在，你可以看到，这段代码比结构化的方法要简单一些。
+
+27
+00:02:03,090 --> 00:02:04,650
+Why do I call it simpler?
+为什么我说它更简单呢？
+
+28
+00:02:04,680 --> 00:02:10,730
+Because in this Structured approach, we had to focus on how to loop the numbers and then print them. In
+因为在这个结构化方法中，我们不得不把重点放在如何循环数字，然后打印它们。而在
+
+29
+00:02:10,810 --> 00:02:11,750
+the Functional approach,
+功能性方法中、
+
+30
+00:02:11,750 --> 00:02:17,930
+on the other hand, we get a list of elements and we define what to do with each one of them.
+另一方面，我们得到一个元素的列表，并定义对每个元素做什么。
+
+31
+00:02:17,930 --> 00:02:23,940
+So, all that we needed to do is to say for each element in this stream, do this. Now,
+因此，我们所需要做的就是对这个流中的每个元素说，做这个。现在、
+
+32
+00:02:24,290 --> 00:02:29,190
+let's try and make the example that we have little bit more complex.
+让我们试着让我们的例子更复杂一些。
+
+33
+00:02:29,430 --> 00:02:35,430
+What I want to do is, I would want to go to the FP Structured class and what I would want to do is to
+我想做的是，我想转到FP结构化类，我想做的是
+
+34
+00:02:35,430 --> 00:02:37,950
+print only the even numbers.
+只打印偶数。
+
+35
+00:02:37,950 --> 00:02:42,390
+I don't want to print all the numbers in the list but I only want to print the even numbers in the list.
+我不想打印列表中的所有数字，但我只想打印列表中的偶数。
+
+36
+00:02:42,780 --> 00:02:44,660
+So, instead of saying print all numbers in the list,
+所以，与其说是打印列表中的所有数字，不如说是打印偶数、
+
+37
+00:02:44,690 --> 00:02:49,410
+I only want to say print even numbers in the list structured.
+我只想说打印列表结构中的偶数。
+
+38
+00:02:50,430 --> 00:02:54,060
+How do we change this code to print even numbers in the list?
+我们如何改变这段代码来打印列表中的偶数？
+
+39
+00:02:54,060 --> 00:02:55,440
+Think about it.
+想一想吧。
+
+40
+00:02:55,440 --> 00:03:03,210
+Typically, what we do is, we would add the logic in here. So, we'll say, if this is even, only then print
+通常情况下，我们所做的是，我们会在这里添加逻辑。所以，我们会说，如果这个是偶数，就打印
+
+41
+00:03:03,360 --> 00:03:05,820
+the number out, right?
+的数字，对吗？
+
+42
+00:03:05,850 --> 00:03:07,230
+So, let's do that.
+所以，让我们这样做吧。
+
+43
+00:03:07,230 --> 00:03:08,580
+So, if even,
+那么，如果是偶数、
+
+44
+00:03:08,580 --> 00:03:12,670
+how can I check that the number is even? If(number), we can divide
+我怎样才能检查这个数字是偶数呢？如果(数)，我们可以除以
+
+45
+00:03:12,720 --> 00:03:17,490
+by two. So number%2==0.
+除以2。所以number%2==0。
+
+46
+00:03:17,520 --> 00:03:22,770
+So, we are dividing by two and checking the remainder. So, number%2 divides the number by two and checks
+所以，我们要除以2并检查余数。所以，number%2除以2并检查
+
+47
+00:03:22,770 --> 00:03:23,370
+the remainder.
+余数。
+
+48
+00:03:23,400 --> 00:03:27,780
+If it's zero,  then what do we want to do? Yes, we would want to print the number out.
+如果是零，那么我们要做什么？是的，我们想把这个数字打印出来。
+
+49
+00:03:28,540 --> 00:03:30,930
+So, let's format this out.
+所以，让我们把这个格式化出来。
+
+50
+00:03:31,120 --> 00:03:39,630
+And now, if I call this, so printEvenNumbersInListStructured, I can copy and paste this in but then
+现在，如果我调用这个，那么printEvenNumbersInListStructured，我可以复制并粘贴这个，但这样的话
+
+51
+00:03:39,630 --> 00:03:41,670
+I would be repeating the list.
+我将会重复这个列表。
+
+52
+00:03:41,670 --> 00:03:42,810
+I don't really want to do that.
+我真的不想这样做。
+
+53
+00:03:42,810 --> 00:03:48,810
+So, what we'll do is, let's extract this list to a local variable. So, right-click, List factor, extract to
+所以，我们要做的是，让我们把这个列表提取到一个局部变量。所以，右键单击，列表因子，提取到
+
+54
+00:03:48,810 --> 00:03:57,300
+a local variable and local variable that I would want to create is numbers and over here, what we want
+我想创建的局部变量是数字，在这里，我们要做的是
+
+55
+00:03:57,300 --> 00:04:02,430
+to do is, we would want to print all the even numbers in the list. Right.
+要做的是，我们要打印列表中的所有偶数。对。
+
+56
+00:04:02,450 --> 00:04:04,230
+So, that's basically what we want to do.
+所以，这基本上就是我们想要做的事情。
+
+57
+00:04:04,230 --> 00:04:13,780
+So we are using the Structured approach and let's run as Java Application. What would happen? Cool. Only the even
+所以我们使用结构化方法，让我们作为Java应用程序运行。会发生什么？很酷。只有偶数
+
+58
+00:04:13,780 --> 00:04:15,390
+numbers are getting printed.
+数字被打印出来。
+
+59
+00:04:15,550 --> 00:04:19,600
+Now how do we do the same thing in a Functional approach?
+现在，我们如何在Functional方法中做同样的事情？
+
+60
+00:04:19,600 --> 00:04:25,570
+How do I do that in a FP01functional class? Let's see how to do that right now.
+如何在FP01functional类中做到这一点？我们现在就来看看如何做到这一点。
+
+61
+00:04:25,910 --> 00:04:28,730
+So, I'll copy the existing method. As usual,
+所以，我将复制现有的方法。像往常一样、
+
+62
+00:04:28,730 --> 00:04:35,420
+I'll call this printEvenNumbersInListFunctional and over here,
+我把这个方法叫做printEvenNumbersInListFunctional，然后在这里、
+
+63
+00:04:35,440 --> 00:04:44,920
+what we want to do is, we'd want to only look at the numbers which are even. So how do I add additional logic
+我们想做的是，我们想只看偶数的数字。那么我如何在这里添加额外的逻辑
+
+64
+00:04:44,920 --> 00:04:53,190
+in here. I can add a Filter in here. I'll say, only allow even numbers.
+在这里。我可以在这里添加一个过滤器。我会说，只允许偶数。
+
+65
+00:04:53,260 --> 00:04:58,430
+How can I add a Filter? The way I can do that is by saying .filter.
+我怎样才能添加一个过滤器呢？我可以通过说.filter来做到这一点。
+
+66
+00:04:59,050 --> 00:05:06,160
+Now, how do I decide if something is even? Let's create a static method for it, for now. I'll call this private
+现在，我如何决定一个东西是否是偶数？让我们为它创建一个静态方法，现在。我把这个方法称为私有
+
+67
+00:05:06,160 --> 00:05:16,560
+static, this return whether it's even or not. So I'll say boolean, private static boolean isEven
+static，这个方法返回它是否是偶数。所以我会说布尔值，私有静态布尔值isEven
+
+68
+00:05:16,570 --> 00:05:18,120
+and let's pass the number to it.
+让我们把数字传给它。
+
+69
+00:05:18,150 --> 00:05:24,200
+So, int number and this would return.
+所以，int number，这个会返回。
+
+70
+00:05:24,200 --> 00:05:25,190
+What does it return?
+它的返回值是什么？
+
+71
+00:05:25,190 --> 00:05:27,400
+number%2
+number%2
+
+72
+00:05:27,400 --> 00:05:29,000
+is equal to, is equal to zero.
+等于，等于零。
+
+73
+00:05:30,450 --> 00:05:31,500
+This is simple logic. Right?
+这就是简单的逻辑。对吗？
+
+74
+00:05:31,530 --> 00:05:36,730
+All that it does is, it divides the number by two, checks the remainder, and if the remainder is zero, it returns a
+它所做的就是，将数字除以2，检查余数，如果余数为零，它就返回一个
+
+75
+00:05:36,740 --> 00:05:37,310
+'true' back.
+'真'返回。
+
+76
+00:05:37,320 --> 00:05:39,400
+Otherwise it returns a 'false' back.
+否则它返回一个 "假"。
+
+77
+00:05:39,400 --> 00:05:44,180
+What do you want to do is, we would want to call this method on each of these numbers.
+你想做的是，我们想在这些数字中的每一个上调用这个方法。
+
+78
+00:05:44,190 --> 00:05:49,950
+And only if it is true, we'd want to print the number. So you'd want to do a forEach,
+只有当它为真时，我们才想打印这个数字。所以你想做一个forEach、
+
+79
+00:05:49,980 --> 00:05:51,560
+only for the numbers
+只对那些
+
+80
+00:05:51,630 --> 00:05:54,390
+where isEven is returning true.
+其中isEven返回true。
+
+81
+00:05:54,390 --> 00:05:56,480
+How do we do that in the Functional approach?
+我们如何在函数式方法中做到这一点呢？
+
+82
+00:05:56,480 --> 00:05:58,860
+The way we can do that is by creating a filter.
+我们可以通过创建一个过滤器来做到这一点。
+
+83
+00:05:58,890 --> 00:06:04,840
+So I said .filter and over here, I can say isEven.
+所以我说.filter，在这里，我可以说isEven。
+
+84
+00:06:04,980 --> 00:06:12,630
+And because this is a static method, the way we can define that is by using a method reference FP01
+因为这是一个静态方法，我们可以通过使用方法引用FP01来定义它。
+
+85
+00:06:12,630 --> 00:06:14,160
+Functional colon
+功能性冒号
+
+86
+00:06:14,160 --> 00:06:20,980
+colon isEven. The important thing in the method reference is that we are not really calling it, we are
+冒号isEven。方法引用的重要之处在于，我们并没有真正调用它，我们并没有
+
+87
+00:06:20,980 --> 00:06:25,240
+not really calling it. We are just saying, okay, this is a method to be called.
+不是真正的调用。我们只是说，好吧，这是一个要被调用的方法。
+
+88
+00:06:25,240 --> 00:06:33,550
+We are declaring that this is a method to be called on each of the numbers and if it returns true back,
+我们声明这是一个在每个数字上被调用的方法，如果它返回真值、
+
+89
+00:06:34,030 --> 00:06:36,130
+only then go to the next line of code.
+然后再转到下一行代码。
+
+90
+00:06:36,520 --> 00:06:46,790
+So, let's move this comment out, down to this side and let's now execute this. Let's quickly create a local
+所以，让我们把这个注释移出来，移到这一边，现在我们来执行这个。让我们迅速为这个列表创建一个本地
+
+91
+00:06:46,790 --> 00:06:54,170
+variable for this list as well, numbers. And what we want to do is, copy this and we would want to print
+变量，也就是数字。我们要做的是，复制这个，我们要打印出
+
+92
+00:06:54,620 --> 00:06:56,030
+even numbers in the list.
+列表中的偶数。
+
+93
+00:06:56,030 --> 00:06:57,780
+Let's comment this out.
+让我们把这个注释出来。
+
+94
+00:06:57,780 --> 00:07:01,000
+Let's quickly run this and see what would happen.
+让我们快速运行这个，看看会发生什么。
+
+95
+00:07:01,280 --> 00:07:02,990
+Do we get only even numbers?
+我们是否只得到偶数？
+
+96
+00:07:02,990 --> 00:07:03,600
+Yup.
+是的。
+
+97
+00:07:03,830 --> 00:07:05,560
+That's cool.
+这很好。
+
+98
+00:07:05,680 --> 00:07:10,070
+Now, we saw that we were able to print all the even numbers in the list.
+现在，我们看到我们能够打印列表中所有的偶数。
+
+99
+00:07:10,610 --> 00:07:17,780
+Once again, you can see the fact that once we have a stream of numbers, all that we needed to do was add
+再一次，你可以看到这样一个事实：一旦我们有了一个数字流，我们所需要做的就是添加
+
+100
+00:07:17,780 --> 00:07:18,430
+a check.
+一个校验。
+
+101
+00:07:18,440 --> 00:07:27,020
+So, for each number, do this check. If that check is true, then you can actually go ahead and print the
+所以，对于每个数字，做这个检查。如果这个检查是真的，那么你就可以继续打印这个
+
+102
+00:07:27,170 --> 00:07:28,330
+number out.
+数字了。
+
+103
+00:07:28,820 --> 00:07:34,880
+Now, again you might be thinking that this method is a little bit more complex than this structured approach
+现在，你可能又在想，这个方法比这个结构化的方法要复杂一些
+
+104
+00:07:35,180 --> 00:07:40,160
+because we needed to use a method called isEven.
+因为我们需要使用一个叫做isEven的方法。
+
+105
+00:07:40,430 --> 00:07:43,630
+How would it be, if I can actually directly define the entire
+如果我真的可以直接定义整个
+
+106
+00:07:43,630 --> 00:07:46,570
+isEven method in here.
+isEven方法。
+
+107
+00:07:47,480 --> 00:07:53,240
+Instead of actually creating a separate method, having a return value, having the parameters defined,
+而不是实际创建一个单独的方法，有一个返回值，有定义的参数、
+
+108
+00:07:53,510 --> 00:07:59,690
+having the body, having the return and all that, can we do it in a simpler way and directly define the
+有主体，有返回等等，我们能不能用一种更简单的方式，直接在这里定义这个
+
+109
+00:07:59,690 --> 00:08:01,310
+method in here.
+方法。
+
+110
+00:08:01,790 --> 00:08:05,380
+Let's look at that in the subsequent step. Until then,
+让我们在接下来的步骤中看看这个问题。在那之前、
+
+111
+00:08:05,530 --> 00:08:06,030
+bye, bye.
+拜拜，拜拜。
+

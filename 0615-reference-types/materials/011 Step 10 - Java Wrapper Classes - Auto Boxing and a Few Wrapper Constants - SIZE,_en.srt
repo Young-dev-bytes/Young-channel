@@ -1,0 +1,184 @@
+1
+00:00:02,070 --> 00:00:03,540
+Welcome back.
+
+2
+00:00:03,540 --> 00:00:08,880
+In this video, we would talk about one of the new features in Java 5, which is called Auto Boxing, which
+
+3
+00:00:08,880 --> 00:00:13,560
+allows you to write code with primitive values, but compiler does a lot of work for you and converts 
+
+4
+00:00:13,560 --> 00:00:14,960
+them into wrappers.
+
+5
+00:00:15,030 --> 00:00:21,260
+And also, we would look at a few constants that are defined inside these wrapper classes.
+
+6
+00:00:21,270 --> 00:00:25,040
+Let's get started with this concept called Auto Boxing.
+
+7
+00:00:25,080 --> 00:00:33,930
+So, I said the way you would create a wrapper class is by saying Integer seven = Integer.valueOf(7)
+
+8
+00:00:34,200 --> 00:00:35,370
+,
+
+9
+00:00:35,430 --> 00:00:35,710
+right.
+
+10
+00:00:36,180 --> 00:00:38,140
+So, this is the way
+
+11
+00:00:38,160 --> 00:00:40,100
+we were creating wrapper classes until now.
+
+12
+00:00:40,440 --> 00:00:45,620
+But this is too long a way because you can do this as well.
+
+13
+00:00:45,720 --> 00:00:49,260
+What is happening in here is Auto Boxing.
+
+14
+00:00:49,260 --> 00:00:56,070
+What happens is when you do this, Java in the background would do this, Integer.valueOf(7) and create
+
+15
+00:00:56,070 --> 00:01:00,380
+an instance of it and put the reference of it in seven.
+
+16
+00:01:00,390 --> 00:01:04,230
+This feature in Java is called Auto boxing.
+
+17
+00:01:04,230 --> 00:01:09,320
+The important thing is Auto Boxing uses Integer.valueOf
+
+18
+00:01:09,330 --> 00:01:13,340
+and we know that Integer.valueOf uses all the things again.
+
+19
+00:01:13,350 --> 00:01:20,700
+So, if I create something like sevenAgain and = 7, because these are using Integer.valueOf,
+
+20
+00:01:20,840 --> 00:01:25,560
+you would see that these are referring to the same variable. So, if I say seven == sevenAgain,
+
+21
+00:01:25,780 --> 00:01:32,640
+you would see that the value is true. Auto Boxing uses Integer.valueOf. The existing objects,
+
+22
+00:01:32,670 --> 00:01:39,330
+the existing wrapper class objects are reused and you can see that the same reference is present in both
+
+23
+00:01:39,330 --> 00:01:46,350
+seven and sevenAgain. Auto Boxing is a very important thing. At later stage, we would also look at how do we use
+
+24
+00:01:46,470 --> 00:01:54,090
+Auto Boxing to add primitive values to a collection. Features like this are called syntactic sugar,
+
+25
+00:01:54,090 --> 00:01:54,680
+right.
+
+26
+00:01:54,700 --> 00:01:57,570
+Who wants to type in the extra characters?
+
+27
+00:01:57,600 --> 00:01:58,460
+I'm a lazy guy
+
+28
+00:01:58,530 --> 00:02:00,640
+and so I guess, would be you.
+
+29
+00:02:00,660 --> 00:02:05,880
+So, we don't really want to type in a lot of code and that's where features like Auto Boxing would really
+
+30
+00:02:05,940 --> 00:02:06,640
+help.
+
+31
+00:02:06,780 --> 00:02:12,840
+Having looked at all these features on the wrapper classes, the last thing which we want to talk about wrapper
+
+32
+00:02:12,840 --> 00:02:17,470
+classes is the different constants, which are defined on each of these wrapper classes.
+
+33
+00:02:17,490 --> 00:02:21,740
+So, if you look at the wrapper classes, they have a MAX_VALUE.
+
+34
+00:02:21,810 --> 00:02:25,120
+It indicates what max value can a integer hold.
+
+35
+00:02:25,140 --> 00:02:31,140
+They also have a MIN_VALUE; what is the minimum value that an integer can hold. If you want to find the
+
+36
+00:02:31,140 --> 00:02:33,180
+size of an integer,
+
+37
+00:02:33,180 --> 00:02:39,310
+you can do that as well and you can get the size in bytes as well. So, size is in bits.
+
+38
+00:02:39,330 --> 00:02:46,830
+So, this is 32 bits and this is 4 bytes. These kind of constants are present on all the wrapper classes.
+
+39
+00:02:47,100 --> 00:02:52,440
+In this video and the previous sets of videos, we looked at wrapper classes, we looked at the fact that
+
+40
+00:02:52,450 --> 00:02:57,900
+they're immutable, we looked at the fact that there are a wide variety of features that these wrapper
+
+41
+00:02:57,900 --> 00:03:04,200
+classes offer, and we looked at the fact that we should always use valueOf instead of using new with
+
+42
+00:03:04,380 --> 00:03:09,600
+the wrapper classes. We also looked at the various constants that are present in this wrapper class like
+
+43
+00:03:09,600 --> 00:03:15,300
+MAX_VALUE, MIN_VALUE, SIZE, and BYTES which would help us get more information about what kind of values
+
+44
+00:03:15,300 --> 00:03:18,750
+you can store into these wrapper classes.
+
+45
+00:03:18,750 --> 00:03:24,450
+I'll see you in the next video where we would start discussing about a brand new topic.
+
+46
+00:03:24,450 --> 00:03:25,420
+Until then, bye bye.
+

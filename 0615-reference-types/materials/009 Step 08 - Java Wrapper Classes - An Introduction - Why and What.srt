@@ -1,0 +1,185 @@
+1
+00:00:02,540 --> 00:00:04,420
+Welcome back.
+欢迎回来。
+
+2
+00:00:04,430 --> 00:00:10,070
+In this video, we would start discussing about wrapper classes. We will try and understand what are wrapper
+在这段视频中，我们将开始讨论包装器类的问题。我们将尝试并理解什么是包装器
+
+3
+00:00:10,070 --> 00:00:15,590
+classes and also we'd discuss about why do we need wrapper classes.
+类，同时我们也会讨论为什么我们需要包装器类。
+
+4
+00:00:15,590 --> 00:00:17,690
+What are wrapper classes?
+什么是封装器类？
+
+5
+00:00:18,050 --> 00:00:22,870
+So, we know that there are a lot of primitive variable types that we have already discussed about, right.
+所以，我们知道有很多原始变量类型，我们已经讨论过了，对吧。
+
+6
+00:00:22,880 --> 00:00:26,020
+So, boolean, byte, char, double, float,
+所以，布尔型、字节型、图表型、双倍型、浮点型。
+
+7
+00:00:26,030 --> 00:00:29,890
+int is the one which we used frequently, long, and short.
+int是我们经常使用的一种类型，还有long和short。
+
+8
+00:00:30,140 --> 00:00:31,970
+The thing is, in Java,
+问题是，在Java中。
+
+9
+00:00:31,970 --> 00:00:41,270
+there are corresponding classes for each of these primitive types. So, these classes are called wrapper
+这些原始类型的每一个都有相应的类。所以，这些类被称为包装器
+
+10
+00:00:41,450 --> 00:00:45,900
+classes, because they are like a wrapper around this value.
+类，因为它们就像是这个值的一个包装。
+
+11
+00:00:45,920 --> 00:00:53,450
+So, if I take int, the wrapper class is Integer. All the other ones are exactly the same names, so boolean,
+所以，如果我拿int来说，包装器类就是Integer。其他的都是完全一样的名字，所以是布尔型。
+
+12
+00:00:53,450 --> 00:00:57,230
+Boolean except for char as well. So, char is Character.
+布尔类，除了char也是如此。所以，char是Character。
+
+13
+00:00:57,230 --> 00:01:02,900
+So, the wrapper class for char is Character, for int is Integer and all the others is just the same
+所以，char的封装类是Character，int的封装类是Integer，其他的都是一样的
+
+14
+00:01:02,900 --> 00:01:06,200
+name with a capital alphabet starting off.
+名称，并以大写字母开头。
+
+15
+00:01:06,200 --> 00:01:09,540
+This is how your wrapper classes are now.
+这就是你的封装类现在的样子。
+
+16
+00:01:09,620 --> 00:01:14,590
+The question might be, okay, if I have primitive values why do I really need a wrapper class?
+问题可能是，好吧，如果我有原始值，为什么我真的需要一个封装类？
+
+17
+00:01:14,600 --> 00:01:16,790
+Why do I need a wrapper class?
+为什么我需要一个包装器类呢？
+
+18
+00:01:16,790 --> 00:01:23,180
+The thing about wrapper classes is, they offer you a lot of options, additional options.
+关于包装器类的问题是，它们为你提供了很多选择，额外的选择。
+
+19
+00:01:23,180 --> 00:01:29,120
+Let's say I would want to create a boolean value from a string or I would want to create a integer value
+比方说，我想从一个字符串创建一个布尔值，或者我想从一个字符串创建一个整数值。
+
+20
+00:01:29,120 --> 00:01:30,500
+from a string.
+或者我想从一个字符串中创建一个整数值。
+
+21
+00:01:30,530 --> 00:01:33,620
+You can do that using wrapper classes.
+你可以用包装器类来做这些。
+
+22
+00:01:33,710 --> 00:01:38,210
+The other things that wrapper class provides are a number of utility methods.
+包装器类提供的其他东西是一些实用方法。
+
+23
+00:01:38,570 --> 00:01:45,890
+So, let's say, I have a float and I would want the integer value of that specific float.
+所以，比方说，我有一个浮点数，我想得到这个特定浮点数的整数值。
+
+24
+00:01:45,890 --> 00:01:48,400
+I can use a intValue( ) method.
+我可以使用一个intValue( )方法。
+
+25
+00:01:48,540 --> 00:01:53,960
+Let's say I want to convert a string which is in binary format. So, binary is 0 and 1s.
+比方说，我想转换一个二进制格式的字符串。所以，二进制是0和1。
+
+26
+00:01:53,990 --> 00:02:00,670
+So, let's say, I have a string in the binary format and I would want to convert it into integer representation.
+所以，比方说，我有一个二进制格式的字符串，我想把它转换为整数表示。
+
+27
+00:02:00,680 --> 00:02:07,250
+There are a lot of utility methods like this which are offered by the wrapper classes. And also, wrapper
+有很多像这样的实用方法，是由包装器类提供的。另外，包装器
+
+28
+00:02:07,250 --> 00:02:07,730
+classes
+类
+
+29
+00:02:07,730 --> 00:02:12,910
+allow you to store primitive values into a collection.
+允许你将原始值存储到一个集合中。
+
+30
+00:02:12,980 --> 00:02:17,270
+We will talk about collections, a little later. If you want to add anything to a collection,
+我们将在稍后讨论集合的问题。如果你想在一个集合中添加任何东西。
+
+31
+00:02:17,330 --> 00:02:25,100
+it must be an object and wrapper classes provide the objects around these primitives. Don't really worry
+它必须是一个对象，而包装器类提供了围绕这些基元的对象。不要担心
+
+32
+00:02:25,100 --> 00:02:29,450
+if you are not able to understand these methods, we would discuss them in detail a little later.
+如果你不能理解这些方法，我们将在稍后详细讨论它们。
+
+33
+00:02:29,450 --> 00:02:34,640
+The idea behind this video was to introduce you to the concept of wrapper classes and understand why
+这段视频的目的是向你介绍包装器类的概念，并理解为什么我们需要包装器类。
+
+34
+00:02:34,640 --> 00:02:36,400
+do we need wrapper classes.
+我们为什么需要包装器类。
+
+35
+00:02:36,440 --> 00:02:41,600
+We'll discuss about each of these wrapper classes and some of the important methods which are present
+我们将在下一个视频中讨论每个封装类和其中的一些重要方法。
+
+36
+00:02:41,630 --> 00:02:43,640
+in them in the next video.
+以及其中的一些重要方法，将在下一个视频中讨论。
+
+37
+00:02:43,670 --> 00:02:44,600
+Until then, bye bye.
+在那之前，再见了。
+

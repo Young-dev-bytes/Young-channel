@@ -1,0 +1,112 @@
+1
+00:00:02,009 --> 00:00:03,690
+Welcome back.
+
+2
+00:00:03,690 --> 00:00:09,210
+In this section on reference types, we looked at what is the difference between a reference variable
+
+3
+00:00:09,330 --> 00:00:11,130
+and a primitive variable.
+
+4
+00:00:11,130 --> 00:00:12,800
+We looked at the different primitive types.
+
+5
+00:00:12,810 --> 00:00:18,270
+We looked at a few reference variables, how they are stored in memory, how they are initialized, and how
+
+6
+00:00:18,270 --> 00:00:21,030
+does assignment and equality work with them.
+
+7
+00:00:21,030 --> 00:00:25,080
+We also discussed a few reference types which are built-in in Java.
+
+8
+00:00:25,080 --> 00:00:27,110
+We talked in depth about the String class.
+
+9
+00:00:27,120 --> 00:00:31,620
+We discussed a couple of alternatives for it: StringBuilder and StringBuffer.
+
+10
+00:00:31,620 --> 00:00:37,200
+We also looked at a wide variety of puzzles which are related to String and we also discussed about
+
+11
+00:00:37,380 --> 00:00:38,850
+wrapper classes.
+
+12
+00:00:38,940 --> 00:00:44,280
+We discussed about the eight wrapper classes which are present in Java, which are exactly corresponding to
+
+13
+00:00:44,280 --> 00:00:46,500
+the eight primitive types.
+
+14
+00:00:46,500 --> 00:00:51,660
+We discussed why we need wrapper classes and also  a variety of methods which are present in the wrapper
+
+15
+00:00:51,660 --> 00:00:52,770
+classes as well.
+
+16
+00:00:52,920 --> 00:00:59,340
+And, at the end of this section, we looked at LocalDate, LocalDateTime, and LocalTime APIs. We looked
+
+17
+00:00:59,340 --> 00:01:04,910
+at different methods to get specific data from the date, to get generic data like leap year, or length of
+
+18
+00:01:04,920 --> 00:01:10,590
+the month, or length the year, and also we looked at different methods to compare with other dates as well
+
+19
+00:01:10,590 --> 00:01:15,170
+as to add a specific number of days, months, or years to a specific date.
+
+20
+00:01:15,960 --> 00:01:23,610
+This was one of the first sections where we tried to explore some of the inbuilt APIs in Java. Exploring
+
+21
+00:01:23,610 --> 00:01:29,580
+APIs can get a little boring at times, but it's very important to understand what you can do and what
+
+22
+00:01:29,580 --> 00:01:30,740
+you cannot do
+
+23
+00:01:30,840 --> 00:01:36,600
+and once you know what you can do, you can easily explore and try to find the right method to do that
+
+24
+00:01:36,600 --> 00:01:37,890
+specific thing.
+
+25
+00:01:37,890 --> 00:01:40,610
+I hope you had a interesting time in this section.
+
+26
+00:01:40,610 --> 00:01:42,590
+I'll see you in the next section.
+
+27
+00:01:42,660 --> 00:01:43,200
+Until then,
+
+28
+00:01:43,300 --> 00:01:43,500
+bye bye.
+

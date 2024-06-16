@@ -1,0 +1,184 @@
+1
+00:00:03,090 --> 00:00:04,700
+Welcome back.
+
+2
+00:00:04,710 --> 00:00:10,700
+In this video, let's explore how to explore different APIs using Eclipse.
+
+3
+00:00:10,860 --> 00:00:16,230
+So, let's say I would want to find out everything there is to find out about the List interface.
+
+4
+00:00:16,230 --> 00:00:17,340
+How do I do that?
+
+5
+00:00:17,370 --> 00:00:24,390
+You can type in Control Shift T or Command Shift T and choose the List class. Type in List and you can
+
+6
+00:00:24,390 --> 00:00:28,260
+choose the List class inside Java SE 9.0.1
+
+7
+00:00:28,400 --> 00:00:30,190
+So, let's make sure I'm using the right one. So,
+
+8
+00:00:30,210 --> 00:00:35,190
+this is the interface that I would want to choose, Java util. Over here,
+
+9
+00:00:35,200 --> 00:00:41,590
+once you go into a class, you can see the entire source code related to that specific class.
+
+10
+00:00:41,830 --> 00:00:47,230
+If you'd want to understand what it is all about, you can try and read the description which is present
+
+11
+00:00:47,320 --> 00:00:48,730
+at the top.
+
+12
+00:00:48,730 --> 00:00:51,520
+Also present is the list of the methods.
+
+13
+00:00:51,550 --> 00:00:57,790
+You can also type in Control O or Command O. Control O or command O will get you to the list of the methods
+
+14
+00:00:57,790 --> 00:00:59,230
+which are present in here. So, 
+
+15
+00:00:59,230 --> 00:01:04,720
+you can see all the individual methods and if you want to look at a specific one, then you can say
+
+16
+00:01:05,019 --> 00:01:10,300
+okay, I would want to understand the sort method and you can see the syntax of it and also, you can see
+
+17
+00:01:10,300 --> 00:01:12,760
+the Java doc related to that.
+
+18
+00:01:12,760 --> 00:01:16,330
+These are long thing and you can read that it's related to a sort.
+
+19
+00:01:16,930 --> 00:01:18,450
+So, this is one of the ways,
+
+20
+00:01:18,460 --> 00:01:24,250
+right. So, if you'd want to directly type in something, you can directly type in Java.util.list 
+
+21
+00:01:24,280 --> 00:01:32,780
+and go there. The other way is, let's say, I'd want to say List list = new ArrayList( ), right. So,
+
+22
+00:01:32,830 --> 00:01:39,020
+let's say, this is the code I am using and I press Control 1 or Command 1 to import the Arraylist
+
+23
+00:01:39,260 --> 00:01:43,670
+and Control 1 or Command 1 to import the List as well.
+
+24
+00:01:43,670 --> 00:01:50,990
+Once you do this, you can do a Control or Command and Click. So, Control or Command and Click. So, press
+
+25
+00:01:50,990 --> 00:01:54,020
+Control and Click or press Command and Click.
+
+26
+00:01:54,050 --> 00:01:56,230
+It would also take you to the same place.
+
+27
+00:01:56,240 --> 00:02:02,880
+Now I can look at all the documentation behind the ArrayList class as well. So,
+
+28
+00:02:02,890 --> 00:02:06,860
+this is the way you can explore API in Eclipse.
+
+29
+00:02:06,920 --> 00:02:13,100
+You can also look at the methods which are present by pressing Control O or Command O. If you want to understand
+
+30
+00:02:13,100 --> 00:02:17,900
+the type hierarchy of list, what are the implementation of the list, all that you need to do is say, right
+
+31
+00:02:17,900 --> 00:02:24,440
+click on the List and say Open Type Hierarchy. That shows the entire Type Hierarchy. So, you can see that
+
+32
+00:02:24,440 --> 00:02:29,600
+list interface is implemented by AbstractList, ArrayList, CopyOnWriteArrayList, and lot of other
+
+33
+00:02:29,600 --> 00:02:35,300
+stuff. You can see what are the different elements, methods, which are present in each of these classes
+
+34
+00:02:35,330 --> 00:02:36,740
+as well.
+
+35
+00:02:36,740 --> 00:02:41,480
+If you don't really want all the details, but you just want to have a Quick Type Hierarchy, you can say
+
+36
+00:02:41,600 --> 00:02:47,810
+right click and Quick Type Hierarchy and this would show the high-level overview of the type hierarchy of
+
+37
+00:02:47,810 --> 00:02:53,570
+that specific interface or the class. In this quick video, we wanted to give you an overview of how to
+
+38
+00:02:53,570 --> 00:02:57,600
+explore different APIs using Eclipse.
+
+39
+00:02:57,620 --> 00:03:03,710
+You can also get the same information by going to Google. All that you need to do is, go to Google and
+
+40
+00:03:03,710 --> 00:03:09,710
+type in the interface, list interface I would want to find out more about. So, Java list, I would want to
+
+41
+00:03:09,710 --> 00:03:15,740
+find the documentation related to Java 9. So, I put in jdk 9 and typed in Javadoc. Once you
+
+42
+00:03:15,740 --> 00:03:22,370
+go in here, you can go ahead and explore the different things related to the list interface. You can see
+
+43
+00:03:22,400 --> 00:03:28,400
+which module it is present, in which package it's present in. You can see all these super interfaces, sub
+
+44
+00:03:28,400 --> 00:03:35,300
+interfaces, all the implementing classes, and you can see the description, and also overview of the methods,
+
+45
+00:03:35,360 --> 00:03:40,340
+and the description of the methods which are present in here. I hope you had an interesting time in this
+
+46
+00:03:40,340 --> 00:03:43,030
+video. I'll see you in the next one. Until then, bye bye.
+

@@ -1,0 +1,424 @@
+1
+00:00:02,320 --> 00:00:03,550
+Welcome back.
+
+2
+00:00:03,550 --> 00:00:10,060
+In the previous sections and also the little bit of this section until now, we have created classes, created
+
+3
+00:00:10,060 --> 00:00:18,190
+methods in them, created instances of these classes called objects, and we invoked methods on these objects.
+
+4
+00:00:18,190 --> 00:00:25,030
+We also learnt about primitive data types versus the reference types. From this video on,
+
+5
+00:00:25,090 --> 00:00:33,130
+we would start exploring the inbuilt reference types in Java. In the next set of videos, we would be starting
+
+6
+00:00:33,130 --> 00:00:42,460
+to look at String, Wrapper classes, and also a few reference types to refer to it. In this video,
+
+7
+00:00:42,760 --> 00:00:47,830
+let's start with the basics of the String class.
+
+8
+00:00:47,950 --> 00:00:50,410
+Let's start with a simple question.
+
+9
+00:00:50,410 --> 00:00:56,970
+We created a number of literals like this. With in double quotes, we said this is representing text.
+
+10
+00:00:57,070 --> 00:01:04,180
+One interesting thing to note about this strings is, actually this is a instance of a class called String.
+
+11
+00:01:04,180 --> 00:01:05,630
+How can I prove that?
+
+12
+00:01:05,680 --> 00:01:12,680
+All that you need to do is to say, "Test".length( ). Oops!, I am a little too early.
+
+13
+00:01:12,700 --> 00:01:15,200
+I just need to login into JShell first.
+
+14
+00:01:15,370 --> 00:01:18,400
+So, let's log into JShell before I would be able to execute the command.
+
+15
+00:01:18,430 --> 00:01:28,820
+Now I can execute "Test".length( ). I am in JShell right now and it's printing 4. This Test string has four
+
+16
+00:01:28,830 --> 00:01:29,470
+characters,
+
+17
+00:01:29,480 --> 00:01:40,310
+length is a method and Test is an instance, instance of what class? In Java, text is represented by a class
+
+18
+00:01:40,460 --> 00:01:41,720
+called String.
+
+19
+00:01:42,170 --> 00:01:48,780
+If I want to store str as a Test, this is how we would do that. 
+
+20
+00:01:48,790 --> 00:01:57,980
+So, String str = "Test" creates an instance of the Test and stores the reference of it in 
+
+21
+00:01:57,980 --> 00:01:59,290
+str. String
+
+22
+00:01:59,300 --> 00:02:01,760
+is very very special.
+
+23
+00:02:01,760 --> 00:02:06,970
+All the other objects you would need to do something like a new BigDecimal, right. 
+
+24
+00:02:06,980 --> 00:02:16,460
+So, when we did BigDecimal, we said BigDecimal bd = new BigDecimal of let's say 1.0.
+
+25
+00:02:16,490 --> 00:02:19,730
+So, we needed to use a constructor to create it.
+
+26
+00:02:20,360 --> 00:02:28,280
+However with String, you don't really need to use a constructor. Even though if you would want str
+
+27
+00:02:28,280 --> 00:02:28,770
+=
+
+28
+00:02:28,910 --> 00:02:31,270
+you can do new String("Test").
+
+29
+00:02:31,580 --> 00:02:34,610
+You can do that. But that's not really necessary.
+
+30
+00:02:34,670 --> 00:02:40,850
+All that you need to do is String str = "Test" and that's more than sufficient. String
+
+31
+00:02:40,910 --> 00:02:43,700
+is a special class in Java.
+
+32
+00:02:43,790 --> 00:02:47,880
+This Test is an instance of the class, String.
+
+33
+00:02:47,930 --> 00:02:50,060
+This is called a String literal.
+
+34
+00:02:50,570 --> 00:02:53,860
+We looked at the basic method which is present in here, length.
+
+35
+00:02:54,020 --> 00:03:00,440
+We'll start looking at a few other methods which are present in the String class to retrieve the details
+
+36
+00:03:00,560 --> 00:03:04,580
+about a specific string, right. So, in String,
+
+37
+00:03:04,610 --> 00:03:06,490
+the index starts with 0.
+
+38
+00:03:06,500 --> 00:03:07,860
+So, this is 0,
+
+39
+00:03:08,030 --> 00:03:12,080
+this is 1, e is 1, s is 2, and t is 3.
+
+40
+00:03:12,260 --> 00:03:15,090
+So, if you want to get a specific character,
+
+41
+00:03:15,350 --> 00:03:18,700
+so let's say I would want to get the first character of a string,
+
+42
+00:03:18,730 --> 00:03:23,770
+the way I would need to do that is by saying str.charAt(0).
+
+43
+00:03:23,780 --> 00:03:30,020
+The important thing is, the index starts with 0. So, 0, 1, 2, and 3.
+
+44
+00:03:30,110 --> 00:03:44,800
+So, let's quickly check another one str.charAt(2). It returns s. 0 is T, 1, and 2 is s.
+
+45
+00:03:45,130 --> 00:03:46,540
+str.CharAt(3),
+
+46
+00:03:46,540 --> 00:03:47,740
+that's the last character.
+
+47
+00:03:48,180 --> 00:03:55,450
+Let's say I don't want to retrive one character but I would want to retrieve a substring from this particular
+
+48
+00:03:55,450 --> 00:03:55,860
+string.
+
+49
+00:03:55,870 --> 00:04:01,720
+Let's create a more bigger string. So, biggerString = 
+
+50
+00:04:01,930 --> 00:04:08,040
+"This is a lot of text". So, let's say I have this text in here
+
+51
+00:04:08,050 --> 00:04:13,730
+and from this I would want to get the substring starting from 'is', right.
+
+52
+00:04:13,750 --> 00:04:17,829
+So, I would want to get all the characters starting from here.
+
+53
+00:04:17,860 --> 00:04:19,040
+How can I do that?
+
+54
+00:04:19,060 --> 00:04:25,870
+Doing that is called a Substring. Substring methods accepts the index of this character.
+
+55
+00:04:25,870 --> 00:04:28,570
+So, we would need to pass in the index of this character
+
+56
+00:04:28,810 --> 00:04:31,150
+and it would be able to print the rest of the strings.
+
+57
+00:04:31,330 --> 00:04:32,070
+Let's do,
+
+58
+00:04:32,230 --> 00:04:35,640
+biggerString. , I would want to do it from
+
+59
+00:04:35,650 --> 00:04:41,920
+i. So, 0, 1, 2, 3, 4, and 5,
+
+60
+00:04:42,070 --> 00:04:51,140
+biggerString.substring(5). So, it's printing "is a lot of text", right.
+
+61
+00:04:51,200 --> 00:04:56,270
+So, that's how you do a substring. I'm trying to get a part of the string. Here
+
+62
+00:04:56,340 --> 00:05:03,190
+we are specifying the start of the string. But you can also specify start and end also. So, I'm specifying 5
+
+63
+00:05:03,190 --> 00:05:06,390
+as the start and I can specify okay, this is 5,
+
+64
+00:05:06,470 --> 00:05:17,040
+I would want to get up to 6, 7, 8, 9, 10, 11, 12. So, let's say, I would want to get up to t, t is at
+
+65
+00:05:17,100 --> 00:05:23,340
+index 12. So, if you want to get up to character with index 12, then you need to enter 13.
+
+66
+00:05:23,370 --> 00:05:28,480
+So, the important thing to understand is this side is inclusive,
+
+67
+00:05:28,500 --> 00:05:29,930
+this is exclusive.
+
+68
+00:05:29,940 --> 00:05:33,280
+So, this index is not really included.
+
+69
+00:05:33,360 --> 00:05:37,900
+So, the character at index 13 will not be part of the substring.
+
+70
+00:05:37,980 --> 00:05:40,200
+So, the character at index 13, if we do it,
+
+71
+00:05:40,530 --> 00:05:47,440
+so if I do str.charAt(13), you would see that it returns a space back.
+
+72
+00:05:47,670 --> 00:05:53,480
+Oops! I should have actually done biggerString.charAt(13). So, biggerString.charAt(13),
+
+73
+00:05:53,690 --> 00:05:55,790
+it prints a space out.
+
+74
+00:05:55,910 --> 00:06:02,900
+So, this is the space which is present at character 13 and that is not included in the string, because
+
+75
+00:06:03,380 --> 00:06:04,610
+this is exclusive.
+
+76
+00:06:04,640 --> 00:06:11,690
+So, starting from the character at index 5 to 12. So, it's when I pass in a 13, only the character 
+
+77
+00:06:11,690 --> 00:06:15,430
+upto index 12 would be included in the substring.
+
+78
+00:06:15,430 --> 00:06:21,440
+I will recommend you to try and play around with these things charAt, substring and see what you can
+
+79
+00:06:21,440 --> 00:06:22,370
+find.
+
+80
+00:06:22,430 --> 00:06:28,490
+One interesting aspect is, if you try and give a index out of the range of the string, so let's say the
+
+81
+00:06:28,490 --> 00:06:35,030
+string is length 5 and you give an index of 15 then it would throw a StringIndexOutOfBoundsException.
+
+82
+00:06:35,930 --> 00:06:39,550
+Exceptions are Java's way of telling you; Okay buddy,
+
+83
+00:06:39,590 --> 00:06:43,250
+as a programmer you are doing something wrong, I'm throwing you an exception.
+
+84
+00:06:43,250 --> 00:06:47,720
+How can I get the 10th character in a string of length 5? That's wrong.
+
+85
+00:06:47,720 --> 00:06:50,110
+That's an exception.
+
+86
+00:06:50,270 --> 00:06:55,850
+The same kind of exception would happen with charAt, if you do something invalid and the same thing
+
+87
+00:06:55,850 --> 00:06:57,200
+would happen with substring
+
+88
+00:06:57,200 --> 00:07:06,980
+also. So, if I say, charAt(456), 456 is an invalid index. So, it would throw you a IndexOutOfBoundsException.
+
+89
+00:07:07,670 --> 00:07:15,020
+Okay. In this video, what we looked at is number one, we looked at the fact that every string literal is
+
+90
+00:07:15,020 --> 00:07:17,690
+an instance of a class.
+
+91
+00:07:17,720 --> 00:07:23,030
+This is the only type of literal which is a instance of a specific class
+
+92
+00:07:23,030 --> 00:07:27,990
+and also we discussed the fact that string is a special type, in the sense that we did not really need
+
+93
+00:07:27,990 --> 00:07:33,860
+to do a new string to create an instance of the string. All that you need to do is str1 = 
+
+94
+00:07:33,860 --> 00:07:39,690
+"SomeString" and Java would automatically create an object for you.
+
+95
+00:07:39,710 --> 00:07:45,260
+This is something unique to String and also we looked at and also we looked at a few important methods
+
+96
+00:07:45,530 --> 00:07:52,400
+substring and charAt. At the end of this video, we were introduced to a simple concept called exceptions
+
+97
+00:07:52,730 --> 00:07:57,700
+which we will discuss a lot more in a separate section on exceptions.
+
+98
+00:07:57,710 --> 00:08:01,870
+I'll leave this video with an exercise.
+
+99
+00:08:01,970 --> 00:08:09,710
+So, let's say I have a string, right. So, let's say I have a very simple string, String someString =
+
+100
+00:08:09,710 --> 00:08:14,290
+"This is a lot of text
+
+101
+00:08:14,400 --> 00:08:23,310
+again". What I would want to do is, write some code in here which would print individual characters on
+
+102
+00:08:23,430 --> 00:08:30,210
+separate lines. So, the output should be 't' on one line, 'h' on next line, 'i' on next line, 's' on next
+
+103
+00:08:30,210 --> 00:08:32,330
+line, and so on, and so forth.
+
+104
+00:08:32,450 --> 00:08:35,740
+We'll discuss the solution in the next video.
+
+105
+00:08:35,880 --> 00:08:36,370
+Until then,
+
+106
+00:08:36,490 --> 00:08:36,750
+bye bye.
+

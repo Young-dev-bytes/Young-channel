@@ -1,0 +1,287 @@
+1
+00:00:02,140 --> 00:00:03,630
+Welcome back.
+
+2
+00:00:03,640 --> 00:00:09,700
+In the previous steps, we looked at a few functional programming basics. And in this step, let's do a few
+
+3
+00:00:09,700 --> 00:00:13,610
+exercises to try and consolidate our knowledge.
+
+4
+00:00:13,630 --> 00:00:15,230
+Let's start off with a simple exercise.
+
+5
+00:00:15,280 --> 00:00:19,120
+It's to print only the odd numbers from the list.
+
+6
+00:00:19,120 --> 00:00:23,440
+So just like we have the method printEvenNumbersInListFunctional, create another method called
+
+7
+00:00:23,440 --> 00:00:26,480
+printOddNumbersInListFunctional.
+
+8
+00:00:26,480 --> 00:00:32,680
+The second exercise is to print all the courses individually. Instead of using a list of integers,
+
+9
+00:00:32,680 --> 00:00:36,550
+what we are doing in here is, creating a list of String courses
+
+10
+00:00:36,550 --> 00:00:39,420
+and we are creating a number of courses in here.
+
+11
+00:00:39,580 --> 00:00:46,060
+So, we would want to actually take this list and print each course individually on its own line by using
+
+12
+00:00:46,060 --> 00:00:48,250
+Functional programming approaches.
+
+13
+00:00:48,340 --> 00:00:54,250
+The third exercise is to print courses that contain the word Spring. So, print only those courses which
+
+14
+00:00:54,250 --> 00:00:56,280
+contain Spring in them.
+
+15
+00:00:57,300 --> 00:01:04,200
+The fourth exercise is to print courses whose name have at least four letters in them.
+
+16
+00:01:04,900 --> 00:01:10,200
+You can pause the video in here and try these as an exercise. Let's get started.
+
+17
+00:01:10,300 --> 00:01:21,490
+I'll go to our FP01Functional, copy it, and I'll call this FP01Exercises. And over here, what I would
+
+18
+00:01:21,490 --> 00:01:29,240
+want to do is to remove all the commented code out. So I'll remove all this stuff which is not really needed.
+
+19
+00:01:32,440 --> 00:01:38,630
+And the only method that I'm interested in is printEvenNumbersInListFunctional.
+
+20
+00:01:38,680 --> 00:01:40,480
+Cool. We have that ready.
+
+21
+00:01:40,480 --> 00:01:46,660
+What do you want to do is rename this, right click, refactor rename, print even numbers in list.
+
+22
+00:01:46,660 --> 00:01:53,720
+Actually, we'd want to printOddNumbersInList. Right? How do I check whether something is odd? number
+
+23
+00:01:53,720 --> 00:01:56,240
+% 2 == 1.
+
+24
+00:01:56,560 --> 00:02:00,020
+So, if a number leaves a remainder of one when divided by two,
+
+25
+00:02:00,020 --> 00:02:02,170
+it's a odd number.
+
+26
+00:02:02,180 --> 00:02:06,730
+All right. So, that's basically the logic that we are using to print odd numbers.
+
+27
+00:02:06,740 --> 00:02:11,030
+You can also say number%2 !=0.
+
+28
+00:02:11,210 --> 00:02:13,290
+Even this code would work.
+
+29
+00:02:13,580 --> 00:02:16,400
+So is equal to, is equal to one or not equal to zero.
+
+30
+00:02:16,430 --> 00:02:18,680
+Both of these logics should work.
+
+31
+00:02:18,680 --> 00:02:21,600
+So, I'll run this as a Java Application.
+
+32
+00:02:21,600 --> 00:02:22,220
+Cool.
+
+33
+00:02:22,230 --> 00:02:29,230
+Nine, 13, 15. So only the odd numbers which are present in here are being printed out.
+
+34
+00:02:29,360 --> 00:02:33,050
+The second exercise was to print all courses individually.
+
+35
+00:02:33,050 --> 00:02:34,290
+This should be simple. Right?
+
+36
+00:02:34,290 --> 00:02:39,890
+So, what I'll do is, instead of creating separate methods for that, we'll actually directly write the code for it
+
+37
+00:02:40,070 --> 00:02:43,270
+in here. So, I'll create a list of courses.
+
+38
+00:02:43,280 --> 00:02:47,530
+So, if you look at these courses, they are quite a number in here.
+
+39
+00:02:47,690 --> 00:02:55,550
+So Spring, Spring Boot, API, Microservices, AWS, PCF, Azure, Docker, and Kubernetes. You can create
+
+40
+00:02:55,610 --> 00:02:58,630
+a list like this containing your favorite set of courses.
+
+41
+00:02:58,770 --> 00:03:01,160
+And what we'd want to do now is, we'd want to print all of them.
+
+42
+00:03:01,670 --> 00:03:07,730
+So, with Functional programming, the first thing that we would do is we'll convert it into a stream. And
+
+43
+00:03:07,730 --> 00:03:10,450
+for each element inside the stream,
+
+44
+00:03:10,450 --> 00:03:17,620
+what do we want to do? First is, we would want to just print out them. So, System.out::println.
+
+45
+00:03:17,620 --> 00:03:20,500
+Cool. Isn't it easy?
+
+46
+00:03:21,400 --> 00:03:26,140
+Let's comment the earlier one. So, I'll comment
+
+47
+00:03:26,210 --> 00:03:31,460
+these two lines of code and let's execute just this line of code right now.
+
+48
+00:03:31,930 --> 00:03:35,680
+Let's run it as Java Application and see all the courses that are being printed.
+
+49
+00:03:35,720 --> 00:03:38,130
+So that's Exercise 2
+
+50
+00:03:38,300 --> 00:03:39,310
+done.
+
+51
+00:03:39,600 --> 00:03:44,380
+Now, the Exercise 3 was to print only those courses that contain the word Spring.
+
+52
+00:03:44,450 --> 00:03:45,290
+How do we do that?
+
+53
+00:03:46,930 --> 00:03:49,520
+I'll copy this, paste it down,
+
+54
+00:03:52,350 --> 00:03:59,860
+comment this out, and over here what we want to do is to add a filter.
+
+55
+00:04:00,050 --> 00:04:01,070
+And what should be the filter?
+
+56
+00:04:02,870 --> 00:04:04,690
+For every course,
+
+57
+00:04:04,940 --> 00:04:12,500
+only filter the course that contains the sequence Spring.
+
+58
+00:04:12,650 --> 00:04:13,070
+Right?
+
+59
+00:04:13,070 --> 00:04:23,190
+That's what we'd want to do. Let's now try and run this, run as Java Application. Cool. Only
+
+60
+00:04:23,190 --> 00:04:25,740
+Spring and Spring Boot are now being printed.
+
+61
+00:04:25,920 --> 00:04:28,170
+Now, you can pause the video in here and try the last exercise,
+
+62
+00:04:28,170 --> 00:04:34,860
+if you have not tried it yet. What's the last exercise? It's to print courses whose name have at least four letters.
+
+63
+00:04:35,760 --> 00:04:43,080
+So, courses.stream() .filter. I would want to allow only those courses which have at least four characters. So, I
+
+64
+00:04:43,080 --> 00:04:53,700
+would want to eliminate AWS and PCF. How do I do that? Over here I can define course and course dot. Oops!
+
+65
+00:04:53,740 --> 00:04:55,670
+Actually, I should use course in here;
+
+66
+00:04:55,670 --> 00:05:04,260
+so it should not be courses. course, course.length is greater than or equal to four.
+
+67
+00:05:04,660 --> 00:05:08,840
+Now, let's run this. Awesome.
+
+68
+00:05:08,900 --> 00:05:16,260
+Only six courses are being printed out. So, you can see that now we are able to filter the courses that
+
+69
+00:05:16,260 --> 00:05:18,970
+we would want to have. In this quick step,
+
+70
+00:05:18,970 --> 00:05:25,490
+we looked at a few exercises to implement the concepts that we have learned in the previous steps.
+
+71
+00:05:25,490 --> 00:05:27,920
+I'm sure you're having a lot of fun and I'll see you in the next step.
+
+72
+00:05:27,930 --> 00:05:28,770
+Until then bye, bye.

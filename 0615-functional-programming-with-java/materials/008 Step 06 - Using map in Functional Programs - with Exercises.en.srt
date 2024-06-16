@@ -1,0 +1,319 @@
+1
+00:00:02,190 --> 00:00:03,640
+Welcome back.
+
+2
+00:00:03,670 --> 00:00:09,060
+In this step, let's try and add a little bit more complexity into our Functionality.
+
+3
+00:00:09,150 --> 00:00:13,150
+What we'd want to do is, we would want to print squares of numbers.
+
+4
+00:00:13,620 --> 00:00:16,760
+Until now, we have been printing the numbers as is.
+
+5
+00:00:16,820 --> 00:00:20,600
+How about printing the squares of each of these numbers?
+
+6
+00:00:20,900 --> 00:00:21,700
+How do we do that?
+
+7
+00:00:22,530 --> 00:00:23,700
+Let's look at that.
+
+8
+00:00:23,730 --> 00:00:31,040
+So, I'll copy this method out. I'll say printSquaresofEvenNumbers.
+
+9
+00:00:31,040 --> 00:00:34,500
+So let's print squares only of the even numbers in the list.
+
+10
+00:00:34,670 --> 00:00:40,570
+So, we have a stream, we are allowing only the even numbers to go through, and then printing them.
+
+11
+00:00:41,000 --> 00:00:46,220
+However, over here, we would want to actually print the squares of the numbers.
+
+12
+00:00:46,640 --> 00:00:52,860
+How do I do that? The way I can do that is by doing something called a mapping.
+
+13
+00:00:53,300 --> 00:00:57,590
+So, what we'd want to do is, we would want to map each of the element, we would want to take each of the
+
+14
+00:00:57,590 --> 00:01:02,340
+element and map it to the square of the element.
+
+15
+00:01:02,350 --> 00:01:09,810
+So, we'd want to calculate the square of the each element and then print the square of the element.
+
+16
+00:01:09,830 --> 00:01:14,300
+So, how do we do the mapping? The way we can do the mapping is by saying map
+
+17
+00:01:14,630 --> 00:01:18,560
+and you can define the mapper function in here,
+
+18
+00:01:18,560 --> 00:01:25,760
+the mapper lambda expression in here. The mapper lambda expression is, take x or take any number,
+
+19
+00:01:25,760 --> 00:01:31,590
+and once you have the number, what we would want to do with the number? We would want to actually multiply
+
+20
+00:01:31,590 --> 00:01:32,840
+it by itself.
+
+21
+00:01:32,840 --> 00:01:35,510
+So, number * number.
+
+22
+00:01:35,510 --> 00:01:42,990
+So, this expression is called a mapping expression, where we are mapping a number to number into a number.
+
+23
+00:01:43,040 --> 00:01:48,170
+The result of this is at the end of it. The number would be multiplied by itself.
+
+24
+00:01:48,170 --> 00:01:50,150
+So, we'll calculate the square of the number.
+
+25
+00:01:50,150 --> 00:01:53,240
+And after that, the square would be printed.
+
+26
+00:01:53,540 --> 00:01:58,000
+Let's try and run this. Oops.
+
+27
+00:01:58,030 --> 00:02:00,630
+We have not changed the call in here.
+
+28
+00:02:00,670 --> 00:02:06,070
+So, we don't want to print even numbers in the list. We would want to print the squares of all numbers.
+
+29
+00:02:06,400 --> 00:02:15,890
+So, let's do this, printSquaresOfEvenNumbersInListFunctional and let's run this. Run Java application
+
+30
+00:02:15,980 --> 00:02:20,810
+and you can see that squares of all the numbers are being printed out.
+
+31
+00:02:20,900 --> 00:02:28,130
+Now, you can pause the video in here and try and do a few more things as an exercise. The two exercises
+
+32
+00:02:28,190 --> 00:02:30,670
+are Exercise 5 and Exercise 6.
+
+33
+00:02:30,690 --> 00:02:38,000
+Exercise 5 is to print the cubes of only the odd numbers. A cube is nothing, but a number multiplied
+
+34
+00:02:38,000 --> 00:02:39,710
+by itself three times.
+
+35
+00:02:39,710 --> 00:02:47,660
+So, three cube is equal to three into three into three, which is 27. Exercise 6 is to print the
+
+36
+00:02:47,660 --> 00:02:50,890
+number of characters in each course name.
+
+37
+00:02:51,050 --> 00:02:53,000
+So, I would want to print six characters.
+
+38
+00:02:53,030 --> 00:02:54,530
+Here it would be 11 characters,
+
+39
+00:02:54,530 --> 00:02:56,870
+here it would be three. So, instead of printing the course itself,
+
+40
+00:02:56,870 --> 00:03:00,190
+I would want to print the number of characters in that.
+
+41
+00:03:00,240 --> 00:03:04,220
+Now, you can pause the video in here and try those two things as an exercise.
+
+42
+00:03:04,910 --> 00:03:06,260
+Let's go ahead and solve them.
+
+43
+00:03:06,260 --> 00:03:11,650
+So, what we would want to do in the exercise is, I'm in FP01Exercises.java.
+
+44
+00:03:11,810 --> 00:03:19,920
+And what we'd want to do is, printCubesOfOddNumbers. And the way I can do that is very simple, right?
+
+45
+00:03:19,950 --> 00:03:24,540
+I would want to map each element, each number which is present in there.
+
+46
+00:03:24,600 --> 00:03:26,520
+What do I want to do with it?
+
+47
+00:03:26,520 --> 00:03:31,810
+I'd want to multiply by itself three times, number * number * number.
+
+48
+00:03:31,920 --> 00:03:33,000
+That's it.
+
+49
+00:03:34,120 --> 00:03:42,500
+Let's take this and let's use the list of numbers which we have already created and call this in here by
+
+50
+00:03:42,500 --> 00:03:43,880
+passing in numbers.
+
+51
+00:03:47,280 --> 00:03:51,660
+Let's see what would be happening. Run Java Application.
+
+52
+00:03:51,660 --> 00:03:53,670
+The code is a little messy.
+
+53
+00:03:53,940 --> 00:03:57,600
+So you can see that only for the odd numbers, the cubes are being printed.
+
+54
+00:03:57,600 --> 00:04:02,940
+Don't really worry about what's printed after this. This is a result from the courses stuff which is after
+
+55
+00:04:02,940 --> 00:04:04,290
+this.
+
+56
+00:04:04,500 --> 00:04:05,130
+So, that's cool.
+
+57
+00:04:05,130 --> 00:04:07,820
+We are now able to do the cubes of odd numbers.
+
+58
+00:04:07,820 --> 00:04:12,840
+The next exercise was to actually print the length of these courses.
+
+59
+00:04:13,500 --> 00:04:19,050
+How do we print the length of these courses? Let's look at it right now. So what do we want to do?
+
+60
+00:04:19,050 --> 00:04:21,910
+courses.stream().
+
+61
+00:04:21,990 --> 00:04:25,170
+We don't really want to filter anything. For all the courses, what do we want to do?
+
+62
+00:04:25,170 --> 00:04:30,990
+We'd want to print the length. So, we can map each of the courses. So each of the course,
+
+63
+00:04:30,990 --> 00:04:32,500
+what do we want to map it to?
+
+64
+00:04:32,520 --> 00:04:37,630
+We'd want to map it to course.length(). So, map
+
+65
+00:04:37,630 --> 00:04:46,900
+course to course.length() .forEach(System.out::println). Isn't it cool?
+
+66
+00:04:47,700 --> 00:04:50,270
+Let's not really worry about this.
+
+67
+00:04:50,280 --> 00:04:51,780
+Let's comment this out.
+
+68
+00:04:53,000 --> 00:04:55,660
+And let's run this code.
+
+69
+00:04:59,380 --> 00:05:05,840
+You can see, over here, that this is printing the lengths of each one of this. Just to be really really
+
+70
+00:05:06,230 --> 00:05:06,850
+clear,
+
+71
+00:05:08,450 --> 00:05:14,150
+what we'll do is, we'll append the course with the space and the course.length().
+
+72
+00:05:14,660 --> 00:05:17,900
+So, what we are doing in here is, course + " "
+
+73
+00:05:17,920 --> 00:05:21,040
++ course.length. Let's run this.
+
+74
+00:05:24,120 --> 00:05:27,360
+You can see that it's printing Spring 6, Spring Boot 11 characters,
+
+75
+00:05:27,360 --> 00:05:32,050
+API is 3 characters, and so on and so forth.
+
+76
+00:05:32,280 --> 00:05:37,410
+As we discussed before, it's very very important to get your hands dirty with functional programming.
+
+77
+00:05:37,760 --> 00:05:42,150
+We are used to doing the traditional approach for a number of years
+
+78
+00:05:42,330 --> 00:05:49,140
+and there is a lot of unlearning to do before we would get comfortable with functional programming.
+
+79
+00:05:49,140 --> 00:05:52,810
+I hope you're having a lot of fun and I'll see you in the next step. Until then,
+
+80
+00:05:52,960 --> 00:05:53,460
+bye bye.

@@ -1,0 +1,360 @@
+1
+00:00:02,140 --> 00:00:03,630
+Welcome back.
+欢迎回来。
+
+2
+00:00:03,640 --> 00:00:09,700
+In the previous steps, we looked at a few functional programming basics. And in this step, let's do a few
+在前面的步骤中，我们看了一些函数式编程的基础知识。在这一步，让我们做一些
+
+3
+00:00:09,700 --> 00:00:13,610
+exercises to try and consolidate our knowledge.
+练习来巩固我们的知识。
+
+4
+00:00:13,630 --> 00:00:15,230
+Let's start off with a simple exercise.
+让我们从一个简单的练习开始。
+
+5
+00:00:15,280 --> 00:00:19,120
+It's to print only the odd numbers from the list.
+它是只打印列表中的奇数。
+
+6
+00:00:19,120 --> 00:00:23,440
+So just like we have the method printEvenNumbersInListFunctional, create another method called
+所以就像我们有printEvenNumbersInListFunctional这个方法一样，创建另一个方法，叫做
+
+7
+00:00:23,440 --> 00:00:26,480
+printOddNumbersInListFunctional.
+printOddNumbersInListFunctional。
+
+8
+00:00:26,480 --> 00:00:32,680
+The second exercise is to print all the courses individually. Instead of using a list of integers,
+第二个练习是单独打印所有的课程。而不是使用一个整数的列表、
+
+9
+00:00:32,680 --> 00:00:36,550
+what we are doing in here is, creating a list of String courses
+我们在这里所做的是，创建一个字符串课程的列表
+
+10
+00:00:36,550 --> 00:00:39,420
+and we are creating a number of courses in here.
+我们在这里创建了一些课程。
+
+11
+00:00:39,580 --> 00:00:46,060
+So, we would want to actually take this list and print each course individually on its own line by using
+因此，我们希望通过使用函数式编程方法，将这个列表中的每门课程单独打印在自己的行中。
+
+12
+00:00:46,060 --> 00:00:48,250
+Functional programming approaches.
+功能性编程方法。
+
+13
+00:00:48,340 --> 00:00:54,250
+The third exercise is to print courses that contain the word Spring. So, print only those courses which
+第三个练习是打印包含Spring这个词的课程。所以，只打印那些
+
+14
+00:00:54,250 --> 00:00:56,280
+contain Spring in them.
+含有Spring的课程。
+
+15
+00:00:57,300 --> 00:01:04,200
+The fourth exercise is to print courses whose name have at least four letters in them.
+第四项练习是打印名称中至少有四个字母的课程。
+
+16
+00:01:04,900 --> 00:01:10,200
+You can pause the video in here and try these as an exercise. Let's get started.
+你可以在这里暂停视频，把这些作为练习来尝试。让我们开始吧。
+
+17
+00:01:10,300 --> 00:01:21,490
+I'll go to our FP01Functional, copy it, and I'll call this FP01Exercises. And over here, what I would
+我将进入我们的FP01Functional，复制它，并将此称为FP01Exercises。而在这里，我想做的是
+
+18
+00:01:21,490 --> 00:01:29,240
+want to do is to remove all the commented code out. So I'll remove all this stuff which is not really needed.
+想做的是删除所有的注释代码。所以我将删除所有这些并不真正需要的东西。
+
+19
+00:01:32,440 --> 00:01:38,630
+And the only method that I'm interested in is printEvenNumbersInListFunctional.
+而我唯一感兴趣的方法是printEvenNumbersInListFunctional。
+
+20
+00:01:38,680 --> 00:01:40,480
+Cool. We have that ready.
+很好。我们已经准备好了。
+
+21
+00:01:40,480 --> 00:01:46,660
+What do you want to do is rename this, right click, refactor rename, print even numbers in list.
+你想做的是重命名这个，右击，重构重命名，打印列表中的偶数。
+
+22
+00:01:46,660 --> 00:01:53,720
+Actually, we'd want to printOddNumbersInList. Right? How do I check whether something is odd? number
+实际上，我们想打印OddNumbersInList。对吗？如何检查某物是否为奇数？ 数字
+
+23
+00:01:53,720 --> 00:01:56,240
+% 2 == 1.
+% 2 == 1.
+
+24
+00:01:56,560 --> 00:02:00,020
+So, if a number leaves a remainder of one when divided by two,
+所以，如果一个数字在除以2时留下1的余数、
+
+25
+00:02:00,020 --> 00:02:02,170
+it's a odd number.
+它就是一个奇数。
+
+26
+00:02:02,180 --> 00:02:06,730
+All right. So, that's basically the logic that we are using to print odd numbers.
+好的。所以，这基本上就是我们用来打印奇数的逻辑。
+
+27
+00:02:06,740 --> 00:02:11,030
+You can also say number%2 !=0.
+你也可以说number%2 !=0。
+
+28
+00:02:11,210 --> 00:02:13,290
+Even this code would work.
+甚至这段代码也可以。
+
+29
+00:02:13,580 --> 00:02:16,400
+So is equal to, is equal to one or not equal to zero.
+所以等于，等于一或不等于零。
+
+30
+00:02:16,430 --> 00:02:18,680
+Both of these logics should work.
+这两种逻辑都应该是有效的。
+
+31
+00:02:18,680 --> 00:02:21,600
+So, I'll run this as a Java Application.
+所以，我将作为一个Java应用程序运行这个程序。
+
+32
+00:02:21,600 --> 00:02:22,220
+Cool.
+酷。
+
+33
+00:02:22,230 --> 00:02:29,230
+Nine, 13, 15. So only the odd numbers which are present in here are being printed out.
+9、13、15。所以，只有在这里出现的奇数被打印出来了。
+
+34
+00:02:29,360 --> 00:02:33,050
+The second exercise was to print all courses individually.
+第二个练习是单独打印所有课程。
+
+35
+00:02:33,050 --> 00:02:34,290
+This should be simple. Right?
+这应该很简单。对吗？
+
+36
+00:02:34,290 --> 00:02:39,890
+So, what I'll do is, instead of creating separate methods for that, we'll actually directly write the code for it
+所以，我要做的是，不要为它创建单独的方法，我们将直接在这里写代码
+
+37
+00:02:40,070 --> 00:02:43,270
+in here. So, I'll create a list of courses.
+在这里。所以，我将创建一个课程列表。
+
+38
+00:02:43,280 --> 00:02:47,530
+So, if you look at these courses, they are quite a number in here.
+所以，如果你看一下这些课程，它们在这里是相当多的。
+
+39
+00:02:47,690 --> 00:02:55,550
+So Spring, Spring Boot, API, Microservices, AWS, PCF, Azure, Docker, and Kubernetes. You can create
+所以Spring、Spring Boot、API、微服务、AWS、PCF、Azure、Docker和Kubernetes。你可以创建
+
+40
+00:02:55,610 --> 00:02:58,630
+a list like this containing your favorite set of courses.
+像这样一个包含你最喜欢的课程集的列表。
+
+41
+00:02:58,770 --> 00:03:01,160
+And what we'd want to do now is, we'd want to print all of them.
+而我们现在想做的是，我们想把它们全部打印出来。
+
+42
+00:03:01,670 --> 00:03:07,730
+So, with Functional programming, the first thing that we would do is we'll convert it into a stream. And
+所以，通过函数式编程，我们要做的第一件事就是把它转换成一个流。然后
+
+43
+00:03:07,730 --> 00:03:10,450
+for each element inside the stream,
+对于流中的每个元素、
+
+44
+00:03:10,450 --> 00:03:17,620
+what do we want to do? First is, we would want to just print out them. So, System.out::println.
+我们要做什么？首先，我们要把它们打印出来。所以，System.out::println。
+
+45
+00:03:17,620 --> 00:03:20,500
+Cool. Isn't it easy?
+很好。这不是很简单吗？
+
+46
+00:03:21,400 --> 00:03:26,140
+Let's comment the earlier one. So, I'll comment
+让我们评论一下前面的那个。所以，我将注释
+
+47
+00:03:26,210 --> 00:03:31,460
+these two lines of code and let's execute just this line of code right now.
+这两行代码，我们现在只执行这一行代码。
+
+48
+00:03:31,930 --> 00:03:35,680
+Let's run it as Java Application and see all the courses that are being printed.
+让我们把它作为Java应用程序运行，看看所有被打印的课程。
+
+49
+00:03:35,720 --> 00:03:38,130
+So that's Exercise 2
+所以这就是练习2
+
+50
+00:03:38,300 --> 00:03:39,310
+done.
+完成了。
+
+51
+00:03:39,600 --> 00:03:44,380
+Now, the Exercise 3 was to print only those courses that contain the word Spring.
+现在，练习3是只打印那些包含Spring这个词的课程。
+
+52
+00:03:44,450 --> 00:03:45,290
+How do we do that?
+我们如何做到这一点呢？
+
+53
+00:03:46,930 --> 00:03:49,520
+I'll copy this, paste it down,
+我复制这个，粘贴下来、
+
+54
+00:03:52,350 --> 00:03:59,860
+comment this out, and over here what we want to do is to add a filter.
+在这里，我们要做的是添加一个过滤器。
+
+55
+00:04:00,050 --> 00:04:01,070
+And what should be the filter?
+这个过滤器应该是什么？
+
+56
+00:04:02,870 --> 00:04:04,690
+For every course,
+对于每个课程、
+
+57
+00:04:04,940 --> 00:04:12,500
+only filter the course that contains the sequence Spring.
+只过滤包含序列Spring的课程。
+
+58
+00:04:12,650 --> 00:04:13,070
+Right?
+对吗？
+
+59
+00:04:13,070 --> 00:04:23,190
+That's what we'd want to do. Let's now try and run this, run as Java Application. Cool. Only
+这就是我们想要做的。现在让我们试着运行这个，作为Java应用程序运行。酷。只有
+
+60
+00:04:23,190 --> 00:04:25,740
+Spring and Spring Boot are now being printed.
+Spring和Spring Boot现在被打印出来了。
+
+61
+00:04:25,920 --> 00:04:28,170
+Now, you can pause the video in here and try the last exercise,
+现在，你可以暂停这里的视频，试试最后的练习、
+
+62
+00:04:28,170 --> 00:04:34,860
+if you have not tried it yet. What's the last exercise? It's to print courses whose name have at least four letters.
+如果你还没有尝试过。最后一个练习是什么？就是打印名称中至少有四个字母的课程。
+
+63
+00:04:35,760 --> 00:04:43,080
+So, courses.stream() .filter. I would want to allow only those courses which have at least four characters. So, I
+所以， courses.stream() .filter. 我想只允许那些至少有四个字符的课程。所以，我
+
+64
+00:04:43,080 --> 00:04:53,700
+would want to eliminate AWS and PCF. How do I do that? Over here I can define course and course dot. Oops!
+我想排除AWS和PCF。我如何做到这一点呢？在这里我可以定义课程和课程点。糟糕！我应该在这里使用课程！
+
+65
+00:04:53,740 --> 00:04:55,670
+Actually, I should use course in here;
+实际上，我应该在这里使用course；
+
+66
+00:04:55,670 --> 00:05:04,260
+so it should not be courses. course, course.length is greater than or equal to four.
+所以它不应该是course。course，course.length大于或等于4。
+
+67
+00:05:04,660 --> 00:05:08,840
+Now, let's run this. Awesome.
+现在，让我们来运行这个。真棒。
+
+68
+00:05:08,900 --> 00:05:16,260
+Only six courses are being printed out. So, you can see that now we are able to filter the courses that
+只有六个课程被打印出来了。所以，你可以看到，现在我们能够过滤我们想要的课程了。
+
+69
+00:05:16,260 --> 00:05:18,970
+we would want to have. In this quick step,
+我们想拥有的课程。在这个快速步骤中、
+
+70
+00:05:18,970 --> 00:05:25,490
+we looked at a few exercises to implement the concepts that we have learned in the previous steps.
+我们看了一些练习，以实现我们在前面步骤中学到的概念。
+
+71
+00:05:25,490 --> 00:05:27,920
+I'm sure you're having a lot of fun and I'll see you in the next step.
+我相信你一定玩得很开心，我们在下一个步骤见。
+
+72
+00:05:27,930 --> 00:05:28,770
+Until then bye, bye.
+在那之前，拜拜，拜拜。
+

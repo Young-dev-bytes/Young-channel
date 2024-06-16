@@ -1,0 +1,230 @@
+1
+00:00:03,090 --> 00:00:04,700
+Welcome back.
+欢迎回来。
+
+2
+00:00:04,710 --> 00:00:10,700
+In this video, let's explore how to explore different APIs using Eclipse.
+在这个视频中，让我们来探讨一下如何使用Eclipse来探索不同的API。
+
+3
+00:00:10,860 --> 00:00:16,230
+So, let's say I would want to find out everything there is to find out about the List interface.
+那么，假设我想找出有关 List 接口的所有信息。
+
+4
+00:00:16,230 --> 00:00:17,340
+How do I do that?
+我怎么做呢？
+
+5
+00:00:17,370 --> 00:00:24,390
+You can type in Control Shift T or Command Shift T and choose the List class. Type in List and you can
+你可以输入 Control Shift T 或 Command Shift T 并选择 List 类。键入List，你可以
+
+6
+00:00:24,390 --> 00:00:28,260
+choose the List class inside Java SE 9.0.1
+选择Java SE 9.0.1中的List类。
+
+7
+00:00:28,400 --> 00:00:30,190
+So, let's make sure I'm using the right one. So,
+所以，让我们确保我使用的是正确的那一个。所以。
+
+8
+00:00:30,210 --> 00:00:35,190
+this is the interface that I would want to choose, Java util. Over here,
+这是我想选择的接口，Java util。在这里。
+
+9
+00:00:35,200 --> 00:00:41,590
+once you go into a class, you can see the entire source code related to that specific class.
+一旦你进入一个类，你就可以看到与该特定类有关的全部源代码。
+
+10
+00:00:41,830 --> 00:00:47,230
+If you'd want to understand what it is all about, you can try and read the description which is present
+如果你想了解它的全部内容，你可以试着读一读顶部的描述。
+
+11
+00:00:47,320 --> 00:00:48,730
+at the top.
+在顶部。
+
+12
+00:00:48,730 --> 00:00:51,520
+Also present is the list of the methods.
+此外，还有方法的列表。
+
+13
+00:00:51,550 --> 00:00:57,790
+You can also type in Control O or Command O. Control O or command O will get you to the list of the methods
+你也可以输入Control O或Command O，Control O或Command O会让你进入方法列表。
+
+14
+00:00:57,790 --> 00:00:59,230
+which are present in here. So,
+这里面有哪些方法。所以。
+
+15
+00:00:59,230 --> 00:01:04,720
+you can see all the individual methods and if you want to look at a specific one, then you can say
+你可以看到所有单独的方法，如果你想看一个特定的方法，那么你可以说
+
+16
+00:01:05,019 --> 00:01:10,300
+okay, I would want to understand the sort method and you can see the syntax of it and also, you can see
+好的，我想了解排序方法，你可以看到它的语法，还可以看到
+
+17
+00:01:10,300 --> 00:01:12,760
+the Java doc related to that.
+与此相关的Java文档。
+
+18
+00:01:12,760 --> 00:01:16,330
+These are long thing and you can read that it's related to a sort.
+这些都是很长的东西，你可以读到它与一个排序有关。
+
+19
+00:01:16,930 --> 00:01:18,450
+So, this is one of the ways,
+所以，这也是其中一种方法。
+
+20
+00:01:18,460 --> 00:01:24,250
+right. So, if you'd want to directly type in something, you can directly type in Java.util.list
+对。所以，如果你想直接键入一些东西，你可以直接键入Java.util.list
+
+21
+00:01:24,280 --> 00:01:32,780
+and go there. The other way is, let's say, I'd want to say List list = new ArrayList( ), right. So,
+然后去那里。另一种方法是，比方说，我想说List list = new ArrayList( ) ，对。所以。
+
+22
+00:01:32,830 --> 00:01:39,020
+let's say, this is the code I am using and I press Control 1 or Command 1 to import the Arraylist
+比方说，这是我正在使用的代码，我按下Control 1或Command 1来导入Arraylist
+
+23
+00:01:39,260 --> 00:01:43,670
+and Control 1 or Command 1 to import the List as well.
+和Control 1或Command 1来导入List。
+
+24
+00:01:43,670 --> 00:01:50,990
+Once you do this, you can do a Control or Command and Click. So, Control or Command and Click. So, press
+一旦你这样做了，你就可以做一个Control或Command and Click。所以，控制或命令和点击。所以，按
+
+25
+00:01:50,990 --> 00:01:54,020
+Control and Click or press Command and Click.
+Control and Click或按Command and Click。
+
+26
+00:01:54,050 --> 00:01:56,230
+It would also take you to the same place.
+它也会把你带到同一个地方。
+
+27
+00:01:56,240 --> 00:02:02,880
+Now I can look at all the documentation behind the ArrayList class as well. So,
+现在我也可以看看ArrayList类背后的所有文档了。所以。
+
+28
+00:02:02,890 --> 00:02:06,860
+this is the way you can explore API in Eclipse.
+这是你在Eclipse中探索API的方法。
+
+29
+00:02:06,920 --> 00:02:13,100
+You can also look at the methods which are present by pressing Control O or Command O. If you want to understand
+你也可以通过按 Control O 或 Command O 来查看其中的方法。
+
+30
+00:02:13,100 --> 00:02:17,900
+the type hierarchy of list, what are the implementation of the list, all that you need to do is say, right
+列表的类型层次，列表的实现是什么，你所需要做的就是，在列表上点击右键
+
+31
+00:02:17,900 --> 00:02:24,440
+click on the List and say Open Type Hierarchy. That shows the entire Type Hierarchy. So, you can see that
+点击列表，然后说 "打开类型层次结构"。这就显示了整个类型层次结构。所以，你可以看到
+
+32
+00:02:24,440 --> 00:02:29,600
+list interface is implemented by AbstractList, ArrayList, CopyOnWriteArrayList, and lot of other
+list接口是由AbstractList、ArrayList、CopyOnWriteArrayList和很多其他的东西实现的。
+
+33
+00:02:29,600 --> 00:02:35,300
+stuff. You can see what are the different elements, methods, which are present in each of these classes
+的东西。你可以看到这些类中有哪些不同的元素和方法。
+
+34
+00:02:35,330 --> 00:02:36,740
+as well.
+也是如此。
+
+35
+00:02:36,740 --> 00:02:41,480
+If you don't really want all the details, but you just want to have a Quick Type Hierarchy, you can say
+如果你不是真的想要所有的细节，而只是想拥有一个快速类型层次，你可以说
+
+36
+00:02:41,600 --> 00:02:47,810
+right click and Quick Type Hierarchy and this would show the high-level overview of the type hierarchy of
+你可以说，右键点击快速类型层次，这将显示该特定接口或类的类型层次的高级概述。
+
+37
+00:02:47,810 --> 00:02:53,570
+that specific interface or the class. In this quick video, we wanted to give you an overview of how to
+该特定接口或类的类型层次。在这个快速视频中，我们想让你了解一下如何使用Eclipse探索不同的API。
+
+38
+00:02:53,570 --> 00:02:57,600
+explore different APIs using Eclipse.
+使用Eclipse探索不同的API。
+
+39
+00:02:57,620 --> 00:03:03,710
+You can also get the same information by going to Google. All that you need to do is, go to Google and
+你也可以通过去谷歌获得同样的信息。你所需要做的就是，到Google上并
+
+40
+00:03:03,710 --> 00:03:09,710
+type in the interface, list interface I would want to find out more about. So, Java list, I would want to
+键入接口，列出我想了解的接口。所以，Java列表，我想
+
+41
+00:03:09,710 --> 00:03:15,740
+find the documentation related to Java 9. So, I put in jdk 9 and typed in Javadoc. Once you
+所以，我输入jdk 9，然后输入Javadoc。一旦你
+
+42
+00:03:15,740 --> 00:03:22,370
+go in here, you can go ahead and explore the different things related to the list interface. You can see
+进入这里，你就可以继续探索与列表接口有关的不同东西。你可以看到
+
+43
+00:03:22,400 --> 00:03:28,400
+which module it is present, in which package it's present in. You can see all these super interfaces, sub
+它存在于哪个模块中，它存在于哪个包中。你可以看到所有这些超级接口、子
+
+44
+00:03:28,400 --> 00:03:35,300
+interfaces, all the implementing classes, and you can see the description, and also overview of the methods,
+接口，所有的实现类，你还可以看到描述，以及方法的概述。
+
+45
+00:03:35,360 --> 00:03:40,340
+and the description of the methods which are present in here. I hope you had an interesting time in this
+以及这里存在的方法的描述。我希望你在这个
+
+46
+00:03:40,340 --> 00:03:43,030
+video. I'll see you in the next one. Until then, bye bye.
+视频。我们在下一集再见。在那之前，拜拜了。
+

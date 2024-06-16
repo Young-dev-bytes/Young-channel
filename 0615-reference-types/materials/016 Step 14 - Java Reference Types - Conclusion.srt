@@ -1,0 +1,140 @@
+1
+00:00:02,009 --> 00:00:03,690
+Welcome back.
+欢迎回来。
+
+2
+00:00:03,690 --> 00:00:09,210
+In this section on reference types, we looked at what is the difference between a reference variable
+在关于引用类型的这一节中，我们研究了引用变量和原始变量之间的区别
+
+3
+00:00:09,330 --> 00:00:11,130
+and a primitive variable.
+和原始变量的区别。
+
+4
+00:00:11,130 --> 00:00:12,800
+We looked at the different primitive types.
+我们看了不同的原始类型。
+
+5
+00:00:12,810 --> 00:00:18,270
+We looked at a few reference variables, how they are stored in memory, how they are initialized, and how
+我们看了一些引用变量，它们是如何存储在内存中的，它们是如何被初始化的，以及如何
+
+6
+00:00:18,270 --> 00:00:21,030
+does assignment and equality work with them.
+赋值和等价是如何进行的。
+
+7
+00:00:21,030 --> 00:00:25,080
+We also discussed a few reference types which are built-in in Java.
+我们还讨论了一些Java中内置的引用类型。
+
+8
+00:00:25,080 --> 00:00:27,110
+We talked in depth about the String class.
+我们深入地讨论了String类。
+
+9
+00:00:27,120 --> 00:00:31,620
+We discussed a couple of alternatives for it: StringBuilder and StringBuffer.
+我们讨论了它的几个替代品。StringBuilder和StringBuffer。
+
+10
+00:00:31,620 --> 00:00:37,200
+We also looked at a wide variety of puzzles which are related to String and we also discussed about
+我们还研究了与String有关的各种难题，并讨论了关于
+
+11
+00:00:37,380 --> 00:00:38,850
+wrapper classes.
+封装器类。
+
+12
+00:00:38,940 --> 00:00:44,280
+We discussed about the eight wrapper classes which are present in Java, which are exactly corresponding to
+我们讨论了Java中存在的八个封装类，它们完全对应于
+
+13
+00:00:44,280 --> 00:00:46,500
+the eight primitive types.
+八个原始类型。
+
+14
+00:00:46,500 --> 00:00:51,660
+We discussed why we need wrapper classes and also  a variety of methods which are present in the wrapper
+我们讨论了为什么我们需要封装类，以及封装类中存在的各种方法。
+
+15
+00:00:51,660 --> 00:00:52,770
+classes as well.
+类中的各种方法。
+
+16
+00:00:52,920 --> 00:00:59,340
+And, at the end of this section, we looked at LocalDate, LocalDateTime, and LocalTime APIs. We looked
+在这一节的最后，我们研究了LocalDate、LocalDateTime和LocalTime APIs。我们看了
+
+17
+00:00:59,340 --> 00:01:04,910
+at different methods to get specific data from the date, to get generic data like leap year, or length of
+我们看了不同的方法，从日期中获得特定的数据，获得通用的数据，如闰年，或月的长度，或年的长度。
+
+18
+00:01:04,920 --> 00:01:10,590
+the month, or length the year, and also we looked at different methods to compare with other dates as well
+我们还研究了不同的方法来与其他日期进行比较，以及增加特定的天数。
+
+19
+00:01:10,590 --> 00:01:15,170
+as to add a specific number of days, months, or years to a specific date.
+我们还研究了与其他日期进行比较的不同方法，以及在一个特定的日期上增加特定的天数、月数或年数。
+
+20
+00:01:15,960 --> 00:01:23,610
+This was one of the first sections where we tried to explore some of the inbuilt APIs in Java. Exploring
+这是我们尝试探索Java中一些内置的API的第一节。探索
+
+21
+00:01:23,610 --> 00:01:29,580
+APIs can get a little boring at times, but it's very important to understand what you can do and what
+API有时会有点无聊，但了解你能做什么，不能做什么，是非常重要的。
+
+22
+00:01:29,580 --> 00:01:30,740
+you cannot do
+你不能做什么
+
+23
+00:01:30,840 --> 00:01:36,600
+and once you know what you can do, you can easily explore and try to find the right method to do that
+一旦你知道你能做什么，你就可以轻松地探索并尝试找到正确的方法来做那件
+
+24
+00:01:36,600 --> 00:01:37,890
+specific thing.
+具体的事情。
+
+25
+00:01:37,890 --> 00:01:40,610
+I hope you had a interesting time in this section.
+我希望你在本节中度过了一段有趣的时光。
+
+26
+00:01:40,610 --> 00:01:42,590
+I'll see you in the next section.
+我们在下一节再见。
+
+27
+00:01:42,660 --> 00:01:43,200
+Until then,
+直到那时。
+
+28
+00:01:43,300 --> 00:01:43,500
+bye bye.
+拜拜了。
+

@@ -1,0 +1,220 @@
+1
+00:00:00,450 --> 00:00:01,270
+Until then, bye bye.
+
+2
+00:00:10,200 --> 00:00:11,940
+Welcome back.
+
+3
+00:00:11,940 --> 00:00:16,250
+Until now, we looked at various kinds of data types, right.
+
+4
+00:00:16,260 --> 00:00:18,810
+We looked at integers, floating point values,
+
+5
+00:00:18,810 --> 00:00:20,260
+we looked at booleans,
+
+6
+00:00:20,280 --> 00:00:23,020
+we looked at characters, we looked at strings.
+
+7
+00:00:23,100 --> 00:00:27,730
+The only data type which is missing until now is dates, right.
+
+8
+00:00:27,760 --> 00:00:32,960
+So, in this video, we would start exploring dates. Before Java 8,
+
+9
+00:00:32,970 --> 00:00:40,170
+one of the constant problems with Java APIs is the implementation of date. They did not really have
+
+10
+00:00:40,290 --> 00:00:42,300
+a good date API
+
+11
+00:00:42,930 --> 00:00:49,230
+and that's where a new implementation for dates is provided in Java 8.
+
+12
+00:00:49,290 --> 00:00:56,070
+The new implementation was based on something called Joda Framework. So, this Joda was a very famous
+
+13
+00:00:56,460 --> 00:01:04,260
+alternative to the Java API for dates and Java 8 brought in some of the important concepts from Joda
+
+14
+00:01:04,410 --> 00:01:06,750
+into the Java API itself.
+
+15
+00:01:06,750 --> 00:01:14,160
+So, we'll use that API, we will use the API which is introduced in Java 8 to discuss about dates in this
+
+16
+00:01:14,170 --> 00:01:15,810
+specific video.
+
+17
+00:01:16,140 --> 00:01:26,280
+Java 8 brings in three most important classes. So, LocalDate, LocalDateTime, and LocalTime.
+
+18
+00:01:26,380 --> 00:01:32,260
+These are the three classes which makes playing with date and time very easy.
+
+19
+00:01:32,260 --> 00:01:35,560
+So, what is LocalDate, what is LocalDateTime, and what is LocalTime?
+
+20
+00:01:35,860 --> 00:01:46,050
+So, date can hold a date. So, 10th October 2017, 15th December 2015. So, LocalDate can hold a date. LocalTime
+
+21
+00:01:46,060 --> 00:01:51,130
+on the other hand can hold just the time. So, it can hold the time saying 23:25.
+
+22
+00:01:51,130 --> 00:01:59,040
+That stands for 11:25 p.m or it can say 1:25, so 1:25 a.m. LocalDateTime
+
+23
+00:01:59,080 --> 00:02:05,920
+can store both the date and the time. So, it can store things like, okay, 11:25 p.m on 10th December
+
+24
+00:02:05,950 --> 00:02:08,020
+of 1985.
+
+25
+00:02:08,250 --> 00:02:12,380
+Let's start exploring the API with LocalDate.
+
+26
+00:02:12,400 --> 00:02:19,720
+If I say, LocalDate now = LocalDate, there's a method called now( ).
+
+27
+00:02:20,080 --> 00:02:21,220
+This would fail.
+
+28
+00:02:21,280 --> 00:02:23,130
+Now, why is this failing?
+
+29
+00:02:23,140 --> 00:02:24,370
+Think about it.
+
+30
+00:02:24,370 --> 00:02:27,270
+What could be the reasons, why it's failing?
+
+31
+00:02:27,310 --> 00:02:38,510
+LocalDate is in a package called Java.time. One of the important things is, JShell provides a few default
+
+32
+00:02:38,690 --> 00:02:39,480
+imports.
+
+33
+00:02:39,510 --> 00:02:43,750
+So, if I do a /imports, it would show the default imports.
+
+34
+00:02:43,760 --> 00:02:47,290
+That's the reason why, we were able to use the BigDecimal class,
+
+35
+00:02:47,460 --> 00:02:55,350
+the String class without having a problem, because it was in the packages which are in the default imports.
+
+36
+00:02:56,040 --> 00:03:04,580
+However, this package, java.time.LocalDate, is not in the default imports. So, we would need to import it in. So, I will say
+
+37
+00:03:04,770 --> 00:03:09,410
+java.time.LocalDate. LocalDate
+
+38
+00:03:09,470 --> 00:03:10,380
+is now imported.
+
+39
+00:03:10,380 --> 00:03:16,290
+Now I'll execute the same statement and now, you would see that the LocalDate instance is now created.
+
+40
+00:03:16,290 --> 00:03:18,510
+You can see the value of it being printed in here.
+
+41
+00:03:18,550 --> 00:03:24,000
+It's saying 2018-02-01.
+
+42
+00:03:24,000 --> 00:03:24,790
+The same thing,
+
+43
+00:03:24,870 --> 00:03:28,620
+if I want to do with LocalDateTime, what would happen?
+
+44
+00:03:28,620 --> 00:03:34,670
+Think about it. LocalDateTime.now( ): error. Because we have to import that as well.
+
+45
+00:03:34,720 --> 00:03:36,200
+So, LocalDateTime.
+
+46
+00:03:37,080 --> 00:03:39,980
+The other option is to import everything together. So,
+
+47
+00:03:40,090 --> 00:03:40,910
+*,
+
+48
+00:03:41,580 --> 00:03:41,940
+right.
+
+49
+00:03:42,180 --> 00:03:45,630
+So, now I would be able to do a LocalDateTime.now( ).
+
+50
+00:03:46,020 --> 00:03:51,480
+So, the difference between LocateDate and LocalDateTime, as you can see in here, is LocalDateTime represents
+
+51
+00:03:51,760 --> 00:03:57,090
+both date and time whereas LocalDate only represents the date
+
+52
+00:03:57,090 --> 00:04:04,650
+and if I do a LocalTime, it represents only the time and you can see the different details that are
+
+53
+00:04:04,650 --> 00:04:07,440
+stored in here. In the next video,
+
+54
+00:04:07,710 --> 00:04:12,060
+we will start exploring all these three APIs a lot more.
+
+55
+00:04:12,060 --> 00:04:13,030
+Until then, bye bye.
+

@@ -1,0 +1,80 @@
+1
+00:00:00,090 --> 00:00:01,440
+Welcome back.
+
+2
+00:00:01,440 --> 00:00:09,360
+In this section on reference types, we would discuss about what are reference types, how are they stored
+
+3
+00:00:09,360 --> 00:00:16,470
+in memory, and how are they different from primitive types. In the previous sections,
+
+4
+00:00:16,470 --> 00:00:22,320
+we created a number of classes and this is how we create instances, right.
+
+5
+00:00:22,320 --> 00:00:24,360
+We used a new jupiter
+
+6
+00:00:24,360 --> 00:00:34,080
+here is a reference variable, Planet here is a reference type, and over here when we created a int variable,
+
+7
+00:00:34,650 --> 00:00:40,820
+i is a primitive variable and int is a primitive type.
+
+8
+00:00:40,920 --> 00:00:46,590
+We will discuss about all of these concepts and we will go one level deeper.
+
+9
+00:00:46,590 --> 00:00:52,380
+We will talk about how the reference variables and primitive variables are stored in memory,
+
+10
+00:00:52,380 --> 00:00:58,380
+what happens behind these screens when you assign a value to a primitive variable or you try to assign
+
+11
+00:00:58,380 --> 00:01:00,240
+one value to another.
+
+12
+00:01:00,240 --> 00:01:03,380
+We will also talk about how they are initialized.
+
+13
+00:01:03,380 --> 00:01:06,930
+We will also look at a few reference types in Java.
+
+14
+00:01:06,930 --> 00:01:10,200
+These are predefined in the sense that Java provides them for you.
+
+15
+00:01:10,230 --> 00:01:12,540
+So, they come free for you with Java.
+
+16
+00:01:12,540 --> 00:01:13,890
+These are string.
+
+17
+00:01:13,890 --> 00:01:19,170
+There are a set of classes called wrapper classes and also we will look at a few date time stuff.
+
+18
+00:01:19,170 --> 00:01:21,750
+So, we'll look at LocalDate and LocalDateTime.
+
+19
+00:01:21,990 --> 00:01:28,370
+I'll see you in the first video where we would start discussing more about reference types and variables.
+
+20
+00:01:28,470 --> 00:01:29,350
+Until then, bye-bye
+

@@ -1,0 +1,475 @@
+1
+00:00:02,450 --> 00:00:03,910
+Welcome back.
+欢迎回来。
+
+2
+00:00:03,920 --> 00:00:09,030
+In this video, we would be talking about reference types and reference variables.
+在本视频中，我们将讨论引用类型和引用变量。
+
+3
+00:00:09,260 --> 00:00:16,309
+We will understand how reference variables are stored in memory and also compare and contrast them with
+我们将了解引用变量是如何存储在内存中的，并将其与原始变量进行比较和对比。
+
+4
+00:00:16,370 --> 00:00:19,090
+the primitive variables.
+原始变量进行比较。
+
+5
+00:00:19,100 --> 00:00:20,450
+Okay, let's get started.
+好吧，让我们开始吧。
+
+6
+00:00:20,450 --> 00:00:29,690
+What is a reference type, right? So, any class that you create is a reference type. So, here the class Planet
+什么是引用类型，对吗？所以，你所创建的任何类都是一个引用类型。所以，这里的类Planet
+
+7
+00:00:29,810 --> 00:00:32,180
+is a reference type.
+就是一个引用类型。
+
+8
+00:00:32,180 --> 00:00:35,510
+There are also pre-defined classes in Java.
+在Java中还有一些预定义的类。
+
+9
+00:00:35,570 --> 00:00:38,720
+String is one of the pre-defined classes in Java.
+字符串是Java中的一个预定义的类。
+
+10
+00:00:38,720 --> 00:00:40,780
+This is a reference type.
+这也是一个引用类型。
+
+11
+00:00:40,880 --> 00:00:50,540
+We looked at BigDecimal earlier and BigDecimal is a reference type. Instances of the classes that we
+我们之前看了BigDecimal，BigDecimal也是一个引用类型。我们所创建的类的实例
+
+12
+00:00:50,540 --> 00:00:51,260
+create,
+创建的实例。
+
+13
+00:00:51,260 --> 00:00:59,470
+here we are creating an instance of the Planet, new Planet and we are storing it into jupiter;
+这里我们正在创建一个行星的实例，new Planet，并把它存储到jupiter中。
+
+14
+00:00:59,570 --> 00:01:04,040
+jupiter is a reference variable.
+jupiter是一个引用变量。
+
+15
+00:01:04,040 --> 00:01:06,650
+Why is this concept called reference variable important
+为什么这个概念叫做引用变量很重要
+
+16
+00:01:06,800 --> 00:01:12,450
+and how are they different from a primitive variable? Here, i is a primitive variable.
+它们与原始变量有什么不同？在这里，i是一个原始变量。
+
+17
+00:01:12,830 --> 00:01:16,660
+So, here I am saying jupiter is a reference variable.
+所以，我在这里说jupiter是一个引用变量。
+
+18
+00:01:16,690 --> 00:01:24,200
+Let's now start with discussion about how the reference variables are stored in memory and how is this
+现在让我们开始讨论参考变量是如何存储在内存中的，以及如何将这个
+
+19
+00:01:24,200 --> 00:01:27,160
+new instance stored in memory.
+新实例如何存储在内存中。
+
+20
+00:01:27,200 --> 00:01:28,440
+Let's create another class.
+让我们再创建一个类。
+
+21
+00:01:28,460 --> 00:01:31,530
+I'll call this class, Animal.
+我把这个类称为 "动物"。
+
+22
+00:01:31,640 --> 00:01:34,980
+Let's say, in this Animal class we have a int id.
+比方说，在这个动物类中，我们有一个int id。
+
+23
+00:01:34,990 --> 00:01:43,150
+So, for each Animal let's say, we are assigning an id and to make it easier for ourselves, I'll create a
+因此，对于每一个动物，让我们说，我们正在分配一个ID，为了使我们更容易，我将创建一个
+
+24
+00:01:43,250 --> 00:01:44,240
+constructor.
+构造函数。
+
+25
+00:01:44,400 --> 00:01:50,130
+If you remember the syntax of the constructor, it's very simple, right. So, the name of the class followed
+如果你记得构造函数的语法，它非常简单，对吧。所以，类的名称后面是
+
+26
+00:01:50,130 --> 00:01:56,780
+by the open bracket followed by what arguments I would want to pass in, int id
+后面是大括号，然后是我想传入的参数，int id
+
+27
+00:01:57,480 --> 00:02:08,139
+and over here I can do this.id = id and close bracket and sorry, close brace and close
+在这里，我可以这样做。id = id，然后是封闭括号，对不起，封闭括号和封闭括号。
+
+28
+00:02:08,139 --> 00:02:08,500
+brace.
+大括号。
+
+29
+00:02:08,560 --> 00:02:09,070
+That's it. So,
+就这样了。所以。
+
+30
+00:02:09,100 --> 00:02:12,700
+we have an Animal created in here.
+我们在这里创建了一个动物。
+
+31
+00:02:12,910 --> 00:02:15,940
+This Animal can have a id value, right.
+这个动物可以有一个id值，对。
+
+32
+00:02:15,970 --> 00:02:19,870
+So, I'm not going to create getters and setters and make this private for now.
+所以，我不打算创建getters和setters，并使其私有化。
+
+33
+00:02:20,200 --> 00:02:22,210
+Let's just keep it very simple.
+让我们保持它非常简单。
+
+34
+00:02:22,210 --> 00:02:26,740
+Now this class called Animal has a field called id,
+现在这个叫做Animal的类有一个叫做id的字段。
+
+35
+00:02:27,010 --> 00:02:27,670
+right.
+对。
+
+36
+00:02:27,670 --> 00:02:31,190
+So. now how do I create instances of the Animal class? I can create it
+那么，现在我如何创建动物类的实例呢？我可以创建它
+
+37
+00:02:31,380 --> 00:02:34,250
+Anima dog = new Animal
+Anima dog = new Animal
+
+38
+00:02:34,390 --> 00:02:35,930
+and pass the parameter. Let's say
+并传递参数。比方说
+
+39
+00:02:35,970 --> 00:02:39,510
+the id I am assigning to this dog is 12, right.
+我分配给这只狗的id是12，对吧。
+
+40
+00:02:39,550 --> 00:02:40,750
+I can create cat
+我可以创建猫
+
+41
+00:02:43,310 --> 00:02:47,340
+and assign it a value of 15.
+并给它分配一个15的值。
+
+42
+00:02:47,360 --> 00:02:51,310
+This is kind of the code that we typically write.
+这就是我们通常写的代码。
+
+43
+00:02:51,320 --> 00:02:54,630
+Nothing fancy in here. It's very simple code.
+这里面没有什么花哨的东西。这是非常简单的代码。
+
+44
+00:02:54,710 --> 00:02:58,700
+What is happening here is what we are really interested in.
+这里所发生的事情是我们真正感兴趣的。
+
+45
+00:02:58,760 --> 00:03:04,290
+Now, let's bring up a fancy spreadsheet to understand what's happening in the background,
+现在，让我们调出一个漂亮的电子表格来了解后台发生的事情。
+
+46
+00:03:04,330 --> 00:03:13,480
+right. Whenever you create a new object, whenever you create a new object, these things are stored in something
+对。每当你创建一个新的对象时，每当你创建一个新的对象时，这些东西都存储在一个叫做 "堆 "的东西中。
+
+47
+00:03:13,480 --> 00:03:15,520
+called a Heap.
+叫做 "堆"。
+
+48
+00:03:15,520 --> 00:03:23,110
+When a Java program runs, it has some memory and there are two kinds of memory, one is a Stack and the
+当一个Java程序运行时，它有一些内存，有两种内存，一种是堆栈，另一种是堆。
+
+49
+00:03:23,200 --> 00:03:32,740
+other one is a Heap. All new objects are created on the heap. This heap is kind of a common place which
+另一种是堆（Heap）。所有的新对象都是在堆上创建的。这个堆是一个共同的地方，由整个Java程序共享。
+
+50
+00:03:32,740 --> 00:03:35,380
+is shared by the entire Java program.
+是整个Java程序所共享的。
+
+51
+00:03:35,860 --> 00:03:45,190
+So, in this heap all your objects are stored.  So, new Animal(12), let's say is stored in here. I'll say Animal
+所以，在这个堆里，你所有的对象都被储存起来。 所以，new Animal(12)，让我们说，是存储在这里。我就说动物
+
+52
+00:03:45,820 --> 00:03:46,210
+12.
+12.
+
+53
+00:03:47,650 --> 00:03:53,140
+This is not exactly what will be stored in the memory. But let's use that as a reference. So, Animal12
+这并不完全是将被存储在内存中的东西。但是让我们把它作为一个参考。所以，动物12
+
+54
+00:03:53,530 --> 00:04:00,090
+will be created on the heap. Heap consists of a number of locations,
+将被创建在堆上。堆是由一些位置组成的。
+
+55
+00:04:00,100 --> 00:04:00,820
+right.
+对。
+
+56
+00:04:00,880 --> 00:04:03,840
+So, I just gave some names to this location.
+所以，我只是给这个位置起了一些名字。
+
+57
+00:04:04,450 --> 00:04:09,010
+Let's not worry about the size of this location and all that kind of stuff because that would become
+让我们不要担心这个位置的大小和所有这些东西，因为那会变得
+
+58
+00:04:09,010 --> 00:04:10,260
+very complex.
+非常复杂。
+
+59
+00:04:10,270 --> 00:04:15,520
+Let's just give a name to these locations and use them as the reference.
+让我们只是给这些位置起个名字，然后用它们作为参考。
+
+60
+00:04:15,910 --> 00:04:26,850
+So, let's say Animal12 is stored in location 1A and Animal15 is stored in 1C. It can be randomly
+所以，让我们说Animal12存储在位置1A，Animal15存储在1C。它可以被随机地
+
+61
+00:04:26,850 --> 00:04:32,550
+assigned anywhere and can be stored anywhere. But I'm just assuming that it's stored in a specific location
+可以随机分配到任何地方，也可以存储在任何地方。但我只是假设它被存储在堆的一个特定位置上
+
+62
+00:04:32,550 --> 00:04:33,800
+on the heap.
+在堆上。
+
+63
+00:04:33,820 --> 00:04:39,290
+Now, when we create primitive variables, they're always created on the stack.
+现在，当我们创建原始变量时，它们总是在栈上创建。
+
+64
+00:04:39,300 --> 00:04:44,460
+So, when I create a local variable in a method, it's always created in a stack.
+所以，当我在一个方法中创建一个局部变量时，它总是在堆栈中创建。
+
+65
+00:04:44,490 --> 00:04:49,120
+So, this is the way it would be stored. So, the variable name is i,
+所以，这就是它的存储方式。所以，这个变量的名字是i。
+
+66
+00:04:49,200 --> 00:04:50,560
+the value is 5.
+的值是5。
+
+67
+00:04:50,640 --> 00:04:52,440
+That's how they are stored.
+这就是它们的存储方式。
+
+68
+00:04:52,440 --> 00:04:56,420
+So, when I create a primitive variable, all that would be stored is a variable name
+因此，当我创建一个原始变量时，所有将被存储的是一个变量名
+
+69
+00:04:56,450 --> 00:04:59,040
+i, with a value 5.
+i，其值为5。
+
+70
+00:04:59,100 --> 00:05:05,840
+When I create a reference variable, as we discussed earlier, this is stored. Where is this stored?
+当我创建一个引用变量时，就像我们之前讨论的那样，这被存储起来。这个存储在哪里呢？
+
+71
+00:05:05,880 --> 00:05:07,860
+This is stored on the heap.
+这是在堆上存储的。
+
+72
+00:05:07,920 --> 00:05:09,640
+Now, where is this stored?
+现在，这个存储在哪里？
+
+73
+00:05:09,690 --> 00:05:13,650
+The dog is actually stored on the stack somewhere.
+这只狗实际上是存储在堆栈的某个地方。
+
+74
+00:05:13,680 --> 00:05:16,720
+So, dog is stored. The variable name is dog
+所以，狗被存储了。变量名称是dog
+
+75
+00:05:16,890 --> 00:05:22,460
+and what would be the value, dog is refering to what? new Animal(12)
+和值是什么，狗指的是什么？ new Animal(12)
+
+76
+00:05:22,530 --> 00:05:25,370
+So, what is the location, Animal(12)?
+那么，Animal(12)的位置是什么？
+
+77
+00:05:25,390 --> 00:05:33,320
+It's at 1A. So, the value which would be stored in here is the memory location.
+它在1A。所以，将被存储在这里的值是内存位置。
+
+78
+00:05:33,570 --> 00:05:41,400
+So, in the dog, what is actually stored is a reference of the memory location, where the actual dog
+所以，在dog中，实际存储的是对内存位置的引用，实际的dog
+
+79
+00:05:41,460 --> 00:05:49,740
+object is stored. That's the most important concept and that's why it's called a reference variable.
+对象被存储在那里。这是最重要的概念，这就是为什么它被称为引用变量。
+
+80
+00:05:49,900 --> 00:05:54,330
+It's called a reference variable, dog is called a reference variable, because does it have the value of
+它被称为引用变量，狗被称为引用变量，因为它有狗的价值吗？
+
+81
+00:05:54,330 --> 00:05:54,780
+the dog?
+狗的价值吗？
+
+82
+00:05:54,990 --> 00:06:04,880
+Nope. It refers to the memory location of where the dog object or the animal object exists in memory.
+没有。它指的是狗对象或动物对象在内存中存在的内存位置。
+
+83
+00:06:04,890 --> 00:06:08,010
+Similarly, the other variable, cat.
+同样的，另一个变量，猫。
+
+84
+00:06:08,310 --> 00:06:10,560
+So, now cat. How does the cat get created?
+所以，现在是猫。猫是如何被创建的？
+
+85
+00:06:10,560 --> 00:06:11,430
+What's is the id?
+id是什么？
+
+86
+00:06:11,430 --> 00:06:14,060
+15, right. So, 15,
+15，对。所以，15。
+
+87
+00:06:14,150 --> 00:06:14,810
+1C.
+1C.
+
+88
+00:06:14,910 --> 00:06:23,910
+So, this is how reference variables are stored in memory. The actual object is created on the heap
+所以，这就是引用变量在内存中的存储方式。实际的对象是在堆上创建的
+
+89
+00:06:24,420 --> 00:06:35,220
+and what would be stored in here is a reference to the location where the object is stored in memory.
+而这里所存储的是对对象在内存中存储位置的一个引用。
+
+90
+00:06:35,220 --> 00:06:42,330
+This distinction is the reason why a difference between primitive and reference variables is very very
+这个区别就是为什么原始变量和引用变量之间的区别非常非常重要的原因。
+
+91
+00:06:42,330 --> 00:06:44,810
+important. In the next video,
+重要的原因。在下一个视频中。
+
+92
+00:06:44,820 --> 00:06:52,050
+let's dig a step deeper and look at what would happen when I assign a primitive variable to another
+让我们再深入一步，看看当我把一个基元变量赋值给另一个变量时会发生什么？
+
+93
+00:06:52,290 --> 00:06:58,500
+and what would happen when I assign a reference variable to another and also look at a wide variety
+会发生什么，以及当我把一个引用变量赋值给另一个变量时会发生什么，还可以看一下各种各样的
+
+94
+00:06:58,500 --> 00:07:00,070
+of other operations.
+的其他操作。
+
+95
+00:07:00,300 --> 00:07:01,150
+Until then, bye bye.
+在那之前，拜拜了。
+

@@ -1,0 +1,352 @@
+1
+00:00:02,060 --> 00:00:03,740
+Welcome back!
+
+2
+00:00:03,740 --> 00:00:06,460
+Let's now, jump right in.
+
+3
+00:00:06,460 --> 00:00:12,680
+One of the first things that you'd need to understand is, functional programming is a paradigm shift.
+
+4
+00:00:12,680 --> 00:00:15,650
+What do I mean by a paradigm shift?
+
+5
+00:00:15,660 --> 00:00:20,920
+It means that you would need to change how you'd think about problem-solving,
+
+6
+00:00:20,920 --> 00:00:27,920
+to master functional programming. And we are here to help you make that transition. In this course,
+
+7
+00:00:27,920 --> 00:00:34,000
+we'll take a step-by-step approach to introduce functional programming to you.
+
+8
+00:00:34,000 --> 00:00:38,460
+In this first section, we start with two key objectives.
+
+9
+00:00:38,460 --> 00:00:44,160
+Number one, is to help you understand how functional programming is different.
+
+10
+00:00:44,160 --> 00:00:49,620
+Number two, is to help you understand a few basic functional programming concepts.
+
+11
+00:00:49,620 --> 00:00:50,890
+We'll talk about Streams,
+
+12
+00:00:50,890 --> 00:00:57,390
+we will talk about Lambda Expressions, and we will talk about something called Method References.
+
+13
+00:00:57,390 --> 00:01:04,100
+As usual, we'll take a very very hands-on approach towards learning functional programming.
+
+14
+00:01:04,100 --> 00:01:07,440
+We'll write a few examples in traditional approach,
+
+15
+00:01:07,440 --> 00:01:11,820
+and look at, how you can write similar code in functional programming.
+
+16
+00:01:11,820 --> 00:01:12,960
+Let's quickly get started.
+
+17
+00:01:12,970 --> 00:01:18,350
+Creating a new project and starting to write some code. I'm going to create a new project.
+
+18
+00:01:18,370 --> 00:01:20,430
+I have Eclipse open.
+
+19
+00:01:20,430 --> 00:01:22,370
+I've already chosen a workspace.
+
+20
+00:01:22,380 --> 00:01:24,140
+I would want to create a new project.
+
+21
+00:01:24,150 --> 00:01:28,150
+So, let's go ahead and create a new Java Project, that's what we'd want to create.
+
+22
+00:01:28,150 --> 00:01:34,670
+File new, Java Project, and let's give the project a name.
+
+23
+00:01:34,690 --> 00:01:44,230
+I'll just call this, functional-programming-with-java. As you can see in here, I'm using Java 9.
+
+24
+00:01:44,230 --> 00:01:50,770
+Any version of Java greater than 9, is cool. So, Java 9, 10, 11,12; the code which we write in
+
+25
+00:01:50,770 --> 00:01:54,900
+this course is compatible with all the versions. That's the only thing you'd need to do.
+
+26
+00:01:54,940 --> 00:01:58,940
+And after that you can say, Finish.
+
+27
+00:01:58,940 --> 00:02:01,340
+Now, the project is created for us.
+
+28
+00:02:01,340 --> 00:02:04,670
+We have a source folder, where we can write our source code.
+
+29
+00:02:04,670 --> 00:02:08,720
+Let's get started with creating our first example.
+
+30
+00:02:08,720 --> 00:02:13,920
+The first problem that we would want to solve is, we would want to print a set of numbers.
+
+31
+00:02:13,920 --> 00:02:18,280
+So, we'll have a list of numbers, and we
+would want to actually print
+
+32
+00:02:18,280 --> 00:02:22,900
+each element in that list, one by one on a separate line.
+
+33
+00:02:22,900 --> 00:02:25,120
+Now, how do we do that in a traditional approach?
+
+34
+00:02:25,160 --> 00:02:26,960
+Let's quickly look at it.
+
+35
+00:02:26,980 --> 00:02:36,160
+I'll Create a new Java class. So, I'll say, new class and I would want to give it a name of, FP01.
+
+36
+00:02:36,170 --> 00:02:45,100
+So, we would use Functional Programming 01, is where we are in right now and I'll class this, Structured.
+
+37
+00:02:45,100 --> 00:02:52,890
+So, FP Structured, is the name of the class and the package name I would give it as, programming.
+
+38
+00:02:52,890 --> 00:02:57,700
+Let's add in a main method and let's click, Finish.
+
+39
+00:02:57,780 --> 00:03:02,660
+This would create the class for us with the main method, which is present in here, and over here I can
+
+40
+00:03:02,670 --> 00:03:04,230
+write all the code that we would want.
+
+41
+00:03:04,230 --> 00:03:12,200
+So, what do we want to do? We would want to write a method to printAllNumbersInList.
+
+42
+00:03:12,200 --> 00:03:14,040
+And which approach do you want to use?
+
+43
+00:03:14,040 --> 00:03:21,400
+We'd want to use a Structured approach, which is the traditional programming approach. Structured approach.
+
+44
+00:03:21,400 --> 00:03:22,580
+What do we want to print?
+
+45
+00:03:22,580 --> 00:03:25,430
+We'd want to print, a list of numbers.
+
+46
+00:03:25,470 --> 00:03:27,820
+How do we create a list of numbers?
+
+47
+00:03:27,820 --> 00:03:33,450
+I can say, List.of. Let's enter a sequence of numbers.
+
+48
+00:03:33,450 --> 00:03:34,880
+This can be random numbers.
+
+49
+00:03:34,880 --> 00:03:44,420
+So, let's enter 12, 9, 13, 4, 6, 2, 4,.
+
+50
+00:03:44,420 --> 00:03:47,680
+Let's have a few duplicates as well, so 12, 15.
+
+51
+00:03:47,680 --> 00:03:50,190
+Let's have a set of numbers in here.
+
+52
+00:03:50,190 --> 00:03:54,090
+Now, it's first giving me a compilation errors on the list.
+
+53
+00:03:54,090 --> 00:03:54,590
+Why?
+
+54
+00:03:54,590 --> 00:03:58,810
+Because I've not really imported it in. So, I would want to use java.util.List;
+
+55
+00:03:58,830 --> 00:04:03,640
+So, over here you can see that it's now imported in, java.util.List.
+
+56
+00:04:03,640 --> 00:04:06,580
+I just needed to do Ctrl 1 or Command 1,
+
+57
+00:04:06,580 --> 00:04:10,160
+and take the option to import, java.util.List.
+
+58
+00:04:10,160 --> 00:04:12,700
+Aha! The method does not really exist right?
+
+59
+00:04:12,750 --> 00:04:16,870
+Let's try and create the method right now. Ctrl 1 or Command 1,
+
+60
+00:04:16,890 --> 00:04:22,560
+and it says, create the method. Please do create the method for me. Cool! The method is now created for
+
+61
+00:04:22,560 --> 00:04:30,180
+us. You can say it's private static void printAllNumbersInListStructured, and I'll want to give a
+
+62
+00:04:30,180 --> 00:04:41,420
+name over here. I would want to call this, numbers. And I'll remove this line Ctrl D, Command D; and over here I'd
+
+63
+00:04:41,450 --> 00:04:49,530
+want to print all the numbers in the list. Now, you can write the program by yourself. How do you write
+
+64
+00:04:49,530 --> 00:04:55,840
+it? The first thing that we'd need to think about is, how to loop the numbers?
+
+65
+00:04:55,840 --> 00:05:00,490
+That's the traditional approach, right? So, we would want to first figure out, how do you loop all the numbers.
+
+66
+00:05:00,490 --> 00:05:06,820
+And once you decide how to loop, you can take each of the individual numbers and print it.
+
+67
+00:05:06,820 --> 00:05:10,160
+So, we'll first choose between, okay
+
+68
+00:05:10,160 --> 00:05:15,740
+should I use a traditional For loop or should I go for enhanced For loop?
+
+69
+00:05:15,760 --> 00:05:23,720
+Let's use the enhanced For loop. I'll say, for int number in numbers.
+
+70
+00:05:23,720 --> 00:05:26,030
+What do you want to do?
+
+71
+00:05:26,030 --> 00:05:32,690
+We'd want to print them out. So, sysout, and number.
+
+72
+00:05:32,690 --> 00:05:34,390
+Is that what we'd want to loop?
+
+73
+00:05:34,390 --> 00:05:38,610
+So, we'd want to print all the numbers in lists, in a structured way.
+
+74
+00:05:38,680 --> 00:05:43,990
+All that we needed to do was to loop the list of numbers and print them out.
+
+75
+00:05:43,990 --> 00:05:45,910
+Let's run this and see what would happen.
+
+76
+00:05:45,970 --> 00:05:51,190
+Right click, Run As, Java Application. Cool!
+
+77
+00:05:51,190 --> 00:05:54,660
+You can see that everything is now printed out to the console.
+
+78
+00:05:54,660 --> 00:05:57,720
+As you can see in here in the traditional approach,
+
+79
+00:05:57,720 --> 00:06:02,020
+whenever we would want to solve a problem, we focus on the how.
+
+80
+00:06:02,020 --> 00:06:04,380
+The first thing we needed to do was, okay,
+
+81
+00:06:04,380 --> 00:06:05,260
+I have a list of numbers.
+
+82
+00:06:05,270 --> 00:06:06,770
+How do I loop around them?
+
+83
+00:06:06,770 --> 00:06:09,270
+Okay, I'll use a For loop.
+
+84
+00:06:09,270 --> 00:06:14,600
+That's the first thing that we did, when we were talking about the Structured approach.
+
+85
+00:06:14,660 --> 00:06:18,130
+Now, how do we solve the same thing in a functional approach?
+
+86
+00:06:18,140 --> 00:06:19,530
+I'll keep you guessing.
+
+87
+00:06:19,590 --> 00:06:21,580
+Let's see that in the next step.
+
+88
+00:06:21,580 --> 00:06:22,580
+Until then bye-bye.

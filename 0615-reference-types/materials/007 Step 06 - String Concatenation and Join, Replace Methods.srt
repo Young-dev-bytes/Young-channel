@@ -1,0 +1,545 @@
+1
+00:00:02,120 --> 00:00:03,410
+Welcome back.
+欢迎回来。
+
+2
+00:00:03,450 --> 00:00:08,060
+In this video, let's look at a few more utility methods which are present in the String class as well as
+在这个视频中，让我们再看看字符串类中的一些实用方法，以及
+
+3
+00:00:08,119 --> 00:00:12,580
+we would discuss something very important called concatenation operator.
+我们将讨论一个非常重要的东西，叫做连接运算符。
+
+4
+00:00:12,610 --> 00:00:17,990
+Let's start with the concatenation operator which is +, right. So, we looked at 1 + 2, what would be
+让我们从连接运算符开始，它是+，对。那么，我们看一下1+2，会是什么
+
+5
+00:00:18,000 --> 00:00:21,940
+the value? It would return 3. The same thing if I do strings,
+值是多少？它将返回3。同样的事情，如果我做字符串。
+
+6
+00:00:21,980 --> 00:00:24,680
+what would be the output? Think about it.
+输出会是什么？想一想吧。
+
+7
+00:00:24,690 --> 00:00:25,870
+It's 12.
+它是12。
+
+8
+00:00:26,080 --> 00:00:31,360
+So, it actually just concatenates 1 with 2 and returns it back. Let's say one of these is a string
+所以，它实际上只是把1和2连接起来，然后返回。比方说，其中一个是字符串
+
+9
+00:00:31,370 --> 00:00:32,790
+and the other one is number.
+而另一个是数字。
+
+10
+00:00:32,930 --> 00:00:36,140
+Will the value change? Nope.
+这个值会改变吗？不会。
+
+11
+00:00:36,150 --> 00:00:38,010
+It is "1" + 2.
+它是 "1"+2。
+
+12
+00:00:38,100 --> 00:00:41,960
+So, if the number is 23, let's say, it's 123.
+所以，如果数字是23，比方说，它是123。
+
+13
+00:00:41,970 --> 00:00:45,480
+However, just 1 + 23 would return 24.
+然而，只是1+23会返回24。
+
+14
+00:00:45,480 --> 00:00:53,610
+So, if there is a string in one of the operands, then what would happen? Is it becomes concatenation,
+那么，如果其中一个操作数有一个字符串，那么会发生什么？它变成了连接。
+
+15
+00:00:53,640 --> 00:00:58,740
++ behaves as if this is a concatenation. So, 1 is concatenated to 23.
++的行为就像这是一个串联。所以，1被串联到23。
+
+16
+00:00:58,770 --> 00:01:03,350
+So, 123. However, there are no strings. 1 + 23 is returning back,
+所以，123。然而，没有任何字符串。1+23是返回的。
+
+17
+00:01:03,450 --> 00:01:11,030
+24. If I have 1 + 2+ "3", what would be the result? Right,
+24. 如果我有1+2+"3"，结果会是什么？对。
+
+18
+00:01:12,060 --> 00:01:13,420
+it's printing 33.
+它打印的是33。
+
+19
+00:01:13,470 --> 00:01:14,940
+Let's try a different thing.
+让我们尝试一下不同的事情。
+
+20
+00:01:15,940 --> 00:01:26,380
+Let's say I don't do this, but I would do this. 123,
+假设我不这样做，但我会这样做。123,
+
+21
+00:01:26,400 --> 00:01:28,280
+that's interesting,
+这很有趣。
+
+22
+00:01:28,280 --> 00:01:28,640
+right.
+对。
+
+23
+00:01:29,030 --> 00:01:36,500
+So, why is this happening? The way expressions are evaluated in Java are left to right. So, left starts with
+那么，为什么会出现这种情况呢？Java中表达式的评估方式是从左到右。所以，左边开始是
+
+24
+00:01:36,500 --> 00:01:36,860
+1.
+1.
+
+25
+00:01:36,860 --> 00:01:38,550
+So, 1 + 2 is 3.
+所以，1+2就是3。
+
+26
+00:01:38,570 --> 00:01:46,340
+So, this is performed as an integer operation. So, any normal, any operation between two integers is a integer.
+所以，这是作为一个整数操作来执行的。所以，任何正常的，两个整数之间的操作都是一个整数。
+
+27
+00:01:46,430 --> 00:01:48,120
+So, 1 + 2 will return 3.
+所以，1+2将返回3。
+
+28
+00:01:48,140 --> 00:01:53,250
+However, once there is 3, the result of this is 3, once we have the result,
+然而，一旦有了3，这个结果就是3，一旦我们有了结果。
+
+29
+00:01:53,360 --> 00:01:59,250
+now, it's 3 + string 3, then it becomes concatenation. So, that's why it is 33.
+现在，它是3+字符串3，那么它就变成了连接。所以，这就是为什么它是33。
+
+30
+00:01:59,570 --> 00:02:07,100
+In this case, let's start from the left, 1 + 2 is 1, is a string, 2 is an integer.
+在这种情况下，让我们从左边开始，1+2是1，是一个字符串，2是一个整数。
+
+31
+00:02:07,100 --> 00:02:08,470
+So, the result is a string.
+所以，结果是一个字符串。
+
+32
+00:02:08,490 --> 00:02:16,020
+So, 1 + 2  becomes concatenation, 12 and 12 is a string again. To that, we are appending 3.
+所以，1+2成为连接，12，12又是一个字符串。在此基础上，我们再加上3。
+
+33
+00:02:16,030 --> 00:02:17,400
+So, 123.
+所以，123。
+
+34
+00:02:17,540 --> 00:02:21,370
+So, the rules of concatenation are very simple. It executes from left to right
+所以，连接的规则非常简单。它从左到右执行
+
+35
+00:02:21,440 --> 00:02:28,610
+and if you see two integers as part of the operation, it would be addition. If you see one string and
+而如果你看到两个整数作为操作的一部分，这将是加法。如果你看到一个字符串和
+
+36
+00:02:28,610 --> 00:02:30,940
+one integer, it's concatenation.
+一个整数，这就是连接。
+
+37
+00:02:31,040 --> 00:02:34,500
+If it's both strings, then it's concatenation as well.
+如果是两个字符串，那也是连接。
+
+38
+00:02:34,550 --> 00:02:35,630
+Okay.
+好的。
+
+39
+00:02:35,630 --> 00:02:40,960
+That's how we would do a lot of our printing, right. So, whenever we did System.out.println,
+这就是我们如何进行大量的打印，对吧。所以，每当我们做System.out.println,
+
+40
+00:02:41,570 --> 00:02:42,670
+we were using +,
+我们都是用+。
+
+41
+00:02:42,680 --> 00:02:42,950
+right.
+对。
+
+42
+00:02:42,950 --> 00:02:46,430
+So, if I have a integer variable, let's say int
+所以，如果我有一个整数变量，比方说int
+
+43
+00:02:46,430 --> 00:02:48,190
+i = 20.
+i = 20.
+
+44
+00:02:48,530 --> 00:02:50,720
+I can do System.out.println
+我可以做System.out.println
+
+45
+00:02:53,550 --> 00:02:58,910
+"Value is" and we said + 20,
+"值是"，我们说+20。
+
+46
+00:02:59,010 --> 00:02:59,250
+right.
+对。
+
+47
+00:02:59,250 --> 00:03:00,360
+So, this is how we did it.
+所以，我们就是这样做的。
+
+48
+00:03:00,460 --> 00:03:02,520
+"Value is 20" is printed.
+"值为20 "被打印出来。
+
+49
+00:03:02,580 --> 00:03:09,820
+This is because of the concatenation operator: string and int. String and int, it becomes concatenation.
+这是因为串联运算符：字符串和int。字符串和int，它变成了连接。
+
+50
+00:03:09,840 --> 00:03:13,430
+So, if I'm doing + 20, what would be the result?
+所以，如果我在做+20，结果会是什么？
+
+51
+00:03:14,500 --> 00:03:16,240
+Value is 2020;
+值是2020。
+
+52
+00:03:16,240 --> 00:03:18,510
+it's just concatenation. Try a puzzle, right. So,
+这只是串联。试着做一道题，对。所以。
+
+53
+00:03:18,580 --> 00:03:21,540
+if you want now, I would want to print 40.
+如果你现在想，我想打印40。
+
+54
+00:03:22,180 --> 00:03:24,300
+What can I do?
+我可以做什么呢？
+
+55
+00:03:24,350 --> 00:03:26,710
+What can I do is, put it in brackets.
+我可以做的是，把它放在括号里。
+
+56
+00:03:26,810 --> 00:03:29,870
+Once you'd put it something in brackets, the brackets get priority.
+一旦你把它放在括号里的东西，括号就会得到优先权。
+
+57
+00:03:30,600 --> 00:03:30,890
+So,
+所以。
+
+58
+00:03:30,890 --> 00:03:32,240
+Value is 40.
+值是40。
+
+59
+00:03:32,720 --> 00:03:36,630
+Let's look at a few other utility methods which are present in the String class.
+让我们来看看字符串类中的其他一些实用方法。
+
+60
+00:03:36,740 --> 00:03:39,560
+So, this is a static method which is present in String.
+所以，这是一个存在于String中的静态方法。
+
+61
+00:03:39,560 --> 00:03:46,040
+This is join method. Lot of scenarios, you would want to append comma to a list of numbers, right. So,
+这就是连接方法。在很多情况下，你想在一个数字列表中添加逗号，对吗？所以。
+
+62
+00:03:46,040 --> 00:03:53,060
+if I want a string with 2, 3, 4, so I can do something of this kind.
+如果我想要一个有2、3、4的字符串，那么我可以做这样的事情。
+
+63
+00:03:53,060 --> 00:03:59,060
+This returns, the first character is what character you want to join with, and rest is a list of strings
+这个返回，第一个字符是你想加入的字符，其余的是你想加入的字符串的列表
+
+64
+00:03:59,090 --> 00:04:00,440
+that you would want to append.
+你想追加的字符串列表。
+
+65
+00:04:00,500 --> 00:04:02,660
+So, 2, 3, 4.
+所以，2、3、4。
+
+66
+00:04:03,080 --> 00:04:15,760
+So, if I just have lesser number values, let's say 35 or 'A', let's say this is 'B', and this is 'C'. It prints A, B, C
+所以，如果我只是有较少的数字值，比方说35或'A'，比方说这是'B'，这是'C'。它打印出A、B、C
+
+67
+00:04:15,760 --> 00:04:24,070
+and if there is only one, it just prints 'A'. If there are two, it would start appending a ','. So, this is a
+如果只有一个，它只打印'A'。如果有两个，它就会开始附加一个'，'。所以，这是一个
+
+68
+00:04:24,250 --> 00:04:30,280
+very useful utility thing when you would want to separate the different values inside a string using
+当你想用','来分隔一个字符串中的不同值时，这是一个非常有用的工具。
+
+69
+00:04:30,280 --> 00:04:31,160
+a ','.
+a ','.
+
+70
+00:04:31,330 --> 00:04:34,210
+The last utility method is to replace.
+最后一个实用方法是替换。
+
+71
+00:04:34,210 --> 00:04:41,550
+So, let's say, in this string, I would want to replace a specific character. So, I can say replace character "a"
+所以，假设在这个字符串中，我想替换一个特定的字符。所以，我可以说替换字符 "a"
+
+72
+00:04:41,580 --> 00:04:51,300
+with character "z". What would be the output? "zbcd" or you can say, even replace a string, right. So, replace
+与字符 "z"。输出会是什么？"zbcd "或者你可以说，甚至替换一个字符串，对吧。所以，把
+
+73
+00:04:51,300 --> 00:04:56,940
+"ab" with "xyz". So, it becomes "xyzcd".
+"ab "与 "xyz"。所以，它就变成了 "xyzcd"。
+
+74
+00:04:57,570 --> 00:04:59,040
+That's cool right.
+这很好，对。
+
+75
+00:04:59,040 --> 00:05:05,340
+So, what we are doing is, it's trying to explore the string APIs. One of the important things is trying to
+所以，我们正在做的是，它正试图探索字符串API。其中一件重要的事情是试图
+
+76
+00:05:05,340 --> 00:05:10,790
+discover and understand the APIs might become little boring after a while.
+发现和理解这些API可能会在一段时间后变得有点无聊。
+
+77
+00:05:11,040 --> 00:05:16,350
+There are so many different methods that are present, that it's impossible to remember all of them.
+有这么多不同的方法存在，要记住所有的方法是不可能的。
+
+78
+00:05:16,350 --> 00:05:21,430
+I think the way you can look at it is, try to understand what are the possibilities that are there.
+我认为你可以这样看待它，试着去理解有哪些可能性。
+
+79
+00:05:21,430 --> 00:05:24,000
+What are the possible operations that are present?
+有哪些可能的操作是存在的？
+
+80
+00:05:24,020 --> 00:05:28,750
+You don't really need to remember all the method names that are present.
+你真的不需要记住所有存在的方法名称。
+
+81
+00:05:28,920 --> 00:05:33,360
+If you are unable to find out what is the right method to do something, you can just say,
+如果你无法找出正确的方法来做某事，你可以直接说。
+
+82
+00:05:33,630 --> 00:05:39,300
+let's say, I have a string variable, right str = 25 or some text, right.
+比方说，我有一个字符串变量，str = 25或一些文本，对吧。
+
+83
+00:05:40,140 --> 00:05:45,180
+I can just say str. and it would show you all the different operations which are present on that
+我可以直接说str.然后它就会向你显示对该字符串的所有不同操作。
+
+84
+00:05:45,180 --> 00:05:50,510
+specific string. So, you can try and research that method further and see if that matches your needs
+特定的字符串。所以，你可以尝试进一步研究这个方法，看看是否符合你的需要。
+
+85
+00:05:50,730 --> 00:05:55,500
+and also there would be a few static methods which are present. So, you can type the class name and press
+也会有一些静态方法存在。所以，你可以输入类的名称，然后按
+
+86
+00:05:55,500 --> 00:06:00,430
+'.' and press tab and that would print all the static methods that are present in there.
+'.'，然后按tab键，这样就可以打印出其中所有的静态方法。
+
+87
+00:06:00,430 --> 00:06:05,250
+We have not really discussed every method which is present in there because that means we'll be spending
+我们没有真正讨论其中的每一个方法，因为这意味着我们将花费整个课程来讨论字符串。
+
+88
+00:06:05,430 --> 00:06:07,780
+the entire course just discussing the string API.
+整个课程都在讨论字符串API。
+
+89
+00:06:08,250 --> 00:06:13,470
+But the idea was to capture the essentials and give them to you and at any other point if you would
+但我们的想法是抓住要点，把它们交给你，在任何其他时候，如果你想了解
+
+90
+00:06:13,470 --> 00:06:18,630
+want to find out whether such kind of feature is there, you can just type in str. or string.
+想知道是否有这样的功能，你可以直接输入str.或string.
+
+91
+00:06:18,990 --> 00:06:24,210
+and find out what are the other options which are present. The other way you can do to explore the API
+并找出存在的其他选项。你可以用另一种方法来探索API
+
+92
+00:06:24,450 --> 00:06:31,200
+is to type in Java doc and type in the class you would want to explore and say which version. Since I would
+是键入Java doc，然后键入你想探索的类，并说明是哪个版本。因为我想
+
+93
+00:06:31,200 --> 00:06:33,680
+want to look at the string class in Java 9,
+想看看Java 9中的字符串类。
+
+94
+00:06:33,720 --> 00:06:35,480
+I'd want to look at the Java doc for it.
+我想看看它的Java文档。
+
+95
+00:06:35,700 --> 00:06:41,700
+You can take this and this would show the entire documentation for the String class.
+你可以拿着这个，这将显示整个字符串类的文档。
+
+96
+00:06:41,700 --> 00:06:46,740
+So, as you can see in here, it says, the String class represents character strings. All string literals in
+所以，正如你在这里看到的，它说，字符串类代表字符串。Java程序中的所有字符串字面
+
+97
+00:06:46,740 --> 00:06:51,990
+Java programs such as "abc" are implemented as instances of this class
+中的所有字符串字面，例如 "abc"，都是作为这个类的实例实现的。
+
+98
+00:06:52,290 --> 00:06:58,290
+and if you look at it, it says Strings are constants, their values cannot be changed after they're created,
+如果你看一下，它说字符串是常量，它们的值在创建后不能被改变。
+
+99
+00:06:59,130 --> 00:06:59,510
+right.
+对。
+
+100
+00:06:59,520 --> 00:07:03,990
+We'll talk about StringBuffers later. But the idea is,  you can actually look at the documentation in
+我们稍后会谈论StringBuffers。但是我们的想法是，你实际上可以看一下这里的文档
+
+101
+00:07:03,990 --> 00:07:04,290
+here.
+这里。
+
+102
+00:07:04,290 --> 00:07:06,600
+Let's say you would want to explore a specific method,
+比方说，你想探索一个特定的方法。
+
+103
+00:07:06,600 --> 00:07:09,440
+what it does, concat what it does,
+它做什么，它做什么。
+
+104
+00:07:09,450 --> 00:07:13,220
+you can just click the method and look at examples down there as well.
+你可以直接点击该方法，然后看看下面的例子。
+
+105
+00:07:13,230 --> 00:07:18,150
+So, one of the things I would recommend you to do is, try and look at the APIs and try and understand the
+所以，我建议你做的一件事是，尝试看看API，并尝试了解
+
+106
+00:07:18,150 --> 00:07:19,510
+different methods which are present.
+不同的方法。
+
+107
+00:07:19,530 --> 00:07:21,660
+It's impossible to remember all the APIs.
+要记住所有的API是不可能的。
+
+108
+00:07:22,050 --> 00:07:26,430
+So, try and get an awareness of what can be done and whenever the need arises,
+所以，试着去了解可以做什么，并且在需要的时候。
+
+109
+00:07:26,430 --> 00:07:32,040
+you go and search the documentation to find the right methods. Until the next video, bye-bye.
+你就去搜索文档，找到正确的方法。在下一个视频之前，拜拜。
+

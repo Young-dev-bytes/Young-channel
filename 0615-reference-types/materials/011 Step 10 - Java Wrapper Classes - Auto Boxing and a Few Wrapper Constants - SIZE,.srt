@@ -1,0 +1,230 @@
+1
+00:00:02,070 --> 00:00:03,540
+Welcome back.
+欢迎回来。
+
+2
+00:00:03,540 --> 00:00:08,880
+In this video, we would talk about one of the new features in Java 5, which is called Auto Boxing, which
+在这段视频中，我们将讨论Java 5中的一个新功能，它被称为自动装箱，这
+
+3
+00:00:08,880 --> 00:00:13,560
+allows you to write code with primitive values, but compiler does a lot of work for you and converts
+它允许你用原始值编写代码，但编译器会帮你做很多工作，并将它们转换成
+
+4
+00:00:13,560 --> 00:00:14,960
+them into wrappers.
+它们转化为包装器。
+
+5
+00:00:15,030 --> 00:00:21,260
+And also, we would look at a few constants that are defined inside these wrapper classes.
+还有，我们会看一下这些包装器类里面定义的一些常量。
+
+6
+00:00:21,270 --> 00:00:25,040
+Let's get started with this concept called Auto Boxing.
+让我们从这个叫做自动装箱的概念开始。
+
+7
+00:00:25,080 --> 00:00:33,930
+So, I said the way you would create a wrapper class is by saying Integer seven = Integer.valueOf(7)
+所以，我说过，你创建一个包装器类的方法是：Integer seven = Integer.valueOf(7)
+
+8
+00:00:34,200 --> 00:00:35,370
+,
+,
+
+9
+00:00:35,430 --> 00:00:35,710
+right.
+对。
+
+10
+00:00:36,180 --> 00:00:38,140
+So, this is the way
+所以，这就是
+
+11
+00:00:38,160 --> 00:00:40,100
+we were creating wrapper classes until now.
+我们直到现在还在创建封装类。
+
+12
+00:00:40,440 --> 00:00:45,620
+But this is too long a way because you can do this as well.
+但这种方式太长了，因为你也可以这样做。
+
+13
+00:00:45,720 --> 00:00:49,260
+What is happening in here is Auto Boxing.
+这里所发生的是自动装箱。
+
+14
+00:00:49,260 --> 00:00:56,070
+What happens is when you do this, Java in the background would do this, Integer.valueOf(7) and create
+发生的情况是，当你这样做的时候，Java在后台会这样做，Integer.valueOf(7)并创建一个实例。
+
+15
+00:00:56,070 --> 00:01:00,380
+an instance of it and put the reference of it in seven.
+它的一个实例，并把它的引用放在7里面。
+
+16
+00:01:00,390 --> 00:01:04,230
+This feature in Java is called Auto boxing.
+这个功能在Java中被称为自动装箱。
+
+17
+00:01:04,230 --> 00:01:09,320
+The important thing is Auto Boxing uses Integer.valueOf
+重要的是，自动装箱使用Integer.valueOf
+
+18
+00:01:09,330 --> 00:01:13,340
+and we know that Integer.valueOf uses all the things again.
+而我们知道，Integer.valueOf又使用了所有的东西。
+
+19
+00:01:13,350 --> 00:01:20,700
+So, if I create something like sevenAgain and = 7, because these are using Integer.valueOf,
+所以，如果我创建像sevenAgain和=7这样的东西，因为这些是使用Integer.valueOf。
+
+20
+00:01:20,840 --> 00:01:25,560
+you would see that these are referring to the same variable. So, if I say seven == sevenAgain,
+你会发现，这些都是指同一个变量。所以，如果我说seven == sevenAgain,
+
+21
+00:01:25,780 --> 00:01:32,640
+you would see that the value is true. Auto Boxing uses Integer.valueOf. The existing objects,
+你会看到这个值是真的。Auto Boxing使用Integer.valueOf。现有的对象。
+
+22
+00:01:32,670 --> 00:01:39,330
+the existing wrapper class objects are reused and you can see that the same reference is present in both
+现有的封装类对象被重用，你可以看到相同的引用同时存在于
+
+23
+00:01:39,330 --> 00:01:46,350
+seven and sevenAgain. Auto Boxing is a very important thing. At later stage, we would also look at how do we use
+seven和sevenAgain中。自动装箱是一件非常重要的事情。在后面的阶段，我们还将研究如何使用
+
+24
+00:01:46,470 --> 00:01:54,090
+Auto Boxing to add primitive values to a collection. Features like this are called syntactic sugar,
+自动框定来向集合中添加原始值。像这样的功能被称为语法糖。
+
+25
+00:01:54,090 --> 00:01:54,680
+right.
+对。
+
+26
+00:01:54,700 --> 00:01:57,570
+Who wants to type in the extra characters?
+谁愿意输入额外的字符呢？
+
+27
+00:01:57,600 --> 00:01:58,460
+I'm a lazy guy
+我是一个懒惰的人
+
+28
+00:01:58,530 --> 00:02:00,640
+and so I guess, would be you.
+所以我猜你也是。
+
+29
+00:02:00,660 --> 00:02:05,880
+So, we don't really want to type in a lot of code and that's where features like Auto Boxing would really
+所以，我们并不真的想输入大量的代码，这就是像自动装箱这样的功能真正的帮助。
+
+30
+00:02:05,940 --> 00:02:06,640
+help.
+帮助。
+
+31
+00:02:06,780 --> 00:02:12,840
+Having looked at all these features on the wrapper classes, the last thing which we want to talk about wrapper
+在看了所有这些关于包装器类的特性之后，我们想谈的最后一件事是包装器
+
+32
+00:02:12,840 --> 00:02:17,470
+classes is the different constants, which are defined on each of these wrapper classes.
+类的最后一点是不同的常量，这些常量被定义在每个包装器类上。
+
+33
+00:02:17,490 --> 00:02:21,740
+So, if you look at the wrapper classes, they have a MAX_VALUE.
+所以，如果你看一下包装器类，它们有一个MAX_VALUE。
+
+34
+00:02:21,810 --> 00:02:25,120
+It indicates what max value can a integer hold.
+它表示一个整数能容纳的最大值。
+
+35
+00:02:25,140 --> 00:02:31,140
+They also have a MIN_VALUE; what is the minimum value that an integer can hold. If you want to find the
+它们也有一个MIN_VALUE；什么是一个整数能容纳的最小值。如果你想找到
+
+36
+00:02:31,140 --> 00:02:33,180
+size of an integer,
+一个整数的大小。
+
+37
+00:02:33,180 --> 00:02:39,310
+you can do that as well and you can get the size in bytes as well. So, size is in bits.
+你也可以这样做，你也可以得到字节的大小。所以，大小的单位是比特。
+
+38
+00:02:39,330 --> 00:02:46,830
+So, this is 32 bits and this is 4 bytes. These kind of constants are present on all the wrapper classes.
+所以，这是32位，这是4字节。这些常量存在于所有的封装类中。
+
+39
+00:02:47,100 --> 00:02:52,440
+In this video and the previous sets of videos, we looked at wrapper classes, we looked at the fact that
+在这段视频和之前的几段视频中，我们看了包装类，我们看了它们是不可变的这一事实。
+
+40
+00:02:52,450 --> 00:02:57,900
+they're immutable, we looked at the fact that there are a wide variety of features that these wrapper
+它们是不可变的，我们看了这些包装类提供的各种功能的事实
+
+41
+00:02:57,900 --> 00:03:04,200
+classes offer, and we looked at the fact that we should always use valueOf instead of using new with
+类所提供的各种功能，以及我们应该始终使用valueOf而不是使用new的事实。
+
+42
+00:03:04,380 --> 00:03:09,600
+the wrapper classes. We also looked at the various constants that are present in this wrapper class like
+而不是使用new。我们还研究了这个封装类中存在的各种常量，如
+
+43
+00:03:09,600 --> 00:03:15,300
+MAX_VALUE, MIN_VALUE, SIZE, and BYTES which would help us get more information about what kind of values
+MAX_VALUE、MIN_VALUE、SIZE和BOTTES，这将帮助我们获得更多关于在这些包装类中可以存储哪些值的信息。
+
+44
+00:03:15,300 --> 00:03:18,750
+you can store into these wrapper classes.
+你可以在这些封装类中存储什么样的值。
+
+45
+00:03:18,750 --> 00:03:24,450
+I'll see you in the next video where we would start discussing about a brand new topic.
+我们将在下一个视频中见，届时我们将开始讨论一个全新的话题。
+
+46
+00:03:24,450 --> 00:03:25,420
+Until then, bye bye.
+在那之前，再见了。
+

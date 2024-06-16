@@ -1,0 +1,275 @@
+1
+00:00:00,450 --> 00:00:01,270
+Until then, bye bye.
+在那之前，再见了。
+
+2
+00:00:10,200 --> 00:00:11,940
+Welcome back.
+欢迎回来。
+
+3
+00:00:11,940 --> 00:00:16,250
+Until now, we looked at various kinds of data types, right.
+到目前为止，我们看了各种数据类型，对吧。
+
+4
+00:00:16,260 --> 00:00:18,810
+We looked at integers, floating point values,
+我们看了整数、浮点值。
+
+5
+00:00:18,810 --> 00:00:20,260
+we looked at booleans,
+我们看了布尔运算。
+
+6
+00:00:20,280 --> 00:00:23,020
+we looked at characters, we looked at strings.
+我们看了字符，我们看了字符串。
+
+7
+00:00:23,100 --> 00:00:27,730
+The only data type which is missing until now is dates, right.
+到目前为止，唯一缺少的数据类型是日期，对。
+
+8
+00:00:27,760 --> 00:00:32,960
+So, in this video, we would start exploring dates. Before Java 8,
+所以，在这段视频中，我们将开始探索日期。在Java 8之前。
+
+9
+00:00:32,970 --> 00:00:40,170
+one of the constant problems with Java APIs is the implementation of date. They did not really have
+在Java 8之前，Java APIs一直存在的问题之一就是日期的实现。他们并没有真正拥有
+
+10
+00:00:40,290 --> 00:00:42,300
+a good date API
+一个好的日期API
+
+11
+00:00:42,930 --> 00:00:49,230
+and that's where a new implementation for dates is provided in Java 8.
+而这正是Java 8中提供的新的日期实现的地方。
+
+12
+00:00:49,290 --> 00:00:56,070
+The new implementation was based on something called Joda Framework. So, this Joda was a very famous
+这个新的实现是基于一个叫做Joda框架的东西。所以，这个Joda是一个非常著名的
+
+13
+00:00:56,460 --> 00:01:04,260
+alternative to the Java API for dates and Java 8 brought in some of the important concepts from Joda
+的替代方案，而Java 8将Joda的一些重要概念引入了Java API本身。
+
+14
+00:01:04,410 --> 00:01:06,750
+into the Java API itself.
+的一些重要概念引入到Java API本身。
+
+15
+00:01:06,750 --> 00:01:14,160
+So, we'll use that API, we will use the API which is introduced in Java 8 to discuss about dates in this
+因此，我们将使用该API，我们将使用Java 8中引入的API来讨论本视频中的日期问题。
+
+16
+00:01:14,170 --> 00:01:15,810
+specific video.
+具体的视频。
+
+17
+00:01:16,140 --> 00:01:26,280
+Java 8 brings in three most important classes. So, LocalDate, LocalDateTime, and LocalTime.
+Java 8引入了三个最重要的类。所以，LocalDate、LocalDateTime和LocalTime。
+
+18
+00:01:26,380 --> 00:01:32,260
+These are the three classes which makes playing with date and time very easy.
+这三个类使日期和时间的处理变得非常容易。
+
+19
+00:01:32,260 --> 00:01:35,560
+So, what is LocalDate, what is LocalDateTime, and what is LocalTime?
+那么，什么是LocalDate，什么是LocalDateTime，以及什么是LocalTime？
+
+20
+00:01:35,860 --> 00:01:46,050
+So, date can hold a date. So, 10th October 2017, 15th December 2015. So, LocalDate can hold a date. LocalTime
+所以，date可以持有一个日期。所以，2017年10月10日，2015年12月15日。所以，LocalDate可以容纳一个日期。而LocalTime
+
+21
+00:01:46,060 --> 00:01:51,130
+on the other hand can hold just the time. So, it can hold the time saying 23:25.
+另一方面，它可以只保存时间。所以，它可以保存时间，如23:25。
+
+22
+00:01:51,130 --> 00:01:59,040
+That stands for 11:25 p.m or it can say 1:25, so 1:25 a.m. LocalDateTime
+这代表晚上11:25，或者它可以说是1:25，所以是凌晨1:25。
+
+23
+00:01:59,080 --> 00:02:05,920
+can store both the date and the time. So, it can store things like, okay, 11:25 p.m on 10th December
+可以同时存储日期和时间。因此，它可以存储诸如1985年12月10日晚上11点25分的事情。
+
+24
+00:02:05,950 --> 00:02:08,020
+of 1985.
+1985年12月10日晚上11点25分。
+
+25
+00:02:08,250 --> 00:02:12,380
+Let's start exploring the API with LocalDate.
+让我们开始探索LocalDate的API。
+
+26
+00:02:12,400 --> 00:02:19,720
+If I say, LocalDate now = LocalDate, there's a method called now( ).
+如果我说，LocalDate now = LocalDate，有一个方法叫now( )。
+
+27
+00:02:20,080 --> 00:02:21,220
+This would fail.
+这就会失败。
+
+28
+00:02:21,280 --> 00:02:23,130
+Now, why is this failing?
+现在，为什么会失败呢？
+
+29
+00:02:23,140 --> 00:02:24,370
+Think about it.
+想一想吧。
+
+30
+00:02:24,370 --> 00:02:27,270
+What could be the reasons, why it's failing?
+会有什么原因导致失败呢？
+
+31
+00:02:27,310 --> 00:02:38,510
+LocalDate is in a package called Java.time. One of the important things is, JShell provides a few default
+LocalDate是在一个叫做Java.time的包里。其中一件重要的事情是，JShell提供了一些默认的
+
+32
+00:02:38,690 --> 00:02:39,480
+imports.
+导入。
+
+33
+00:02:39,510 --> 00:02:43,750
+So, if I do a /imports, it would show the default imports.
+因此，如果我做一个
+
+34
+00:02:43,760 --> 00:02:47,290
+That's the reason why, we were able to use the BigDecimal class,
+null
+
+35
+00:02:47,460 --> 00:02:55,350
+the String class without having a problem, because it was in the packages which are in the default imports.
+null
+
+36
+00:02:56,040 --> 00:03:04,580
+However, this package, java.time.LocalDate, is not in the default imports. So, we would need to import it in. So, I will say
+null
+
+37
+00:03:04,770 --> 00:03:09,410
+java.time.LocalDate. LocalDate
+null
+
+38
+00:03:09,470 --> 00:03:10,380
+is now imported.
+null
+
+39
+00:03:10,380 --> 00:03:16,290
+Now I'll execute the same statement and now, you would see that the LocalDate instance is now created.
+null
+
+40
+00:03:16,290 --> 00:03:18,510
+You can see the value of it being printed in here.
+null
+
+41
+00:03:18,550 --> 00:03:24,000
+It's saying 2018-02-01.
+null
+
+42
+00:03:24,000 --> 00:03:24,790
+The same thing,
+null
+
+43
+00:03:24,870 --> 00:03:28,620
+if I want to do with LocalDateTime, what would happen?
+null
+
+44
+00:03:28,620 --> 00:03:34,670
+Think about it. LocalDateTime.now( ): error. Because we have to import that as well.
+null
+
+45
+00:03:34,720 --> 00:03:36,200
+So, LocalDateTime.
+null
+
+46
+00:03:37,080 --> 00:03:39,980
+The other option is to import everything together. So,
+null
+
+47
+00:03:40,090 --> 00:03:40,910
+*,
+null
+
+48
+00:03:41,580 --> 00:03:41,940
+right.
+null
+
+49
+00:03:42,180 --> 00:03:45,630
+So, now I would be able to do a LocalDateTime.now( ).
+null
+
+50
+00:03:46,020 --> 00:03:51,480
+So, the difference between LocateDate and LocalDateTime, as you can see in here, is LocalDateTime represents
+null
+
+51
+00:03:51,760 --> 00:03:57,090
+both date and time whereas LocalDate only represents the date
+null
+
+52
+00:03:57,090 --> 00:04:04,650
+and if I do a LocalTime, it represents only the time and you can see the different details that are
+null
+
+53
+00:04:04,650 --> 00:04:07,440
+stored in here. In the next video,
+null
+
+54
+00:04:07,710 --> 00:04:12,060
+we will start exploring all these three APIs a lot more.
+null
+
+55
+00:04:12,060 --> 00:04:13,030
+Until then, bye bye.
+null
+

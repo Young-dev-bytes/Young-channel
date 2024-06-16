@@ -1,0 +1,285 @@
+1
+00:00:02,070 --> 00:00:03,570
+Welcome back.
+
+2
+00:00:03,570 --> 00:00:07,790
+In this video, let's discuss how do you create wrapper classes. Creating wrapper classes is
+
+3
+00:00:07,800 --> 00:00:08,980
+very very simple, right.
+
+4
+00:00:08,990 --> 00:00:12,410
+So, just like you create an int i = 5.
+
+5
+00:00:12,420 --> 00:00:19,440
+Let's say I'd want to create an integer with similar things. I'll say Integer integer = 
+
+6
+00:00:19,450 --> 00:00:23,880
+new Integer(5). Now,
+
+7
+00:00:23,900 --> 00:00:26,360
+that's how we would create it, right. So, now a
+
+8
+00:00:26,480 --> 00:00:29,570
+integer value is created with a value, 5.
+
+9
+00:00:30,080 --> 00:00:34,650
+Now, let's say I'm creating another Integer, integer1 with 5.
+
+10
+00:00:34,740 --> 00:00:40,210
+So, now integer and integer1 are having the same value, 5.
+
+11
+00:00:40,490 --> 00:00:46,820
+This is one way of creating integers. The other way of creating integer values is by using something
+
+12
+00:00:46,820 --> 00:00:52,780
+called valueOf. There is a static method in each of the wrapper classes called valueOf
+
+13
+00:00:52,900 --> 00:00:59,920
+and I can say valueOf(5) and I can say, integer1 = valueOf.
+
+14
+00:00:59,990 --> 00:01:06,500
+So, these are the two ways you can create wrapper classes; directly use the constructors or you can use
+
+15
+00:01:06,500 --> 00:01:09,580
+the valueOf methods which are present.
+
+16
+00:01:09,590 --> 00:01:13,710
+These are static methods which are present in each of the wrapper classes.
+
+17
+00:01:13,790 --> 00:01:19,010
+If you look at the integers constructor, it can also accept string values,
+
+18
+00:01:19,020 --> 00:01:20,490
+"5234".
+
+19
+00:01:20,590 --> 00:01:26,680
+So, you can do that as well. So, you can pass in a string and create an integer based on that.
+
+20
+00:01:26,750 --> 00:01:33,710
+You might be asking, if I have two ways of creating wrapper classes, which one should I use?
+
+21
+00:01:33,710 --> 00:01:39,860
+Which one of these is a better way to create wrapper classes? To understand that further,
+
+22
+00:01:40,390 --> 00:01:41,360
+let's dig in.
+
+23
+00:01:41,750 --> 00:01:42,820
+So, integer,
+
+24
+00:01:42,920 --> 00:01:48,860
+let's say, I'm creating i1 = new Integer(5).
+
+25
+00:01:49,340 --> 00:01:54,590
+Let's create i2 also using new Integer(5). Same value, I'm creating two integers.
+
+26
+00:01:54,740 --> 00:02:05,280
+I would use Integer.valueOf( ), right now. So, I'll call this 
+i3 and do Integer.valueOf(5). Now, let's do an
+
+27
+00:02:05,290 --> 00:02:12,550
+i4 with the same thing. Now, I'll do i1 == i2.
+
+28
+00:02:12,850 --> 00:02:14,240
+If you remember this,
+
+29
+00:02:14,470 --> 00:02:15,880
+this is a reference type.
+
+30
+00:02:15,880 --> 00:02:21,100
+This is a reference variable. For reference variables, == does not compare the value.
+
+31
+00:02:21,310 --> 00:02:23,270
+It compares where they are stored in memory.
+
+32
+00:02:23,890 --> 00:02:27,920
+So, i1 = i2, they have the same value. But it's false.
+
+33
+00:02:28,580 --> 00:02:31,030
+But if I do i3 = i4,
+
+34
+00:02:32,390 --> 00:02:33,050
+Aha,
+
+35
+00:02:33,120 --> 00:02:35,190
+it returns true.
+
+36
+00:02:35,280 --> 00:02:43,470
+One of the important things is just like String class, all the wrapper classes are also immutable.
+
+37
+00:02:43,470 --> 00:02:48,440
+So, that means once a value is assigned to them, you cannot change it.
+
+38
+00:02:48,590 --> 00:02:49,270
+Over here,
+
+39
+00:02:49,290 --> 00:02:55,560
+what is happening is, for i1, a new integer variable is getting created and i2, another integer variable
+
+40
+00:02:55,560 --> 00:02:57,660
+with the same value is getting created.
+
+41
+00:02:58,170 --> 00:03:01,200
+What Integer.valueOf( ) does is okay, 
+
+42
+00:03:01,200 --> 00:03:09,120
+why do I need to create another instance of the same value? It would check and re-use if there is an existing
+
+43
+00:03:09,270 --> 00:03:12,210
+object of the integer with the same value.
+
+44
+00:03:12,210 --> 00:03:17,970
+If it finds another object with the same value, it would try and re-use and it would return the same
+
+45
+00:03:18,090 --> 00:03:19,800
+thing back.
+
+46
+00:03:19,800 --> 00:03:23,520
+That's okay because the value of that object will not change.
+
+47
+00:03:23,520 --> 00:03:25,300
+Integer is immutable.
+
+48
+00:03:25,350 --> 00:03:27,120
+You cannot change the value of it.
+
+49
+00:03:27,120 --> 00:03:33,780
+So, having two reference variables pointing to the same object is not a problem at all.
+
+50
+00:03:33,780 --> 00:03:41,300
+What we would recommend is to use Integer.valueOf( ) or the valueOf methods to create any of the
+
+51
+00:03:41,420 --> 00:03:47,880
+wrappers, because valueOf tries and reuses whatever objects are already created.
+
+52
+00:03:47,880 --> 00:03:51,800
+So, it does not create a new object every time. When you use a new,
+
+53
+00:03:51,960 --> 00:03:54,360
+you are creating a new object every time.
+
+54
+00:03:54,390 --> 00:03:57,080
+However, Integer.valueOf( ) does not do that.
+
+55
+00:03:57,150 --> 00:04:04,170
+It would try and reuse existing objects which are present inside the heap. Similar to the integer, there are
+
+56
+00:04:04,290 --> 00:04:12,330
+float functions which accept a double, which accepts a float, and also a string. So, you can use all this
+
+57
+00:04:12,330 --> 00:04:19,140
+constructors, as well as you have a Character constructor which accepts a character, and a Boolean constructor
+
+58
+00:04:19,140 --> 00:04:22,960
+which accepts a boolean as well as Strings.
+
+59
+00:04:23,010 --> 00:04:27,030
+So, for a String, it accepts True, capital true, capital False.
+
+60
+00:04:27,030 --> 00:04:32,720
+I mean, you can use true in any case. So, it would be able to use that and create a value for it. So,
+
+61
+00:04:32,760 --> 00:04:38,070
+for this, the value is true. For this also, the value is true and for this, the value is false
+
+62
+00:04:38,070 --> 00:04:43,110
+and if you try and do something else, some string, then it would create a value of False.
+
+63
+00:04:43,140 --> 00:04:45,230
+So, these are the different things which are present.
+
+64
+00:04:45,240 --> 00:04:52,440
+You can also use the same kind of stuff with the valueOf on each of these wrapper classes.
+
+65
+00:04:52,500 --> 00:04:58,290
+I'll recommend you to try all that stuff as an exercise. Creating those wrapper classes will not be any
+
+66
+00:04:58,290 --> 00:05:03,480
+different from creating the Integer wrapper class that is present in here. In this video,
+
+67
+00:05:03,480 --> 00:05:09,300
+we looked at how to create wrapper classes using a constructor and also valueOf. The same kind of wrapper
+
+68
+00:05:09,300 --> 00:05:11,140
+classes for Integer exist
+
+69
+00:05:11,190 --> 00:05:17,730
+also for all the other wrapper classes. In the next video, we will learn about more ways that wrapper
+
+70
+00:05:17,730 --> 00:05:19,660
+classes can help you.
+
+71
+00:05:19,740 --> 00:05:20,680
+Until then, bye bye.
+

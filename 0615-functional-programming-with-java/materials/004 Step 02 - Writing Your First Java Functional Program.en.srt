@@ -1,0 +1,307 @@
+1
+00:00:01,800 --> 00:00:03,680
+Welcome back!
+
+2
+00:00:03,690 --> 00:00:09,110
+In the previous step, we solved the simple problem in a structured approach, and in this step we would
+
+3
+00:00:09,110 --> 00:00:12,760
+want to focus on how to solve it in a functional approach.
+
+4
+00:00:12,760 --> 00:00:21,020
+What I'll do is, I'll copy this file and paste it down here. I'll rename it to, FP01Functional.
+
+5
+00:00:21,020 --> 00:00:25,600
+Let's open up FP01Functional and that's where we'll try and solve this problem.
+
+6
+00:00:25,600 --> 00:00:28,940
+Let's start with renaming the method.
+
+7
+00:00:28,980 --> 00:00:34,920
+Right click, Refactor, Rename, and I would want to rename this to
+
+8
+00:00:34,920 --> 00:00:40,160
+printAllNumbersInList, in a Functional approach. That's what we would want to do.
+
+9
+00:00:40,160 --> 00:00:43,110
+So, we'd want to print all the numbers in a Functional approach.
+
+10
+00:00:43,140 --> 00:00:45,620
+We have a list of numbers passed in.
+
+11
+00:00:45,620 --> 00:00:50,250
+Now, how do we do this in a Functional approach?
+
+12
+00:00:50,250 --> 00:00:57,180
+One of the important things to remember is, in the functional approach, we will focus on, 'What to do?'
+
+13
+00:00:57,180 --> 00:00:59,420
+Before we can focus on what to do,
+
+14
+00:00:59,430 --> 00:01:07,320
+what we'd need to do is, we'd need to convert the list of numbers into a stream of numbers.
+
+15
+00:01:07,320 --> 00:01:08,400
+What does that mean?
+
+16
+00:01:08,400 --> 00:01:15,210
+You can see, that the list of numbers is this. You'd want to convert this into a stream.
+
+17
+00:01:15,270 --> 00:01:18,620
+So, I would want to convert it into a sequence of elements.
+
+18
+00:01:18,630 --> 00:01:24,710
+I would want to first get 12, then get 9, then get 13, then get 4,
+
+19
+00:01:24,710 --> 00:01:27,150
+and so on and so forth.
+
+20
+00:01:27,150 --> 00:01:33,650
+So, we would want to convert whatever we have, into a stream of elements.
+
+21
+00:01:33,650 --> 00:01:36,520
+How do we convert a list into a stream?
+
+22
+00:01:36,520 --> 00:01:45,080
+The way we can do that is by; let's comment out this piece of code, Ctrl slash or Command slash,
+
+23
+00:01:45,080 --> 00:01:50,680
+and followed by Ctrl Shift F or Command Shift F to format it. Cool! That's commented out.
+
+24
+00:01:50,680 --> 00:01:56,160
+We'd want to create a stream for numbers. So, numbers.stream.
+
+25
+00:01:56,160 --> 00:02:02,950
+As you can see in the Java doc, it says, "Returns a sequential Stream with this collection as its source."
+
+26
+00:02:02,950 --> 00:02:08,220
+So, we're taking a list and converting it into a stream of numbers.
+
+27
+00:02:08,280 --> 00:02:12,860
+So, we are converting it into individual numbers, which come one after the other;
+
+28
+00:02:12,860 --> 00:02:18,720
+a sequence of numbers: 12, 9, 13, 4. Once I have a stream of numbers,
+
+29
+00:02:18,720 --> 00:02:23,660
+what I can do is to specify, what to do with each one of them.
+
+30
+00:02:23,660 --> 00:02:28,740
+So when I get 12, what needs to be done? When I get 9, what needs to be done?
+
+31
+00:02:28,740 --> 00:02:30,860
+What do we want to do with each one of them?
+
+32
+00:02:30,870 --> 00:02:35,420
+We'd want to do a System.out.println(number) right?
+
+33
+00:02:35,420 --> 00:02:43,170
+So what we'll do is, we'll create a simple method, which accepts a parameter and prints it out.
+
+34
+00:02:43,170 --> 00:02:45,690
+So, let's create a simple method in here.
+
+35
+00:02:45,690 --> 00:02:49,200
+So, I call this private static void.
+
+36
+00:02:49,220 --> 00:02:53,280
+I'll just call this, print and let's send
+
+37
+00:02:53,280 --> 00:02:55,580
+in a int number to it.
+
+38
+00:02:55,580 --> 00:03:00,880
+What this will do is, it will just do a System.out.println(number).
+
+39
+00:03:00,880 --> 00:03:03,810
+So, it just prints a single number, that's it.
+
+40
+00:03:03,810 --> 00:03:05,490
+Nothing more, nothing less.
+
+41
+00:03:05,490 --> 00:03:07,780
+Now, what do we want to do over here?
+
+42
+00:03:07,780 --> 00:03:15,200
+numbers.stream() for each number. For each of these numbers, for 12, for 9, for 13, for 4,
+
+43
+00:03:15,240 --> 00:03:17,920
+we would want to call the print method.
+
+44
+00:03:17,940 --> 00:03:19,980
+How do we call the print method from here,
+
+45
+00:03:19,980 --> 00:03:23,040
+for each of the numbers? The way we can do that is by
+
+46
+00:03:23,040 --> 00:03:26,300
+saying, forEach, and you can define;
+
+47
+00:03:26,300 --> 00:03:30,180
+I would want to call the print method. Now, over here,
+
+48
+00:03:30,180 --> 00:03:33,600
+typically what we'd do, we'll say print of 5.
+
+49
+00:03:33,660 --> 00:03:35,980
+Alright! So, typically what would happen?
+
+50
+00:03:35,980 --> 00:03:37,840
+This code would be immediately executed.
+
+51
+00:03:37,860 --> 00:03:41,380
+We don't want the method to be immediately called. What we would want
+
+52
+00:03:41,380 --> 00:03:43,860
+to do is to define, what needs to be done.
+
+53
+00:03:43,860 --> 00:03:48,360
+We need to define the behavior, when we get a number of 12.
+
+54
+00:03:48,360 --> 00:03:53,580
+To define the behavior, we use something called a method reference.
+
+55
+00:03:53,580 --> 00:03:56,220
+How do you put a method reference in?
+
+56
+00:03:56,220 --> 00:03:59,220
+What we want to do is, for each element we'd want to call this print method.
+
+57
+00:03:59,250 --> 00:04:04,710
+How do we say that? The way we can say that is by using, the name of the class, colon,
+
+58
+00:04:04,710 --> 00:04:09,360
+colon, followed by the name of the method.
+
+59
+00:04:09,360 --> 00:04:15,210
+So, you can see that this is a static method and I'm using the class name colon, colon the name of the
+
+60
+00:04:15,210 --> 00:04:21,210
+static method. And what I'm telling it is, hey! take the numbers, convert in into a stream,
+
+61
+00:04:21,210 --> 00:04:26,110
+and for each element; for 12 do a print, for 9 do a print.
+
+62
+00:04:26,110 --> 00:04:28,690
+That's basically, what we are specifying in here.
+
+63
+00:04:28,690 --> 00:04:36,350
+Now, I think we have got almost everything covered. So let's do Right click, Run As, Java Application.
+
+64
+00:04:36,350 --> 00:04:38,060
+Aha! The output does not really change.
+
+65
+00:04:38,060 --> 00:04:43,520
+You can see that, everything is being printed out in a sequence.
+
+66
+00:04:43,520 --> 00:04:47,010
+Let's end this step by reviewing quickly, what's happening with this code.
+
+67
+00:04:47,030 --> 00:04:50,110
+What we are doing is, we are converting the numbers list into a stream.
+
+68
+00:04:50,110 --> 00:04:54,900
+So instead of getting a list like this, what we'll get is, a stream of elements like this.
+
+69
+00:04:54,980 --> 00:05:00,710
+And what we are specifying is, for each of these elements which are coming out, what we would want to
+
+70
+00:05:00,710 --> 00:05:06,780
+do is, to call the print method which is present in the current class.
+
+71
+00:05:06,780 --> 00:05:10,340
+And the syntax which we are using in here is, colon, colon.
+
+72
+00:05:10,340 --> 00:05:14,780
+This is the syntax of something called a Method Reference.
+
+73
+00:05:14,780 --> 00:05:19,620
+What we are saying in here is, for each element, this method needs to be called.
+
+74
+00:05:19,640 --> 00:05:26,400
+So, for each of the numbers coming up, what would happen is, this print method would get executed
+
+75
+00:05:26,400 --> 00:05:31,220
+and that's how we were seeing all the elements that are printed.
+
+76
+00:05:31,220 --> 00:05:34,940
+I'm sure there are a lot of questions about this specific approach.
+
+77
+00:05:34,940 --> 00:05:38,140
+Hold onto them, and I'll see you in the next step.

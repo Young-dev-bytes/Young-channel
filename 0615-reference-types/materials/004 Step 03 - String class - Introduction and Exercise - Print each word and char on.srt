@@ -1,0 +1,530 @@
+1
+00:00:02,320 --> 00:00:03,550
+Welcome back.
+欢迎回来。
+
+2
+00:00:03,550 --> 00:00:10,060
+In the previous sections and also the little bit of this section until now, we have created classes, created
+在前几节和本节的小部分内容中，我们已经创建了类，在其中创建了
+
+3
+00:00:10,060 --> 00:00:18,190
+methods in them, created instances of these classes called objects, and we invoked methods on these objects.
+方法，创建了这些称为对象的类的实例，并对这些对象调用了方法。
+
+4
+00:00:18,190 --> 00:00:25,030
+We also learnt about primitive data types versus the reference types. From this video on,
+我们还学习了原始数据类型和引用类型。从这个视频开始。
+
+5
+00:00:25,090 --> 00:00:33,130
+we would start exploring the inbuilt reference types in Java. In the next set of videos, we would be starting
+我们将开始探索Java中内置的引用类型。在下一集视频中，我们将开始
+
+6
+00:00:33,130 --> 00:00:42,460
+to look at String, Wrapper classes, and also a few reference types to refer to it. In this video,
+看一下字符串、封装类，以及一些引用类型的参考。在这个视频中。
+
+7
+00:00:42,760 --> 00:00:47,830
+let's start with the basics of the String class.
+让我们从字符串类的基础知识开始。
+
+8
+00:00:47,950 --> 00:00:50,410
+Let's start with a simple question.
+让我们从一个简单的问题开始。
+
+9
+00:00:50,410 --> 00:00:56,970
+We created a number of literals like this. With in double quotes, we said this is representing text.
+我们创建了一些像这样的字词。用双引号，我们说这是代表文本。
+
+10
+00:00:57,070 --> 00:01:04,180
+One interesting thing to note about this strings is, actually this is a instance of a class called String.
+关于这个字符串的一个有趣的事情是，实际上这是一个叫做String的类的实例。
+
+11
+00:01:04,180 --> 00:01:05,630
+How can I prove that?
+我怎么能证明这一点呢？
+
+12
+00:01:05,680 --> 00:01:12,680
+All that you need to do is to say, "Test".length( ). Oops!, I am a little too early.
+你只需要说，"Test".length( )。哎呀！，我有点太早了。
+
+13
+00:01:12,700 --> 00:01:15,200
+I just need to login into JShell first.
+我只是需要先登录到JShell。
+
+14
+00:01:15,370 --> 00:01:18,400
+So, let's log into JShell before I would be able to execute the command.
+所以，让我们在我能够执行命令之前登录到JShell。
+
+15
+00:01:18,430 --> 00:01:28,820
+Now I can execute "Test".length( ). I am in JShell right now and it's printing 4. This Test string has four
+现在我可以执行 "Test".length( )。我现在就在JShell中，它正在打印4。这个Test字符串有四个
+
+16
+00:01:28,830 --> 00:01:29,470
+characters,
+字符。
+
+17
+00:01:29,480 --> 00:01:40,310
+length is a method and Test is an instance, instance of what class? In Java, text is represented by a class
+length是一个方法，Test是一个实例，什么类的实例？在Java中，文本是由一个叫做
+
+18
+00:01:40,460 --> 00:01:41,720
+called String.
+叫做String。
+
+19
+00:01:42,170 --> 00:01:48,780
+If I want to store str as a Test, this is how we would do that.
+如果我想把str存储为一个Test，我们将这样做。
+
+20
+00:01:48,790 --> 00:01:57,980
+So, String str = "Test" creates an instance of the Test and stores the reference of it in
+所以，String str = "Test "创建了一个Test的实例，并把它的引用存储在
+
+21
+00:01:57,980 --> 00:01:59,290
+str. String
+str。字符串
+
+22
+00:01:59,300 --> 00:02:01,760
+is very very special.
+是非常非常特别的。
+
+23
+00:02:01,760 --> 00:02:06,970
+All the other objects you would need to do something like a new BigDecimal, right.
+所有其他的对象你都需要做一些事情，比如新建一个BigDecimal，对吧。
+
+24
+00:02:06,980 --> 00:02:16,460
+So, when we did BigDecimal, we said BigDecimal bd = new BigDecimal of let's say 1.0.
+所以，当我们做BigDecimal时，我们说BigDecimal bd = new BigDecimal of let's say 1.0。
+
+25
+00:02:16,490 --> 00:02:19,730
+So, we needed to use a constructor to create it.
+所以，我们需要使用一个构造函数来创建它。
+
+26
+00:02:20,360 --> 00:02:28,280
+However with String, you don't really need to use a constructor. Even though if you would want str
+但是对于字符串，你并不真的需要使用构造函数。尽管如果你想让str
+
+27
+00:02:28,280 --> 00:02:28,770
+=
+=
+
+28
+00:02:28,910 --> 00:02:31,270
+you can do new String("Test").
+你可以使用new String("Test")。
+
+29
+00:02:31,580 --> 00:02:34,610
+You can do that. But that's not really necessary.
+你可以这样做。但这并不是真正必要的。
+
+30
+00:02:34,670 --> 00:02:40,850
+All that you need to do is String str = "Test" and that's more than sufficient. String
+你所需要做的就是String str = "Test"，这就足够了。字符串
+
+31
+00:02:40,910 --> 00:02:43,700
+is a special class in Java.
+是Java中的一个特殊类。
+
+32
+00:02:43,790 --> 00:02:47,880
+This Test is an instance of the class, String.
+这个Test是String这个类的一个实例。
+
+33
+00:02:47,930 --> 00:02:50,060
+This is called a String literal.
+这就是所谓的String literal。
+
+34
+00:02:50,570 --> 00:02:53,860
+We looked at the basic method which is present in here, length.
+我们看了这里存在的基本方法，长度。
+
+35
+00:02:54,020 --> 00:03:00,440
+We'll start looking at a few other methods which are present in the String class to retrieve the details
+我们将开始看一些其他的方法，这些方法存在于String类中，用于检索特定字符串的细节。
+
+36
+00:03:00,560 --> 00:03:04,580
+about a specific string, right. So, in String,
+关于一个特定的字符串的细节，对吗。所以，在String中，索引从0开始。
+
+37
+00:03:04,610 --> 00:03:06,490
+the index starts with 0.
+索引从0开始。
+
+38
+00:03:06,500 --> 00:03:07,860
+So, this is 0,
+所以，这个是0。
+
+39
+00:03:08,030 --> 00:03:12,080
+this is 1, e is 1, s is 2, and t is 3.
+这个是1，e是1，s是2，t是3。
+
+40
+00:03:12,260 --> 00:03:15,090
+So, if you want to get a specific character,
+所以，如果你想得到一个特定的字符。
+
+41
+00:03:15,350 --> 00:03:18,700
+so let's say I would want to get the first character of a string,
+比如说我想获得一个字符串的第一个字符。
+
+42
+00:03:18,730 --> 00:03:23,770
+the way I would need to do that is by saying str.charAt(0).
+我需要做的是说str.charAt(0)。
+
+43
+00:03:23,780 --> 00:03:30,020
+The important thing is, the index starts with 0. So, 0, 1, 2, and 3.
+重要的是，索引从0开始，所以，0、1、2、3。
+
+44
+00:03:30,110 --> 00:03:44,800
+So, let's quickly check another one str.charAt(2). It returns s. 0 is T, 1, and 2 is s.
+那么，让我们快速检查另一个str.charAt(2)。它返回s。0是T，1，2是s。
+
+45
+00:03:45,130 --> 00:03:46,540
+str.CharAt(3),
+str.CharAt(3)。
+
+46
+00:03:46,540 --> 00:03:47,740
+that's the last character.
+那是最后一个字符。
+
+47
+00:03:48,180 --> 00:03:55,450
+Let's say I don't want to retrive one character but I would want to retrieve a substring from this particular
+假设我不想检索一个字符，但我想从这个特定的字符串中检索一个子串。
+
+48
+00:03:55,450 --> 00:03:55,860
+string.
+字符串。
+
+49
+00:03:55,870 --> 00:04:01,720
+Let's create a more bigger string. So, biggerString =
+让我们创建一个更大的字符串。所以，biggerString =
+
+50
+00:04:01,930 --> 00:04:08,040
+"This is a lot of text". So, let's say I have this text in here
+"这是个很大的文本"。所以，假设我有这个文本在这里
+
+51
+00:04:08,050 --> 00:04:13,730
+and from this I would want to get the substring starting from 'is', right.
+我想从这里得到从 "是 "开始的子串，对。
+
+52
+00:04:13,750 --> 00:04:17,829
+So, I would want to get all the characters starting from here.
+所以，我想获得从这里开始的所有字符。
+
+53
+00:04:17,860 --> 00:04:19,040
+How can I do that?
+我怎样才能做到这一点呢？
+
+54
+00:04:19,060 --> 00:04:25,870
+Doing that is called a Substring. Substring methods accepts the index of this character.
+这样做被称为Substring。子串方法接受这个字符的索引。
+
+55
+00:04:25,870 --> 00:04:28,570
+So, we would need to pass in the index of this character
+所以，我们需要传入这个字符的索引
+
+56
+00:04:28,810 --> 00:04:31,150
+and it would be able to print the rest of the strings.
+它就可以打印出其余的字符串了。
+
+57
+00:04:31,330 --> 00:04:32,070
+Let's do,
+让我们来做。
+
+58
+00:04:32,230 --> 00:04:35,640
+biggerString. , I would want to do it from
+biggerString. ，我想从
+
+59
+00:04:35,650 --> 00:04:41,920
+i. So, 0, 1, 2, 3, 4, and 5,
+i. 所以，0、1、2、3、4和5。
+
+60
+00:04:42,070 --> 00:04:51,140
+biggerString.substring(5). So, it's printing "is a lot of text", right.
+biggerString.substring(5)。所以，它在打印 "是很多的文本"，对。
+
+61
+00:04:51,200 --> 00:04:56,270
+So, that's how you do a substring. I'm trying to get a part of the string. Here
+所以，这就是你做子串的方法。我试图得到字符串的一部分。这里
+
+62
+00:04:56,340 --> 00:05:03,190
+we are specifying the start of the string. But you can also specify start and end also. So, I'm specifying 5
+我们指定的是字符串的开头。但你也可以指定开始和结束。所以，我指定5
+
+63
+00:05:03,190 --> 00:05:06,390
+as the start and I can specify okay, this is 5,
+作为开始，我可以指定好，这是5。
+
+64
+00:05:06,470 --> 00:05:17,040
+I would want to get up to 6, 7, 8, 9, 10, 11, 12. So, let's say, I would want to get up to t, t is at
+我希望能达到6、7、8、9、10、11、12。所以，比方说，我想达到t，t是在
+
+65
+00:05:17,100 --> 00:05:23,340
+index 12. So, if you want to get up to character with index 12, then you need to enter 13.
+索引12。所以，如果你想获得索引为12的字符，那么你需要输入13。
+
+66
+00:05:23,370 --> 00:05:28,480
+So, the important thing to understand is this side is inclusive,
+所以，重要的是要明白，这一边是包容的。
+
+67
+00:05:28,500 --> 00:05:29,930
+this is exclusive.
+这个是排他性的。
+
+68
+00:05:29,940 --> 00:05:33,280
+So, this index is not really included.
+所以，这个索引并不真正包括在内。
+
+69
+00:05:33,360 --> 00:05:37,900
+So, the character at index 13 will not be part of the substring.
+所以，索引13的字符不会成为子串的一部分。
+
+70
+00:05:37,980 --> 00:05:40,200
+So, the character at index 13, if we do it,
+所以，索引13处的字符，如果我们这样做。
+
+71
+00:05:40,530 --> 00:05:47,440
+so if I do str.charAt(13), you would see that it returns a space back.
+所以如果我做str.charAt(13)，你会看到它返回了一个空格。
+
+72
+00:05:47,670 --> 00:05:53,480
+Oops! I should have actually done biggerString.charAt(13). So, biggerString.charAt(13),
+Oops! 我实际上应该做 biggerString.charAt(13)。所以，biggerString.charAt(13)。
+
+73
+00:05:53,690 --> 00:05:55,790
+it prints a space out.
+它打印出了一个空格。
+
+74
+00:05:55,910 --> 00:06:02,900
+So, this is the space which is present at character 13 and that is not included in the string, because
+所以，这是存在于字符13的空格，它不包括在字符串中，因为
+
+75
+00:06:03,380 --> 00:06:04,610
+this is exclusive.
+这是排他性的。
+
+76
+00:06:04,640 --> 00:06:11,690
+So, starting from the character at index 5 to 12. So, it's when I pass in a 13, only the character
+所以，从索引5到12的字符开始。所以，当我传入一个13时，只有索引12以下的字符
+
+77
+00:06:11,690 --> 00:06:15,430
+upto index 12 would be included in the substring.
+会被包含在子串中。
+
+78
+00:06:15,430 --> 00:06:21,440
+I will recommend you to try and play around with these things charAt, substring and see what you can
+我建议你尝试使用charAt, substring这些东西，看看你能找到什么。
+
+79
+00:06:21,440 --> 00:06:22,370
+find.
+发现。
+
+80
+00:06:22,430 --> 00:06:28,490
+One interesting aspect is, if you try and give a index out of the range of the string, so let's say the
+一个有趣的方面是，如果你试图给一个超出字符串范围的索引，那么我们假设
+
+81
+00:06:28,490 --> 00:06:35,030
+string is length 5 and you give an index of 15 then it would throw a StringIndexOutOfBoundsException.
+字符串的长度是5，而你给出的索引是15，那么它就会抛出一个StringIndexOutOfBoundsException。
+
+82
+00:06:35,930 --> 00:06:39,550
+Exceptions are Java's way of telling you; Okay buddy,
+异常是Java告诉你的方式；好了，伙计。
+
+83
+00:06:39,590 --> 00:06:43,250
+as a programmer you are doing something wrong, I'm throwing you an exception.
+作为一个程序员，你做错了什么，我给你抛出一个异常。
+
+84
+00:06:43,250 --> 00:06:47,720
+How can I get the 10th character in a string of length 5? That's wrong.
+我怎样才能在一个长度为5的字符串中获得第10个字符？这是不对的。
+
+85
+00:06:47,720 --> 00:06:50,110
+That's an exception.
+这就是一个异常。
+
+86
+00:06:50,270 --> 00:06:55,850
+The same kind of exception would happen with charAt, if you do something invalid and the same thing
+同样的异常会发生在charAt上，如果你做了一些无效的事情，同样的事情也会发生在
+
+87
+00:06:55,850 --> 00:06:57,200
+would happen with substring
+也会发生在substring
+
+88
+00:06:57,200 --> 00:07:06,980
+also. So, if I say, charAt(456), 456 is an invalid index. So, it would throw you a IndexOutOfBoundsException.
+也是如此。所以，如果我说，charAt(456)，456是一个无效的索引。所以，它会给你一个IndexOutOfBoundsException。
+
+89
+00:07:07,670 --> 00:07:15,020
+Okay. In this video, what we looked at is number one, we looked at the fact that every string literal is
+好的，在这个视频中，我们看的是第一点，我们看的是每个字符串的字面意义是
+
+90
+00:07:15,020 --> 00:07:17,690
+an instance of a class.
+是一个类的实例。
+
+91
+00:07:17,720 --> 00:07:23,030
+This is the only type of literal which is a instance of a specific class
+这是唯一一种是特定类的实例的字面意义。
+
+92
+00:07:23,030 --> 00:07:27,990
+and also we discussed the fact that string is a special type, in the sense that we did not really need
+我们还讨论了一个事实，即字符串是一个特殊的类型，在这个意义上，我们并不真的需要
+
+93
+00:07:27,990 --> 00:07:33,860
+to do a new string to create an instance of the string. All that you need to do is str1 =
+来创建一个字符串的实例。你所需要做的就是str1 =
+
+94
+00:07:33,860 --> 00:07:39,690
+"SomeString" and Java would automatically create an object for you.
+"SomeString"，Java会自动为你创建一个对象。
+
+95
+00:07:39,710 --> 00:07:45,260
+This is something unique to String and also we looked at and also we looked at a few important methods
+这是字符串特有的东西，我们也看了一些重要的方法
+
+96
+00:07:45,530 --> 00:07:52,400
+substring and charAt. At the end of this video, we were introduced to a simple concept called exceptions
+substring和charAt。在这个视频的最后，我们介绍了一个简单的概念，叫做异常。
+
+97
+00:07:52,730 --> 00:07:57,700
+which we will discuss a lot more in a separate section on exceptions.
+我们将在关于异常的单独章节中讨论更多的内容。
+
+98
+00:07:57,710 --> 00:08:01,870
+I'll leave this video with an exercise.
+我将以一个练习来离开这个视频。
+
+99
+00:08:01,970 --> 00:08:09,710
+So, let's say I have a string, right. So, let's say I have a very simple string, String someString =
+那么，我们假设我有一个字符串，对。所以，让我们假设我有一个非常简单的字符串，String someString =
+
+100
+00:08:09,710 --> 00:08:14,290
+"This is a lot of text
+"这又是一大堆的文字
+
+101
+00:08:14,400 --> 00:08:23,310
+again". What I would want to do is, write some code in here which would print individual characters on
+又是"。我想做的是，在这里写一些代码，将单个字符打印在
+
+102
+00:08:23,430 --> 00:08:30,210
+separate lines. So, the output should be 't' on one line, 'h' on next line, 'i' on next line, 's' on next
+单独的行。所以，输出应该是 "t "在一行，"h "在下一行，"i "在下一行，"s "在下一行。
+
+103
+00:08:30,210 --> 00:08:32,330
+line, and so on, and so forth.
+行，以此类推。
+
+104
+00:08:32,450 --> 00:08:35,740
+We'll discuss the solution in the next video.
+我们将在下一个视频中讨论这个解决方案。
+
+105
+00:08:35,880 --> 00:08:36,370
+Until then,
+在那之前。
+
+106
+00:08:36,490 --> 00:08:36,750
+bye bye.
+bye bye。
+

@@ -1,0 +1,468 @@
+1
+00:00:01,880 --> 00:00:03,410
+Welcome back.
+
+2
+00:00:03,410 --> 00:00:08,560
+In this video, we'll talk about some more methods on the String class.
+
+3
+00:00:08,720 --> 00:00:14,240
+Before we discuss about the methods on the String class, let's pick up the exercise from the previous
+
+4
+00:00:14,240 --> 00:00:14,500
+video.
+
+5
+00:00:14,510 --> 00:00:20,130
+We have a string and we would want to print each of the individual characters on separate lines, right.
+
+6
+00:00:20,170 --> 00:00:22,910
+If you are able to do it already, that's cool.
+
+7
+00:00:22,910 --> 00:00:25,220
+If you are not, I'll give you a hint right now.
+
+8
+00:00:25,550 --> 00:00:32,009
+So, how do I find out the length of the string? someString.length( ),
+
+9
+00:00:32,369 --> 00:00:32,580
+right.
+
+10
+00:00:32,580 --> 00:00:41,310
+This gives you that it's 27. The index of this string would run from 0 to 26, length minus 1.
+
+11
+00:00:41,400 --> 00:00:45,660
+I would want to print individual characters at each of those locations.
+
+12
+00:00:45,720 --> 00:00:46,050
+Okay.
+
+13
+00:00:46,050 --> 00:00:46,710
+Did an idea
+
+14
+00:00:46,980 --> 00:00:50,100
+strike you? Try and pause the video and try and work it out.
+
+15
+00:00:50,430 --> 00:00:50,760
+Okay.
+
+16
+00:00:50,790 --> 00:00:52,140
+If it did not,
+
+17
+00:00:52,150 --> 00:00:59,610
+then another clue. How do I find out what's the specific character at a specific location? someString.
+
+18
+00:00:59,730 --> 00:01:03,230
+charAt(5).
+
+19
+00:01:03,280 --> 00:01:10,060
+This gives me the character at index 5 which is i, right. So, 0 is this. So, starting with that, if you
+
+20
+00:01:10,060 --> 00:01:12,350
+start counting, this will be 5.
+
+21
+00:01:12,390 --> 00:01:14,320
+So, it gives me a charAt(5).
+
+22
+00:01:14,410 --> 00:01:19,180
+So, now does this strike you? Do you think you can solve this on yourself? Try and 
+
+23
+00:01:19,290 --> 00:01:20,770
+pause the video and try it.
+
+24
+00:01:20,860 --> 00:01:22,430
+Okay.
+
+25
+00:01:22,450 --> 00:01:24,160
+Now the solution is very simple, right. So,
+
+26
+00:01:24,390 --> 00:01:36,260
+i= 0; i<someString.length( ). So I am running a loop from, i is 0 to one less than the 
+
+27
+00:01:36,260 --> 00:01:36,520
+length.
+
+28
+00:01:36,570 --> 00:01:44,430
+So, from 0 to 26, in this specific example and i++ and all that we would need to do
+
+29
+00:01:45,120 --> 00:01:53,900
+is System.out.println and what should we do?
+
+30
+00:01:53,920 --> 00:01:55,030
+What should we print?
+
+31
+00:01:55,390 --> 00:02:01,520
+someString.charAt(i). Isn't this cool?
+
+32
+00:02:02,950 --> 00:02:03,970
+Okay.
+
+33
+00:02:04,000 --> 00:02:08,770
+You can see all the characters printed on individual lines.
+
+34
+00:02:08,770 --> 00:02:11,500
+This is a lot of text again.
+
+35
+00:02:12,050 --> 00:02:18,020
+So, all that we did is very simple. We created a loop starting from 0.
+
+36
+00:02:18,030 --> 00:02:29,140
+I mean from 0 to length-1 and we incremented i and we printed the character at that specific location.
+
+37
+00:02:29,140 --> 00:02:29,740
+Isn't that cool?
+
+38
+00:02:30,010 --> 00:02:34,070
+Okay. Now, let's move on to what we want to discuss in this specific video.
+
+39
+00:02:34,360 --> 00:02:37,070
+Let's take the same string from the previous example
+
+40
+00:02:37,210 --> 00:02:44,130
+and now I would want to find out if a specific string is present in this.
+
+41
+00:02:44,200 --> 00:02:48,550
+So, I would want to see if a word called 'lot' is present in this specific string.
+
+42
+00:02:48,550 --> 00:02:58,570
+How do I do that? The way I can do that is by using a someString.indexOf, indexOf and pass in the
+
+43
+00:02:58,750 --> 00:03:03,820
+string. What does it return? It returns the starting index of 'l'.
+
+44
+00:03:04,420 --> 00:03:06,020
+So, it returns 10.
+
+45
+00:03:06,100 --> 00:03:14,930
+So, if I do a someString.charAt(10), it would return me 'l'.
+
+46
+00:03:15,030 --> 00:03:18,360
+So, this is returning the index of 'l'.
+
+47
+00:03:18,360 --> 00:03:25,800
+So, it's searching for 'lot' in the string and returning the index of the first character of the substring.
+
+48
+00:03:25,800 --> 00:03:29,160
+Now, let's say I would want to search for a character.
+
+49
+00:03:29,220 --> 00:03:31,950
+So, I'm not searching for a string, but a character.
+
+50
+00:03:32,460 --> 00:03:34,530
+So, let's say I am searching for 'i'.
+
+51
+00:03:34,860 --> 00:03:35,960
+How can I do that?
+
+52
+00:03:36,360 --> 00:03:42,810
+charAt, the same name, this is an overloaded method which accepts a character parameter and this returns
+
+53
+00:03:42,930 --> 00:03:46,510
+the index of this. Because that's the first 'i'. Oops!
+
+54
+00:03:47,010 --> 00:03:49,960
+Actually, I should use indexOf, right.
+
+55
+00:03:49,980 --> 00:03:50,850
+So, it's not charAt.
+
+56
+00:03:51,300 --> 00:03:53,410
+I should use indexOf('i').
+
+57
+00:03:53,960 --> 00:03:57,090
+So, it returns 2. So, indexOf is the same method.
+
+58
+00:03:57,090 --> 00:04:04,860
+It's an overloaded method and we would use indexOf to find the index of a string, a substring as well
+
+59
+00:04:04,860 --> 00:04:06,150
+as a specific character.
+
+60
+00:04:06,150 --> 00:04:09,340
+So, 'i' in this string is at location, index 2.
+
+61
+00:04:09,440 --> 00:04:15,490
+Now, you might want to find out what is the index of the last 'i' which is present in here.
+
+62
+00:04:15,630 --> 00:04:24,680
+You can do that too very easily using lastIndexOf, lastIndexOf and this returns 25.
+
+63
+00:04:24,750 --> 00:04:30,390
+One thing you should be careful about is the Camel casing. So, indexOf, O is caps,
+
+64
+00:04:30,390 --> 00:04:35,650
+CharAt, A is caps, indexOf, lastIndexOf, I and O are caps.
+
+65
+00:04:35,790 --> 00:04:39,210
+So, be careful about the Camel casing of these methods.
+
+66
+00:04:39,210 --> 00:04:45,040
+The names should exactly match. You cannot use a different case. That applies to anything in Java.
+
+67
+00:04:45,060 --> 00:04:52,020
+It's case sensitive except for whatever is going in your literal characters or literal strings.
+
+68
+00:04:52,110 --> 00:04:57,610
+The other functions in String help you to check a few things on the String.
+
+69
+00:04:57,750 --> 00:05:02,550
+So, let's say I want to find out if this string contains a word called 'again'.
+
+70
+00:05:02,580 --> 00:05:03,520
+How can I do that?
+
+71
+00:05:03,600 --> 00:05:10,200
+I can do, use indexOf, but the other option is to do someString.contain( ).
+
+72
+00:05:10,230 --> 00:05:16,890
+So, if I want to present, I want to check whether a text is present, so I just need to say "text" and you can
+
+73
+00:05:16,890 --> 00:05:18,640
+see that it returns true.
+
+74
+00:05:18,690 --> 00:05:22,680
+I would want to find out if this string starts with a specific string.
+
+75
+00:05:22,680 --> 00:05:25,770
+I can say someString.startsWith
+
+76
+00:05:28,380 --> 00:05:37,070
+("This"). This would return true. The same thing if I give some other thing, it would return a false back. The
+
+77
+00:05:37,070 --> 00:05:40,790
+same similar method is endsWith( ). So, endsWith,
+
+78
+00:05:42,060 --> 00:05:45,090
+let's say, some garbage, it returns false.
+
+79
+00:05:45,150 --> 00:05:49,370
+If I give the right string, so endsWith("in"): yes,
+
+80
+00:05:49,520 --> 00:05:50,940
+endsWith("ain"):
+
+81
+00:05:51,060 --> 00:05:51,750
+yes,
+
+82
+00:05:51,760 --> 00:05:53,520
+endsWith("again"):
+
+83
+00:05:53,520 --> 00:05:54,330
+yes.
+
+84
+00:05:54,390 --> 00:05:55,620
+If I do something wrong,
+
+85
+00:05:56,670 --> 00:05:57,520
+false.
+
+86
+00:05:57,590 --> 00:06:03,720
+So, you can use this to find out if a string endsWith or startsWith a specific substring.
+
+87
+00:06:03,720 --> 00:06:09,530
+The last utility method is to check if a string is empty. So, you can check if a string is empty by using
+
+88
+00:06:09,530 --> 00:06:12,010
+the someString.empty( ).
+
+89
+00:06:12,080 --> 00:06:13,770
+Actually it is, isEmpty( ).
+
+90
+00:06:15,320 --> 00:06:17,870
+Okay. So, someString.IsEmpty( ) returns 
+
+91
+00:06:17,900 --> 00:06:20,330
+if it's empty or not.
+
+92
+00:06:20,390 --> 00:06:25,370
+So, any string which has some content is not empty.
+
+93
+00:06:25,730 --> 00:06:29,520
+However, this string is empty.
+
+94
+00:06:30,480 --> 00:06:32,850
+So, that's the isEmpty( ) method.
+
+95
+00:06:32,940 --> 00:06:37,640
+The last useful method inside String to check the content is Equal.
+
+96
+00:06:37,640 --> 00:06:43,410
+So, you want to find out whether two strings are equal, then you can say, "true".equals("true").
+
+97
+00:06:43,410 --> 00:06:57,210
+So, this is string, so or you can say some "value" is equals some ("value"). So, you can also use a string variable
+
+98
+00:06:57,210 --> 00:07:09,590
+on the other side. So, I can say string str = "value" and I can say, Oops! string, i said str str. 
+
+99
+00:07:09,600 --> 00:07:14,640
+It should have been string str = "value" and I should say str.equals
+
+100
+00:07:17,120 --> 00:07:17,730
+("value").
+
+101
+00:07:19,750 --> 00:07:21,020
+It would return true.
+
+102
+00:07:21,040 --> 00:07:28,570
+So, if I want to compare if two strings are equal, I can use either equals or if I want to compare them
+
+103
+00:07:28,600 --> 00:07:30,490
+without worrying about the case,
+
+104
+00:07:30,490 --> 00:07:33,620
+so for example, this value has a capital thing.
+
+105
+00:07:33,730 --> 00:07:35,660
+If I do this, it would return false.
+
+106
+00:07:35,680 --> 00:07:41,980
+Because this is caps and this is small, but if you want to ignore the fact that, that you can say 
+
+107
+00:07:42,070 --> 00:07:49,390
+equalsIgnoreCase("VAlue") and it returns true. So, it ignores the case. It does a kind of an uppercase on both
+
+108
+00:07:49,390 --> 00:07:51,350
+of these and check whether they're same.
+
+109
+00:07:51,370 --> 00:07:58,120
+So, in this video, we looked at the exercise from the previous video, we wrote a simple loop upto the
+
+110
+00:07:58,120 --> 00:08:03,010
+length of the string, and we printed all the characters by using charAt.
+
+111
+00:08:03,300 --> 00:08:09,340
+After that we looked at a variety of methods in the string API to find out specific things from your
+
+112
+00:08:09,340 --> 00:08:16,540
+string, whether it startsWith specific thing, endsWith something, whether it has a specific substring present
+
+113
+00:08:16,540 --> 00:08:21,310
+in it using contains, and how do you compare a string with another string.
+
+114
+00:08:21,310 --> 00:08:25,330
+We talked about equals and equalsIgnoreCase methods.
+
+115
+00:08:25,510 --> 00:08:31,010
+One important thing is we have not really tried to modify the content of the string until now.
+
+116
+00:08:31,240 --> 00:08:35,980
+In the next video, we would start trying to modify the value of a specific string.
+
+117
+00:08:36,100 --> 00:08:37,090
+Until then, bye bye.
+

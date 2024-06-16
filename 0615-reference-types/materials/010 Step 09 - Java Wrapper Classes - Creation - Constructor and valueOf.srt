@@ -1,0 +1,355 @@
+1
+00:00:02,070 --> 00:00:03,570
+Welcome back.
+欢迎回来。
+
+2
+00:00:03,570 --> 00:00:07,790
+In this video, let's discuss how do you create wrapper classes. Creating wrapper classes is
+在这段视频中，我们来讨论一下如何创建封装类。创建封装器类是
+
+3
+00:00:07,800 --> 00:00:08,980
+very very simple, right.
+非常非常简单，对吧。
+
+4
+00:00:08,990 --> 00:00:12,410
+So, just like you create an int i = 5.
+所以，就像你创建一个int i = 5。
+
+5
+00:00:12,420 --> 00:00:19,440
+Let's say I'd want to create an integer with similar things. I'll say Integer integer =
+比方说，我想创建一个有类似内容的整数。我就说Integer integer =
+
+6
+00:00:19,450 --> 00:00:23,880
+new Integer(5). Now,
+new Integer(5)。现在。
+
+7
+00:00:23,900 --> 00:00:26,360
+that's how we would create it, right. So, now a
+这就是我们创建它的方法，对吧。所以，现在一个
+
+8
+00:00:26,480 --> 00:00:29,570
+integer value is created with a value, 5.
+创建了一个整数，其值为5。
+
+9
+00:00:30,080 --> 00:00:34,650
+Now, let's say I'm creating another Integer, integer1 with 5.
+现在，让我们说，我正在创建另一个Integer，integer1，其值为5。
+
+10
+00:00:34,740 --> 00:00:40,210
+So, now integer and integer1 are having the same value, 5.
+所以，现在integer和integer1的值是一样的，都是5。
+
+11
+00:00:40,490 --> 00:00:46,820
+This is one way of creating integers. The other way of creating integer values is by using something
+这是创建整数的一种方式。创建整数值的另一种方法是通过使用一种叫做
+
+12
+00:00:46,820 --> 00:00:52,780
+called valueOf. There is a static method in each of the wrapper classes called valueOf
+称为valueOf。每个封装类中都有一个静态方法叫做valueOf
+
+13
+00:00:52,900 --> 00:00:59,920
+and I can say valueOf(5) and I can say, integer1 = valueOf.
+我可以说valueOf(5)，我可以说，integer1 = valueOf。
+
+14
+00:00:59,990 --> 00:01:06,500
+So, these are the two ways you can create wrapper classes; directly use the constructors or you can use
+所以，这是你创建封装类的两种方式；直接使用构造函数或使用
+
+15
+00:01:06,500 --> 00:01:09,580
+the valueOf methods which are present.
+的valueOf方法。
+
+16
+00:01:09,590 --> 00:01:13,710
+These are static methods which are present in each of the wrapper classes.
+这些都是静态方法，在每个封装类中都有。
+
+17
+00:01:13,790 --> 00:01:19,010
+If you look at the integers constructor, it can also accept string values,
+如果你看一下整数构造函数，它也可以接受字符串值。
+
+18
+00:01:19,020 --> 00:01:20,490
+"5234".
+"5234".
+
+19
+00:01:20,590 --> 00:01:26,680
+So, you can do that as well. So, you can pass in a string and create an integer based on that.
+所以，你也可以这么做。所以，你可以传入一个字符串并在此基础上创建一个整数。
+
+20
+00:01:26,750 --> 00:01:33,710
+You might be asking, if I have two ways of creating wrapper classes, which one should I use?
+你可能会问，如果我有两种创建封装类的方法，我应该使用哪一种？
+
+21
+00:01:33,710 --> 00:01:39,860
+Which one of these is a better way to create wrapper classes? To understand that further,
+哪一种是创建封装类的更好方法？为了进一步了解这个问题。
+
+22
+00:01:40,390 --> 00:01:41,360
+let's dig in.
+让我们深入了解一下。
+
+23
+00:01:41,750 --> 00:01:42,820
+So, integer,
+那么，整数。
+
+24
+00:01:42,920 --> 00:01:48,860
+let's say, I'm creating i1 = new Integer(5).
+比方说，我正在创建i1 = new Integer(5)。
+
+25
+00:01:49,340 --> 00:01:54,590
+Let's create i2 also using new Integer(5). Same value, I'm creating two integers.
+让我们也用new Integer(5)来创建i2。同样的值，我正在创建两个整数。
+
+26
+00:01:54,740 --> 00:02:05,280
+I would use Integer.valueOf( ), right now. So, I'll call this  i3 and do Integer.valueOf(5). Now, let's do an
+我现在会使用Integer.valueOf( )，。所以，我就叫这个i3，做Integer.valueOf(5)。现在，让我们做一个
+
+27
+00:02:05,290 --> 00:02:12,550
+i4 with the same thing. Now, I'll do i1 == i2.
+i4，做同样的事情。现在，我将做i1 == i2。
+
+28
+00:02:12,850 --> 00:02:14,240
+If you remember this,
+如果你记得这个。
+
+29
+00:02:14,470 --> 00:02:15,880
+this is a reference type.
+这是一个引用类型。
+
+30
+00:02:15,880 --> 00:02:21,100
+This is a reference variable. For reference variables, == does not compare the value.
+这是一个引用变量。对于引用变量，==并不比较值。
+
+31
+00:02:21,310 --> 00:02:23,270
+It compares where they are stored in memory.
+它比较的是它们在内存中的存储位置。
+
+32
+00:02:23,890 --> 00:02:27,920
+So, i1 = i2, they have the same value. But it's false.
+所以，i1=i2，它们有相同的值。但这是假的。
+
+33
+00:02:28,580 --> 00:02:31,030
+But if I do i3 = i4,
+但如果我做i3=i4。
+
+34
+00:02:32,390 --> 00:02:33,050
+Aha,
+啊哈。
+
+35
+00:02:33,120 --> 00:02:35,190
+it returns true.
+它就会返回真。
+
+36
+00:02:35,280 --> 00:02:43,470
+One of the important things is just like String class, all the wrapper classes are also immutable.
+其中一件重要的事情是，就像String类一样，所有的封装类也是不可变的。
+
+37
+00:02:43,470 --> 00:02:48,440
+So, that means once a value is assigned to them, you cannot change it.
+所以，这意味着一旦一个值被分配给它们，你就不能改变它。
+
+38
+00:02:48,590 --> 00:02:49,270
+Over here,
+在这里。
+
+39
+00:02:49,290 --> 00:02:55,560
+what is happening is, for i1, a new integer variable is getting created and i2, another integer variable
+发生的情况是，对于i1，一个新的整数变量被创建，而i2，另一个整数变量
+
+40
+00:02:55,560 --> 00:02:57,660
+with the same value is getting created.
+被创建。
+
+41
+00:02:58,170 --> 00:03:01,200
+What Integer.valueOf( ) does is okay,
+Integer.valueOf( )所做的一切都很好。
+
+42
+00:03:01,200 --> 00:03:09,120
+why do I need to create another instance of the same value? It would check and re-use if there is an existing
+为什么我需要创建另一个相同值的实例？它将检查并重新使用是否有一个现有的
+
+43
+00:03:09,270 --> 00:03:12,210
+object of the integer with the same value.
+整数的对象具有相同的值。
+
+44
+00:03:12,210 --> 00:03:17,970
+If it finds another object with the same value, it would try and re-use and it would return the same
+如果它发现另一个具有相同值的对象，它将尝试重新使用，并将返回相同的
+
+45
+00:03:18,090 --> 00:03:19,800
+thing back.
+返回相同的东西。
+
+46
+00:03:19,800 --> 00:03:23,520
+That's okay because the value of that object will not change.
+这没关系，因为该对象的值不会改变。
+
+47
+00:03:23,520 --> 00:03:25,300
+Integer is immutable.
+整数是不可变的。
+
+48
+00:03:25,350 --> 00:03:27,120
+You cannot change the value of it.
+你不能改变它的值。
+
+49
+00:03:27,120 --> 00:03:33,780
+So, having two reference variables pointing to the same object is not a problem at all.
+所以，有两个引用变量指向同一个对象根本就不是问题。
+
+50
+00:03:33,780 --> 00:03:41,300
+What we would recommend is to use Integer.valueOf( ) or the valueOf methods to create any of the
+我们建议使用Integer.valueOf( )或valueOf方法来创建任何的
+
+51
+00:03:41,420 --> 00:03:47,880
+wrappers, because valueOf tries and reuses whatever objects are already created.
+封装器，因为valueOf会尝试并重用已经创建的任何对象。
+
+52
+00:03:47,880 --> 00:03:51,800
+So, it does not create a new object every time. When you use a new,
+所以，它不会每次都创建一个新的对象。当你使用一个new,
+
+53
+00:03:51,960 --> 00:03:54,360
+you are creating a new object every time.
+你每次都会创建一个新的对象。
+
+54
+00:03:54,390 --> 00:03:57,080
+However, Integer.valueOf( ) does not do that.
+然而，Integer.valueOf( )不会这样做。
+
+55
+00:03:57,150 --> 00:04:04,170
+It would try and reuse existing objects which are present inside the heap. Similar to the integer, there are
+它将尝试重新使用存在于堆内的现有对象。与整数类似，也有一些
+
+56
+00:04:04,290 --> 00:04:12,330
+float functions which accept a double, which accepts a float, and also a string. So, you can use all this
+float函数，它接受双倍数，接受浮点数，也接受字符串。所以，你可以使用所有这些
+
+57
+00:04:12,330 --> 00:04:19,140
+constructors, as well as you have a Character constructor which accepts a character, and a Boolean constructor
+构造函数，还有一个接受字符的字符构造函数和一个接受布尔值的布尔构造函数
+
+58
+00:04:19,140 --> 00:04:22,960
+which accepts a boolean as well as Strings.
+可以接受布尔值和字符串。
+
+59
+00:04:23,010 --> 00:04:27,030
+So, for a String, it accepts True, capital true, capital False.
+所以，对于一个字符串，它接受True，大写的true，小写的False。
+
+60
+00:04:27,030 --> 00:04:32,720
+I mean, you can use true in any case. So, it would be able to use that and create a value for it. So,
+我的意思是，你可以在任何情况下使用true。所以，它将能够使用它并为它创建一个值。所以。
+
+61
+00:04:32,760 --> 00:04:38,070
+for this, the value is true. For this also, the value is true and for this, the value is false
+对于这个，其值为真。对于这个，其值也是真的，对于这个，其值是假的
+
+62
+00:04:38,070 --> 00:04:43,110
+and if you try and do something else, some string, then it would create a value of False.
+如果你试图做一些其他的事情，一些字符串，那么它将创建一个False的值。
+
+63
+00:04:43,140 --> 00:04:45,230
+So, these are the different things which are present.
+所以，这些都是不同的东西，都是存在的。
+
+64
+00:04:45,240 --> 00:04:52,440
+You can also use the same kind of stuff with the valueOf on each of these wrapper classes.
+你也可以在这些包装类中的每一个上使用同样的东西与valueOf。
+
+65
+00:04:52,500 --> 00:04:58,290
+I'll recommend you to try all that stuff as an exercise. Creating those wrapper classes will not be any
+我建议你把这些东西都作为练习来尝试。创建这些封装类与创建Integer封装类没有任何
+
+66
+00:04:58,290 --> 00:05:03,480
+different from creating the Integer wrapper class that is present in here. In this video,
+与创建这里的Integer封装类没有任何区别。在这个视频中。
+
+67
+00:05:03,480 --> 00:05:09,300
+we looked at how to create wrapper classes using a constructor and also valueOf. The same kind of wrapper
+我们研究了如何使用构造函数和valueOf来创建封装类。同样的包装器
+
+68
+00:05:09,300 --> 00:05:11,140
+classes for Integer exist
+类也存在
+
+69
+00:05:11,190 --> 00:05:17,730
+also for all the other wrapper classes. In the next video, we will learn about more ways that wrapper
+也存在于所有其他的封装类中。在下一个视频中，我们将了解到更多包装器
+
+70
+00:05:17,730 --> 00:05:19,660
+classes can help you.
+类可以帮助你。
+
+71
+00:05:19,740 --> 00:05:20,680
+Until then, bye bye.
+在那之前，再见了。
+

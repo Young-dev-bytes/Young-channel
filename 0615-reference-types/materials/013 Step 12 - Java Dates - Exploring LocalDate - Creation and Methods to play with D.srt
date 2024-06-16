@@ -1,0 +1,505 @@
+1
+00:00:02,660 --> 00:00:03,150
+In this video,
+在这个视频中。
+
+2
+00:00:03,410 --> 00:00:09,530
+let's get started with the LocalDate. LocalDate today = LocalDate.
+让我们从LocalDate开始。LocalDate today = LocalDate.
+
+3
+00:00:09,710 --> 00:00:15,800
+now( ). Make sure that you have the import in place because if you don't have the import, so you need to
+now( )。请确保你已经导入了，因为如果你没有导入，那么你就需要
+
+4
+00:00:15,800 --> 00:00:19,010
+have the java.time.* in your imports.
+因为如果你没有导入，那么你需要在你的导入中添加java.time.*。
+
+5
+00:00:19,010 --> 00:00:24,310
+So, if you restart JShell, you need to again import it in. So, import java.time.*.
+所以，如果你重新启动JShell，你需要再次导入它。所以，导入java.time.*。
+
+6
+00:00:24,320 --> 00:00:26,470
+That's when you would be able to do LocalDate
+这时你就可以做LocalDate了
+
+7
+00:00:26,480 --> 00:00:28,020
+today = LocalDate.now( )
+today = LocalDate.now( )
+
+8
+00:00:28,020 --> 00:00:29,570
+and you can see that it's printing the
+你可以看到，它正在打印
+
+9
+00:00:29,750 --> 00:00:34,520
+today's date. So, 2018-02-01.
+今天的日期。所以，2018-02-01。
+
+10
+00:00:34,550 --> 00:00:40,070
+One of the important things about the LocalDate, is offers a lot of ways of getting information about
+关于LocalDate的一个重要的事情是，它提供了很多方法来获取关于这个日期的信息。
+
+11
+00:00:40,070 --> 00:00:40,580
+this date.
+这个日期的信息。
+
+12
+00:00:40,580 --> 00:00:45,440
+So, once we have created today, now I can get a lot of information about today.
+所以，一旦我们创建了今天，现在我可以得到很多关于今天的信息。
+
+13
+00:00:45,530 --> 00:00:50,000
+Let's look at those methods now. So, let's say I would want to get the year.
+现在让我们看看这些方法。所以，假设我想获得年份。
+
+14
+00:00:50,120 --> 00:00:54,720
+I can say getYear( ) and print 2018.
+我可以说getYear( )并打印2018年。
+
+15
+00:00:54,720 --> 00:01:03,200
+I want to getDayOfWeek( ). It's printing Thursday.
+我想获得DayOfWeek( )。它正在打印星期四。
+
+16
+00:01:03,200 --> 00:01:04,150
+So it says,
+所以它说。
+
+17
+00:01:04,160 --> 00:01:05,690
+it says, today is a Thursday
+它说，今天是星期四
+
+18
+00:01:05,990 --> 00:01:12,500
+and if I want DayOfMonth( ), so that prints 1, because today is the first day of February.
+如果我想得到DayOfMonth( )，那么就打印出1，因为今天是2月的第一天。
+
+19
+00:01:12,500 --> 00:01:14,230
+So, today's date is 1st February
+所以，今天的日期是2月1日
+
+20
+00:01:14,420 --> 00:01:21,580
+and if I want to print DayOfYear( ), it prints 32 because today is the 32nd day of the year.
+如果我想打印DayOfYear( )，它会打印32，因为今天是一年中的第32天。
+
+21
+00:01:22,070 --> 00:01:28,580
+So, you can see that there are a number of methods which help you get information about the specific
+所以，你可以看到，有许多方法可以帮助你获得关于特定的
+
+22
+00:01:28,730 --> 00:01:29,510
+date.
+日期的信息。
+
+23
+00:01:29,540 --> 00:01:30,440
+So, I am able to get
+所以，我能够得到
+
+24
+00:01:30,440 --> 00:01:32,930
+which day of the year, which day of the month,
+今年的哪一天，每月的哪一天。
+
+25
+00:01:33,140 --> 00:01:40,010
+which day of the week, and all that kind of information just by creating a simple variable using the
+哪一天，以及所有这些信息，只是通过使用
+
+26
+00:01:40,250 --> 00:01:42,110
+now( ) static method.
+now( ) 静态方法创建一个简单的变量，就可以获得哪一年的哪一天，哪一个月的哪一天，以及所有这些信息。
+
+27
+00:01:42,290 --> 00:01:45,120
+You can also get details about the month.
+你还可以获得关于月份的详细信息。
+
+28
+00:01:45,360 --> 00:01:46,090
+It's February
+现在是二月
+
+29
+00:01:46,280 --> 00:01:50,490
+and if you want the number, you can get, getMonthValue which would return 2.
+如果你想要数字，你可以得到，getMonthValue，它将返回2。
+
+30
+00:01:50,930 --> 00:01:57,620
+So, those are all the important methods in the API which would help you get information about the specific
+所以，这些是API中所有重要的方法，它们将帮助你获得关于特定的
+
+31
+00:01:57,620 --> 00:01:58,370
+date.
+日期的信息。
+
+32
+00:01:58,400 --> 00:02:04,220
+Now you might sometimes want to get some more generic information, right whether the year is a leap year,
+现在，你有时可能想得到一些更通用的信息，比如，这一年是否是闰年。
+
+33
+00:02:05,000 --> 00:02:10,070
+how many days are there in that specific year, how many days are there in that specific month.
+该年有多少天，该月有多少天。
+
+34
+00:02:10,100 --> 00:02:15,680
+The cool thing is, Java 8 DateTime API provides you all that stuff very easily.
+最酷的是，Java 8的DateTime API很容易为你提供所有这些东西。
+
+35
+00:02:15,710 --> 00:02:22,710
+So, if I want to find out isLeapYear( ). All that I need to do is today.isLeapYear( ). Nope, it's false.
+所以，如果我想找出isLeapYear( )。我所需要做的就是 today.isLeapYear( )。不，它是假的。
+
+36
+00:02:22,790 --> 00:02:30,320
+So, I am right now in 2018 which is not really a leap year, right. So, it returns false. I can find more information
+所以，我现在是在2018年，这不是一个真正的闰年，对吧。所以，它返回错误。我可以找到更多的信息
+
+37
+00:02:30,320 --> 00:02:35,670
+about it. So, you can say today.lengthOfYear( ).
+关于它的更多信息。所以，你可以说 today.lengthOfYear( )。
+
+38
+00:02:35,780 --> 00:02:38,980
+So, how many days are there in the current year? 365.
+那么，当前的一年有多少天？365.
+
+39
+00:02:39,580 --> 00:02:42,600
+I can say lengthOfMonth( ), 28.
+我可以说lengthOfMonth( )，28。
+
+40
+00:02:42,920 --> 00:02:49,080
+So, these methods help you get meta information about the year or the month we are in:
+所以，这些方法可以帮助你获得关于我们所处年份或月份的元信息。
+
+41
+00:02:49,130 --> 00:02:50,610
+how many days are there in the month,
+这个月有多少天。
+
+42
+00:02:50,630 --> 00:02:58,880
+how many days are there in the year, whether it's a leap year and things like that. And also, the date API provides
+这一年有多少天，是否是闰年以及类似的事情。此外，日期API还提供了
+
+43
+00:02:58,880 --> 00:03:04,800
+ways to add number of days or number of months or number of years to your date. So,
+提供了在日期中添加天数、月数或年数的方法。所以。
+
+44
+00:03:04,940 --> 00:03:12,030
+I would want to find out what is the date after 100 days. So, I can say today.plusDays(100).
+我想知道100天后的日期是什么。所以，我可以说 today.plusDays(100)。
+
+45
+00:03:12,040 --> 00:03:14,270
+What's the date after 100 days?
+100天后的日期是什么？
+
+46
+00:03:14,360 --> 00:03:17,920
+It says 2018-05-12,
+它说2018-05-12。
+
+47
+00:03:17,920 --> 00:03:18,890
+right.
+对。
+
+48
+00:03:18,890 --> 00:03:24,320
+So, it says 12th May 2018 is plus 100 days from now.
+所以，它说2018年5月12日是从现在开始加100天。
+
+49
+00:03:24,370 --> 00:03:33,470
+You can also do plusMonths( ). So, plusMonths(100). So, 100 months from now is 1st of June, June
+你也可以做 plusMonths( )。所以，plusMonths(100)。所以，从现在起100个月是6月1日，6月
+
+50
+00:03:33,910 --> 00:03:37,300
+2026 or you can even do plusYears( ),
+2026年，或者你甚至可以做plusYears( )。
+
+51
+00:03:37,340 --> 00:03:38,910
+100 years from now.
+从现在起100年。
+
+52
+00:03:39,000 --> 00:03:39,380
+Okay.
+好的。
+
+53
+00:03:39,410 --> 00:03:43,910
+I will not be alive then, so 2118.
+那时我就不在世了，所以是2118年。
+
+54
+00:03:43,930 --> 00:03:50,950
+These are all the methods you can use to add days, or months, or years to your date and you can also have
+这些都是你可以用来给你的日期增加天数、月数或年数的方法，你也可以有
+
+55
+00:03:51,670 --> 00:03:52,780
+subtraction, right.
+减法，对吧。
+
+56
+00:03:52,810 --> 00:03:58,220
+So, today.minusYears(100) or minusMonths( ) and  minusDays( ).
+所以， today.minusYears(100) 或 minusMonths( ) 和 minusDays( )。
+
+57
+00:03:58,240 --> 00:04:05,110
+So, these are all the things to change the date. So, you can add the number of days, add number of months,
+所以，这些都是改变日期的东西。所以，你可以增加天数，增加月数。
+
+58
+00:04:05,170 --> 00:04:07,990
+or a specific number of years to the date.
+或特定年数的日期。
+
+59
+00:04:08,080 --> 00:04:15,510
+One of the important things that you'd need to remember is all these do not change today value. LocalDate
+你需要记住的一个重要事项是所有这些都不会改变今天的值。本地日期
+
+60
+00:04:15,510 --> 00:04:15,820
+Time
+时间
+
+61
+00:04:15,820 --> 00:04:17,829
+class is immutable.
+类是不可改变的。
+
+62
+00:04:17,829 --> 00:04:21,990
+So, what we are doing in here is, we are creating new variables. The
+所以，我们在这里所做的是，我们正在创建新的变量。而
+
+63
+00:04:22,089 --> 00:04:24,220
+today itself does not get affected.
+今天本身并没有受到影响。
+
+64
+00:04:24,220 --> 00:04:27,930
+So, today minusYears(100) would be a new variable.
+所以，今天减去Years(100)将是一个新变量。
+
+65
+00:04:27,940 --> 00:04:34,740
+So, I can say LocalDateTime, actually it's LocalDate.  LocalDate hundredYearsBefore
+所以，我可以说是LocalDateTime，实际上是LocalDate。 LocalDate hundredYearsBefore
+
+66
+00:04:38,730 --> 00:04:41,860
+= today.minusYears(100).
+= today.minusYears(100)。
+
+67
+00:04:41,860 --> 00:04:46,070
+The value of today on the other hand would still remain today.
+另一方面，今天的值仍然会保持在今天。
+
+68
+00:04:46,180 --> 00:04:49,540
+It creates a new variable called hundredYearsBefore with the value.
+它用这个值创建了一个新的变量，叫做 hundredYearsBefore。
+
+69
+00:04:49,570 --> 00:04:57,190
+So, this is immutable class again. All the methods would create new instances with the new value. Until
+所以，这又是一个不可变的类。所有的方法都会用新的值创建新的实例。直到
+
+70
+00:04:57,220 --> 00:04:57,610
+now,
+现在。
+
+71
+00:04:57,640 --> 00:05:00,990
+in this video, we have looked at a wide variety of things, right.
+在这个视频中，我们已经看了各种各样的东西，对吧。
+
+72
+00:05:01,000 --> 00:05:07,720
+So, we looked at how to get specific information: which day of the year, which month, which year, and all that kind
+所以，我们看了如何获得具体的信息：一年中的哪一天，哪一个月，哪一年，以及所有这些
+
+73
+00:05:07,720 --> 00:05:08,550
+of stuff.
+的东西。
+
+74
+00:05:08,560 --> 00:05:13,000
+We also looked at getting generic information; leap year, is it a leap year,
+我们还研究了如何获得通用信息；闰年，是否是闰年。
+
+75
+00:05:13,030 --> 00:05:13,470
+what is,
+什么是。
+
+76
+00:05:13,540 --> 00:05:16,030
+what is the number of days in the current year.
+本年度的天数是多少。
+
+77
+00:05:16,030 --> 00:05:18,990
+what is the number of days in current month.
+当前月份的天数是多少。
+
+78
+00:05:19,000 --> 00:05:25,660
+And, we also looked at different operations to add  number of days, months, years, and subtract years, and
+而且，我们还研究了不同的操作，以增加日数、月数、年数，以及减去年数，等等。
+
+79
+00:05:25,660 --> 00:05:26,610
+stuff like that.
+诸如此类的操作。
+
+80
+00:05:27,820 --> 00:05:35,740
+The interesting thing to note is that very similar APIs exist on the LocalDateTime class as well.
+值得注意的是，在LocalDateTime类中也存在非常类似的API。
+
+81
+00:05:35,740 --> 00:05:37,320
+So, on LocalDateTime class,
+所以，在LocalDateTime类上。
+
+82
+00:05:37,330 --> 00:05:48,500
+if I create a instance of it right now, DateTime.now( ), there are very similar methods present.
+如果我现在创建一个实例，DateTime.now( )，就有非常类似的方法存在。
+
+83
+00:05:48,550 --> 00:05:52,040
+However, in addition to the usual ones,
+然而，除了通常的方法之外。
+
+84
+00:05:52,150 --> 00:06:00,190
+so let's say I want to do a plus, the LocalDateTime not only allows plusDays, plusMonths, plusYears,
+所以，假设我想做一个加法，LocalDateTime不仅允许加日、加月、加年。
+
+85
+00:06:00,280 --> 00:06:06,940
+and plusWeeks, but it also allows plusSeconds, plusHours, and plusMinutes.
+和plusWeeks，而且还允许plusSeconds、plusHours和plusMinutes。
+
+86
+00:06:06,940 --> 00:06:12,150
+So, all that I had to do was now.plus( ) and press tab and it would show all the options present. So,
+因此，我所要做的就是now.plus( )，然后按tab键，它就会显示所有的选项。所以。
+
+87
+00:06:12,190 --> 00:06:18,550
+LocalDateTime provides all the options that are present for the LocalDate plus it allows you options
+LocalDateTime提供了LocalDate的所有选项，而且它允许你选择
+
+88
+00:06:18,910 --> 00:06:26,140
+to play with hours, minutes, and seconds, and nanoseconds as well. So, over here what you are seeing in here
+小时、分钟和秒，以及纳秒。所以，在这里你看到的是
+
+89
+00:06:26,410 --> 00:06:27,960
+is nanoseconds.
+是纳秒。
+
+90
+00:06:28,120 --> 00:06:34,660
+So, that's basically what the LocalDateTime provides. So, similar to adding, you would also be able to get
+所以，这基本上就是LocalDateTime提供的东西。所以，与添加类似，你也能得到
+
+91
+00:06:34,780 --> 00:06:39,250
+different information, right. So, now.get( ), you would be able to get minute, you'd be able to
+不同的信息，对吧。所以，now.get( )，你就可以得到分钟，你就可以得到
+
+92
+00:06:39,250 --> 00:06:40,130
+get second,
+得到秒。
+
+93
+00:06:40,270 --> 00:06:42,580
+you'll be able to get nano,
+你将能够得到纳米。
+
+94
+00:06:42,580 --> 00:06:45,520
+and you'd be able to get the hour as well.
+而且你也能得到小时数。
+
+95
+00:06:45,520 --> 00:06:51,250
+I'd recommend you to try and play around with the LocalDateTime API on your own and try and find out more
+我建议你自己试着玩一玩LocalDateTime API，并尝试找出更多的
+
+96
+00:06:51,250 --> 00:06:53,830
+things about it. In this video,
+关于它的事情。在这个视频中。
+
+97
+00:06:53,860 --> 00:06:58,660
+we looked at few of the important methods that are present on the LocalDate class.
+我们看了LocalDate类中的一些重要方法。
+
+98
+00:06:58,690 --> 00:07:00,300
+We looked at how to play with it.
+我们研究了如何使用它。
+
+99
+00:07:00,310 --> 00:07:03,780
+We also looked at a few methods which are present in the LocalDateTime.
+我们还看了LocalDateTime中的一些方法。
+
+100
+00:07:03,880 --> 00:07:09,850
+In the next video, we will explore a few more things about the LocalDate and the LocalDateTime classes.
+在下一个视频中，我们将探讨更多关于LocalDate和LocalDateTime类的东西。
+
+101
+00:07:09,850 --> 00:07:10,740
+Until then, bye bye.
+在那之前，再见了。
+

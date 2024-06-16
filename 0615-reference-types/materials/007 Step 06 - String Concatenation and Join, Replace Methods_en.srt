@@ -1,0 +1,436 @@
+1
+00:00:02,120 --> 00:00:03,410
+Welcome back.
+
+2
+00:00:03,450 --> 00:00:08,060
+In this video, let's look at a few more utility methods which are present in the String class as well as
+
+3
+00:00:08,119 --> 00:00:12,580
+we would discuss something very important called concatenation operator.
+
+4
+00:00:12,610 --> 00:00:17,990
+Let's start with the concatenation operator which is +, right. So, we looked at 1 + 2, what would be
+
+5
+00:00:18,000 --> 00:00:21,940
+the value? It would return 3. The same thing if I do strings, 
+
+6
+00:00:21,980 --> 00:00:24,680
+what would be the output? Think about it.
+
+7
+00:00:24,690 --> 00:00:25,870
+It's 12.
+
+8
+00:00:26,080 --> 00:00:31,360
+So, it actually just concatenates 1 with 2 and returns it back. Let's say one of these is a string
+
+9
+00:00:31,370 --> 00:00:32,790
+and the other one is number.
+
+10
+00:00:32,930 --> 00:00:36,140
+Will the value change? Nope.
+
+11
+00:00:36,150 --> 00:00:38,010
+It is "1" + 2.
+
+12
+00:00:38,100 --> 00:00:41,960
+So, if the number is 23, let's say, it's 123.
+
+13
+00:00:41,970 --> 00:00:45,480
+However, just 1 + 23 would return 24.
+
+14
+00:00:45,480 --> 00:00:53,610
+So, if there is a string in one of the operands, then what would happen? Is it becomes concatenation,
+
+15
+00:00:53,640 --> 00:00:58,740
++ behaves as if this is a concatenation. So, 1 is concatenated to 23.
+
+16
+00:00:58,770 --> 00:01:03,350
+So, 123. However, there are no strings. 1 + 23 is returning back,
+
+17
+00:01:03,450 --> 00:01:11,030
+24. If I have 1 + 2+ "3", what would be the result? Right,
+
+18
+00:01:12,060 --> 00:01:13,420
+it's printing 33.
+
+19
+00:01:13,470 --> 00:01:14,940
+Let's try a different thing.
+
+20
+00:01:15,940 --> 00:01:26,380
+Let's say I don't do this, but I would do this. 123,
+
+21
+00:01:26,400 --> 00:01:28,280
+that's interesting,
+
+22
+00:01:28,280 --> 00:01:28,640
+right.
+
+23
+00:01:29,030 --> 00:01:36,500
+So, why is this happening? The way expressions are evaluated in Java are left to right. So, left starts with
+
+24
+00:01:36,500 --> 00:01:36,860
+1.
+
+25
+00:01:36,860 --> 00:01:38,550
+So, 1 + 2 is 3.
+
+26
+00:01:38,570 --> 00:01:46,340
+So, this is performed as an integer operation. So, any normal, any operation between two integers is a integer.
+
+27
+00:01:46,430 --> 00:01:48,120
+So, 1 + 2 will return 3.
+
+28
+00:01:48,140 --> 00:01:53,250
+However, once there is 3, the result of this is 3, once we have the result,
+
+29
+00:01:53,360 --> 00:01:59,250
+now, it's 3 + string 3, then it becomes concatenation. So, that's why it is 33.
+
+30
+00:01:59,570 --> 00:02:07,100
+In this case, let's start from the left, 1 + 2 is 1, is a string, 2 is an integer.
+
+31
+00:02:07,100 --> 00:02:08,470
+So, the result is a string.
+
+32
+00:02:08,490 --> 00:02:16,020
+So, 1 + 2  becomes concatenation, 12 and 12 is a string again. To that, we are appending 3.
+
+33
+00:02:16,030 --> 00:02:17,400
+So, 123.
+
+34
+00:02:17,540 --> 00:02:21,370
+So, the rules of concatenation are very simple. It executes from left to right
+
+35
+00:02:21,440 --> 00:02:28,610
+and if you see two integers as part of the operation, it would be addition. If you see one string and
+
+36
+00:02:28,610 --> 00:02:30,940
+one integer, it's concatenation.
+
+37
+00:02:31,040 --> 00:02:34,500
+If it's both strings, then it's concatenation as well.
+
+38
+00:02:34,550 --> 00:02:35,630
+Okay.
+
+39
+00:02:35,630 --> 00:02:40,960
+That's how we would do a lot of our printing, right. So, whenever we did System.out.println,
+
+40
+00:02:41,570 --> 00:02:42,670
+we were using +,
+
+41
+00:02:42,680 --> 00:02:42,950
+right.
+
+42
+00:02:42,950 --> 00:02:46,430
+So, if I have a integer variable, let's say int
+
+43
+00:02:46,430 --> 00:02:48,190
+i = 20.
+
+44
+00:02:48,530 --> 00:02:50,720
+I can do System.out.println
+
+45
+00:02:53,550 --> 00:02:58,910
+"Value is" and we said + 20,
+
+46
+00:02:59,010 --> 00:02:59,250
+right.
+
+47
+00:02:59,250 --> 00:03:00,360
+So, this is how we did it.
+
+48
+00:03:00,460 --> 00:03:02,520
+"Value is 20" is printed.
+
+49
+00:03:02,580 --> 00:03:09,820
+This is because of the concatenation operator: string and int. String and int, it becomes concatenation.
+
+50
+00:03:09,840 --> 00:03:13,430
+So, if I'm doing + 20, what would be the result?
+
+51
+00:03:14,500 --> 00:03:16,240
+Value is 2020;
+
+52
+00:03:16,240 --> 00:03:18,510
+it's just concatenation. Try a puzzle, right. So,
+
+53
+00:03:18,580 --> 00:03:21,540
+if you want now, I would want to print 40.
+
+54
+00:03:22,180 --> 00:03:24,300
+What can I do?
+
+55
+00:03:24,350 --> 00:03:26,710
+What can I do is, put it in brackets.
+
+56
+00:03:26,810 --> 00:03:29,870
+Once you'd put it something in brackets, the brackets get priority.
+
+57
+00:03:30,600 --> 00:03:30,890
+So,
+
+58
+00:03:30,890 --> 00:03:32,240
+Value is 40.
+
+59
+00:03:32,720 --> 00:03:36,630
+Let's look at a few other utility methods which are present in the String class.
+
+60
+00:03:36,740 --> 00:03:39,560
+So, this is a static method which is present in String.
+
+61
+00:03:39,560 --> 00:03:46,040
+This is join method. Lot of scenarios, you would want to append comma to a list of numbers, right. So,
+
+62
+00:03:46,040 --> 00:03:53,060
+if I want a string with 2, 3, 4, so I can do something of this kind.
+
+63
+00:03:53,060 --> 00:03:59,060
+This returns, the first character is what character you want to join with, and rest is a list of strings
+
+64
+00:03:59,090 --> 00:04:00,440
+that you would want to append.
+
+65
+00:04:00,500 --> 00:04:02,660
+So, 2, 3, 4.
+
+66
+00:04:03,080 --> 00:04:15,760
+So, if I just have lesser number values, let's say 35 or 'A', let's say this is 'B', and this is 'C'. It prints A, B, C
+
+67
+00:04:15,760 --> 00:04:24,070
+and if there is only one, it just prints 'A'. If there are two, it would start appending a ','. So, this is a 
+
+68
+00:04:24,250 --> 00:04:30,280
+very useful utility thing when you would want to separate the different values inside a string using
+
+69
+00:04:30,280 --> 00:04:31,160
+a ','.
+
+70
+00:04:31,330 --> 00:04:34,210
+The last utility method is to replace.
+
+71
+00:04:34,210 --> 00:04:41,550
+So, let's say, in this string, I would want to replace a specific character. So, I can say replace character "a"
+
+72
+00:04:41,580 --> 00:04:51,300
+with character "z". What would be the output? "zbcd" or you can say, even replace a string, right. So, replace
+
+73
+00:04:51,300 --> 00:04:56,940
+"ab" with "xyz". So, it becomes "xyzcd".
+
+74
+00:04:57,570 --> 00:04:59,040
+That's cool right.
+
+75
+00:04:59,040 --> 00:05:05,340
+So, what we are doing is, it's trying to explore the string APIs. One of the important things is trying to
+
+76
+00:05:05,340 --> 00:05:10,790
+discover and understand the APIs might become little boring after a while.
+
+77
+00:05:11,040 --> 00:05:16,350
+There are so many different methods that are present, that it's impossible to remember all of them.
+
+78
+00:05:16,350 --> 00:05:21,430
+I think the way you can look at it is, try to understand what are the possibilities that are there.
+
+79
+00:05:21,430 --> 00:05:24,000
+What are the possible operations that are present?
+
+80
+00:05:24,020 --> 00:05:28,750
+You don't really need to remember all the method names that are present.
+
+81
+00:05:28,920 --> 00:05:33,360
+If you are unable to find out what is the right method to do something, you can just say,
+
+82
+00:05:33,630 --> 00:05:39,300
+let's say, I have a string variable, right str = 25 or some text, right.
+
+83
+00:05:40,140 --> 00:05:45,180
+I can just say str. and it would show you all the different operations which are present on that
+
+84
+00:05:45,180 --> 00:05:50,510
+specific string. So, you can try and research that method further and see if that matches your needs
+
+85
+00:05:50,730 --> 00:05:55,500
+and also there would be a few static methods which are present. So, you can type the class name and press
+
+86
+00:05:55,500 --> 00:06:00,430
+'.' and press tab and that would print all the static methods that are present in there.
+
+87
+00:06:00,430 --> 00:06:05,250
+We have not really discussed every method which is present in there because that means we'll be spending
+
+88
+00:06:05,430 --> 00:06:07,780
+the entire course just discussing the string API.
+
+89
+00:06:08,250 --> 00:06:13,470
+But the idea was to capture the essentials and give them to you and at any other point if you would
+
+90
+00:06:13,470 --> 00:06:18,630
+want to find out whether such kind of feature is there, you can just type in str. or string. 
+
+91
+00:06:18,990 --> 00:06:24,210
+and find out what are the other options which are present. The other way you can do to explore the API
+
+92
+00:06:24,450 --> 00:06:31,200
+is to type in Java doc and type in the class you would want to explore and say which version. Since I would
+
+93
+00:06:31,200 --> 00:06:33,680
+want to look at the string class in Java 9,
+
+94
+00:06:33,720 --> 00:06:35,480
+I'd want to look at the Java doc for it.
+
+95
+00:06:35,700 --> 00:06:41,700
+You can take this and this would show the entire documentation for the String class.
+
+96
+00:06:41,700 --> 00:06:46,740
+So, as you can see in here, it says, the String class represents character strings. All string literals in
+
+97
+00:06:46,740 --> 00:06:51,990
+Java programs such as "abc" are implemented as instances of this class
+
+98
+00:06:52,290 --> 00:06:58,290
+and if you look at it, it says Strings are constants, their values cannot be changed after they're created,
+
+99
+00:06:59,130 --> 00:06:59,510
+right.
+
+100
+00:06:59,520 --> 00:07:03,990
+We'll talk about StringBuffers later. But the idea is,  you can actually look at the documentation in
+
+101
+00:07:03,990 --> 00:07:04,290
+here.
+
+102
+00:07:04,290 --> 00:07:06,600
+Let's say you would want to explore a specific method,
+
+103
+00:07:06,600 --> 00:07:09,440
+what it does, concat what it does,
+
+104
+00:07:09,450 --> 00:07:13,220
+you can just click the method and look at examples down there as well.
+
+105
+00:07:13,230 --> 00:07:18,150
+So, one of the things I would recommend you to do is, try and look at the APIs and try and understand the
+
+106
+00:07:18,150 --> 00:07:19,510
+different methods which are present.
+
+107
+00:07:19,530 --> 00:07:21,660
+It's impossible to remember all the APIs.
+
+108
+00:07:22,050 --> 00:07:26,430
+So, try and get an awareness of what can be done and whenever the need arises,
+
+109
+00:07:26,430 --> 00:07:32,040
+you go and search the documentation to find the right methods. Until the next video, bye-bye.
+

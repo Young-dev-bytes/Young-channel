@@ -1,0 +1,265 @@
+1
+00:00:02,770 --> 00:00:03,890
+Welcome back.
+
+2
+00:00:03,890 --> 00:00:08,690
+In this quick video, we would want to look at a couple of alternatives for the String class.
+
+3
+00:00:08,860 --> 00:00:12,720
+One of the problems with the String class is String is immutable.
+
+4
+00:00:12,760 --> 00:00:21,510
+So, as soon as I create a string like this, let's say I am doing "123" + "123" +"1234"+
+
+5
+00:00:22,260 --> 00:00:28,260
+"123456". Think about how many strings we are creating.
+
+6
+00:00:28,260 --> 00:00:30,830
+So, this creates the entire concatenated string.
+
+7
+00:00:30,900 --> 00:00:35,430
+So, when we are doing this operation, what we are doing is, we are creating individual string instances
+
+8
+00:00:35,430 --> 00:00:44,780
+for 1, 2, 3, and 4. So, four values in here. Because the concatenation runs from left to right, first
+
+9
+00:00:44,830 --> 00:00:49,440
+these two are concatenated and 123 + 123 becomes 
+123123.
+
+10
+00:00:49,450 --> 00:00:51,390
+So, this is the 5th instance
+
+11
+00:00:51,430 --> 00:00:57,650
+and after that another instance concatenating all these three and sixth instance and then a seventh
+
+12
+00:00:57,670 --> 00:00:58,730
+instance.
+
+13
+00:00:58,750 --> 00:01:07,060
+So, just to do a simple concatenation, we had to create seven instances of this string, right. The first
+
+14
+00:01:07,060 --> 00:01:12,190
+four are definitely needed because those are values, but there are three additional instances of objects
+
+15
+00:01:12,190 --> 00:01:13,860
+that are being created
+
+16
+00:01:14,260 --> 00:01:17,220
+and that's a very costly operation. Creating objects
+
+17
+00:01:17,380 --> 00:01:19,450
+is very very costly.
+
+18
+00:01:19,450 --> 00:01:21,990
+If this is the case, if it's four simple strings,
+
+19
+00:01:22,000 --> 00:01:31,150
+but imagine the case when I have to append 200 strings. How many useless objects would be created? To avoid
+
+20
+00:01:31,150 --> 00:01:35,640
+that, Java provides another class called StringBuffer.
+
+21
+00:01:36,000 --> 00:01:42,720
+So, StringBuffer is another class in Java which you can use to create strings.
+
+22
+00:01:42,760 --> 00:01:46,310
+However StringBuffer is not as easy to use as a String, right. So,
+
+23
+00:01:46,540 --> 00:01:49,300
+if it was a String, I can just say this. Oops!
+
+24
+00:01:49,540 --> 00:01:53,950
+That's not allowed with a StringBuffer. You have to actually use new StringBuffer
+
+25
+00:01:57,590 --> 00:01:59,690
+("TEst")
+
+26
+00:01:59,690 --> 00:02:02,540
+The important thing is StringBuffer is mutable.
+
+27
+00:02:02,600 --> 00:02:11,930
+That means if I do a sb. let's say, append and say append("123") and I leave a space in here.
+
+28
+00:02:13,540 --> 00:02:15,900
+What would happen? sb
+
+29
+00:02:16,110 --> 00:02:20,370
+value also gets changed. So, sb new have, sb has the new value, right. Now,
+
+30
+00:02:20,610 --> 00:02:24,120
+so the value inside the string buffer is changing.
+
+31
+00:02:24,120 --> 00:02:33,540
+So, it's actually saying "TEst 123". sb.setCharAt, let's say I would want to replace this character
+
+32
+00:02:33,660 --> 00:02:37,840
+with a 'e'. So, I can say charAt, index is 
+
+33
+00:02:37,940 --> 00:02:38,330
+(1,'e').
+
+34
+00:02:38,500 --> 00:02:46,230
+Now, if I do sb, it would show "TEst 123" because we have replaced this character.
+
+35
+00:02:46,350 --> 00:02:50,660
+One thing you would notice that with StringBuffer is that, we are actually changing the value inside
+
+36
+00:02:50,660 --> 00:02:51,650
+the StringBuffer .
+
+37
+00:02:52,160 --> 00:02:53,600
+So, that's an important thing.
+
+38
+00:02:53,660 --> 00:02:58,720
+So, in StringBuffer you can actually change the values. Whenever you do a lot of concatenations,
+
+39
+00:02:58,730 --> 00:03:01,520
+it's preferred that you'd use a StringBuffer.
+
+40
+00:03:01,700 --> 00:03:08,240
+There is another class which is offered in Java which is called StringBuilder. StringBuilder is
+
+41
+00:03:08,240 --> 00:03:16,070
+very very similar to StringBuffer. But it's offered in the later versions of Java because StringBuffer is
+
+42
+00:03:16,320 --> 00:03:17,990
+a synchronised class.
+
+43
+00:03:17,990 --> 00:03:18,920
+So, what does that mean?
+
+44
+00:03:19,010 --> 00:03:24,980
+That means, that StringBuffer is a class which is ready for multithreading. But if you are ready for
+
+45
+00:03:24,980 --> 00:03:29,660
+multithreading, it means that there is a penalty which is imposed on you.
+
+46
+00:03:29,660 --> 00:03:35,040
+That means when you're running in a single-threaded scenarios where you don't really need all the complexities
+
+47
+00:03:35,070 --> 00:03:41,450
+around multithreading, StringBuffer might get really slow and in those kind of situations, you can use
+
+48
+00:03:41,450 --> 00:03:42,420
+StringBuilder.
+
+49
+00:03:42,480 --> 00:03:46,640
+We'd talk about multithreading and all that kind of stuff a little later in this course in a separate
+
+50
+00:03:46,640 --> 00:03:47,330
+section.
+
+51
+00:03:47,450 --> 00:03:54,740
+But for now, you can think that if you don't really worry about multithreading, then you can use a String
+
+52
+00:03:54,950 --> 00:03:55,580
+Builder.
+
+53
+00:03:55,610 --> 00:04:02,300
+So, instead of a StringBuffer, you can use a StringBuilder. So, I can say StringBuilder sb =
+
+54
+00:04:02,300 --> 00:04:05,540
+new StringBuilder with your string.
+
+55
+00:04:05,720 --> 00:04:10,250
+If you further explore the APIs of StringBuffer and String Builder, you would see that there are
+
+56
+00:04:10,250 --> 00:04:13,030
+variations in the methods that they offer and things like that.
+
+57
+00:04:13,340 --> 00:04:18,560
+But effectively, the thing which you'd need to remember is this. If you're concatenating a lot of strings
+
+58
+00:04:18,709 --> 00:04:24,240
+and creating a lot of instances of strings, then it's recommended to go for the alternatives, either the
+
+59
+00:04:24,240 --> 00:04:31,340
+StringBuilder or the StringBuffer. If you don't worry about multithreading, then you would really be
+
+60
+00:04:31,340 --> 00:04:37,670
+advised to go with the StringBuilder class. If you want your code to be thread-safe, then you'd go for
+
+61
+00:04:37,670 --> 00:04:38,780
+the StringBuffer
+
+62
+00:04:38,780 --> 00:04:44,270
+class. We will discuss more about multithreading when we encounter that in a subsequent section.
+
+63
+00:04:44,270 --> 00:04:49,160
+In this video, we discussed the alternatives to String, StringBuilder, and StringBuffer and things
+
+64
+00:04:49,160 --> 00:04:49,610
+like that.
+
+65
+00:04:49,980 --> 00:04:51,710
+I'll see you in the next video.
+
+66
+00:04:51,710 --> 00:04:52,510
+Until then, bye bye.
+

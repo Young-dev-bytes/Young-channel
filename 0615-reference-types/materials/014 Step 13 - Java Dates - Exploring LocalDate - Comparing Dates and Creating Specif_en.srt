@@ -1,0 +1,289 @@
+1
+00:00:02,100 --> 00:00:03,350
+Welcome back.
+
+2
+00:00:03,400 --> 00:00:08,580
+In this video, let's look at a few more utility methods present in the LocalDate class which help you to
+
+3
+00:00:08,580 --> 00:00:13,230
+compare dates as well as set a specific value to a date.
+
+4
+00:00:13,230 --> 00:00:18,010
+So, until now we created a LocalDate object using LocalDate.now( ), right. So,
+
+5
+00:00:18,480 --> 00:00:21,180
+what we did was LocalDate today = LocalDate.now( ).
+
+6
+00:00:21,810 --> 00:00:26,940
+But there are other methods which are there which can be used to create specific dates. So, instead of
+
+7
+00:00:26,940 --> 00:00:27,540
+today,
+
+8
+00:00:27,720 --> 00:00:34,390
+let's say, I would want to hard code the date and get the details about yesterday. Yesterday was 31st,
+
+9
+00:00:34,390 --> 00:00:35,070
+31st Jan.
+
+10
+00:00:35,100 --> 00:00:40,000
+So, for now, let's hardcode, I could have got 31st by subtracting one day from here.
+
+11
+00:00:40,050 --> 00:00:41,690
+Let's hardcode the values now.
+
+12
+00:00:41,870 --> 00:00:43,400
+So, there's a method called, of( ).
+
+13
+00:00:43,410 --> 00:00:50,850
+I can say 2018 and I can say 01, 31. Oops!
+
+14
+00:00:50,880 --> 00:00:52,170
+I got something wrong.
+
+15
+00:00:52,500 --> 00:00:54,690
+Okay, this is how it would be.
+
+16
+00:00:54,750 --> 00:00:59,280
+So, yesterday, oops, I got the spelling wrong as well.
+
+17
+00:01:00,730 --> 00:01:01,160
+Okay.
+
+18
+00:01:01,190 --> 00:01:03,790
+Yesterday is 2018-01-31.
+
+19
+00:01:03,800 --> 00:01:08,710
+So, this is one method which can set, help you to set a specific value.
+
+20
+00:01:08,750 --> 00:01:14,030
+So, of( ) is a specific method in LocalDate which will help you to create a LocalDate instance, specifying
+
+21
+00:01:14,030 --> 00:01:17,790
+the specific year, month, and day.
+
+22
+00:01:18,470 --> 00:01:20,780
+So, now, today has this
+
+23
+00:01:20,780 --> 00:01:23,880
+and yesterday has this.
+
+24
+00:01:23,930 --> 00:01:25,000
+That's cool, right.
+
+25
+00:01:25,010 --> 00:01:28,880
+There are methods which are present which would help you to set a specific year on this date.
+
+26
+00:01:28,880 --> 00:01:35,530
+So, I would want to find out the same day, but with a different year. I can say today.withYear,
+
+27
+00:01:35,870 --> 00:01:39,000
+I can say 2016, for example.
+
+28
+00:01:39,500 --> 00:01:49,220
+So, it becomes 2016, the same day, first February in 2016 and you can also do today.with, a specific 
+
+29
+00:01:49,220 --> 00:01:49,640
+day of the month.
+
+30
+00:01:49,640 --> 00:01:54,870
+So, let's say I would want to have the date as of 20th day of this month.
+
+31
+00:01:55,160 --> 00:01:58,670
+So, it would become 20 February 2018.
+
+32
+00:01:58,880 --> 00:02:08,320
+You can do the same thing with the month as well. So, you can say with today.withMonth( ) and say 
+
+33
+00:02:08,340 --> 00:02:15,290
+I would want to be in the third month. The interesting method which is present in here is, today.with
+
+34
+00:02:15,520 --> 00:02:16,510
+DayOftheYear( ).
+
+35
+00:02:16,510 --> 00:02:19,080
+You can say I would want the same year,
+
+36
+00:02:20,130 --> 00:02:27,120
+but with a specific day. So, 120th day of the year. So, it would return me 04-30.
+
+37
+00:02:27,120 --> 00:02:31,610
+So, 30th April is the 120th day of 2018.
+
+38
+00:02:31,740 --> 00:02:37,140
+So, what we are looking at in here is, we started off with looking at different way of creating the Local
+
+39
+00:02:37,140 --> 00:02:43,430
+Date with a specific date, month, and year and we are looking at, once you are having a specific date,
+
+40
+00:02:43,560 --> 00:02:46,650
+how do you modify it with a specific attribute.
+
+41
+00:02:46,650 --> 00:02:54,540
+So, I would want to modify the year, or a month, or a day, or you would want to use the current year with a
+
+42
+00:02:54,540 --> 00:02:56,700
+specific day of the year.
+
+43
+00:02:56,700 --> 00:03:03,240
+So, these are all the options which are present in LocalDate to be able to do all these things.
+
+44
+00:03:03,270 --> 00:03:08,410
+One of the typical things that we would always do with dates is, we would want to compare.
+
+45
+00:03:08,520 --> 00:03:13,790
+Once you have two days, you'd want to compare whether they are before each other or after each other
+
+46
+00:03:14,010 --> 00:03:21,760
+and there are methods to do that as well. So, you can do today.isBefore(yesterday).
+
+47
+00:03:21,780 --> 00:03:22,350
+Is that true?
+
+48
+00:03:23,500 --> 00:03:28,410
+false. today.isAfter(yesterday)
+
+49
+00:03:30,990 --> 00:03:31,620
+true.
+
+50
+00:03:31,660 --> 00:03:39,490
+So, this is to allow us to compare dates. So, isBefore( ) and isAfter( ) are two awesome methods to compare
+
+51
+00:03:39,640 --> 00:03:41,520
+dates as well.
+
+52
+00:03:41,560 --> 00:03:44,750
+Whatever dates that we discussed on the LocalDate
+
+53
+00:03:44,770 --> 00:03:51,090
+class are also present on the LocalDateTime and the 
+LocalTime class as well. And, in LocalDateTime,
+
+54
+00:03:51,190 --> 00:03:57,700
+you'd also be able to do things like withHour, withMinute, withSecond, and things like that. So, you
+
+55
+00:03:57,700 --> 00:04:01,740
+can get specific things to manipulate hours, minutes, and seconds as well.
+
+56
+00:04:02,050 --> 00:04:08,920
+I'd leave that as an exercise for you to explore the LocalDateTime and the LocalTime APIs. In
+
+57
+00:04:09,010 --> 00:04:16,390
+this and the previous set of videos, we explored a wide variety of things related to the LocalDate, Local
+
+58
+00:04:16,390 --> 00:04:19,100
+DateTime, and the LocalTime classes.
+
+59
+00:04:19,149 --> 00:04:25,040
+We tried to play around with the dates and we tried to explore the API further.
+
+60
+00:04:25,540 --> 00:04:30,110
+As I said before, exploring APIs is not really a fun thing.
+
+61
+00:04:30,200 --> 00:04:33,820
+It's a huge number of methods that you'd need to remember.
+
+62
+00:04:33,820 --> 00:04:40,570
+So, try and remember, what are the operations you can do and if you want specific details or about a specific
+
+63
+00:04:40,780 --> 00:04:42,000
+thing that you would want to do,
+
+64
+00:04:42,040 --> 00:04:46,870
+you can always a look at the Java docs of the API. All that you need to do is, if you want to search for
+
+65
+00:04:46,870 --> 00:04:48,460
+LocalDateTime,
+
+66
+00:04:48,900 --> 00:04:55,240
+I would just need to say  java doc LocalDateTime and Java 9 and you'd be able to get the API and you can read
+
+67
+00:04:55,240 --> 00:04:59,110
+it and try and find out more about a specific class.
+
+68
+00:04:59,140 --> 00:05:04,780
+The most important thing for you is to remember that there is a specific class existing and probably
+
+69
+00:05:04,780 --> 00:05:08,590
+you can do a few things of this kind with that specific class.
+
+70
+00:05:08,860 --> 00:05:14,740
+Once you know that, once you are aware of that, you can locate the specific details from the documentation
+
+71
+00:05:14,740 --> 00:05:16,290
+of the API.
+
+72
+00:05:16,410 --> 00:05:18,240
+I will see you in the next video.
+

@@ -1,0 +1,147 @@
+1
+00:00:01,320 --> 00:00:02,970
+Welcome back.
+
+2
+00:00:03,000 --> 00:00:08,190
+Before we move into the next section, let's review some of the important concepts that we have learned
+
+3
+00:00:08,370 --> 00:00:10,500
+in this specific section.
+
+4
+00:00:10,500 --> 00:00:17,580
+The first thing that we have learnt is, in Functional programming we focus on specifying what to do.
+
+5
+00:00:18,300 --> 00:00:22,000
+First of all, we converted the List to a stream.
+
+6
+00:00:22,140 --> 00:00:24,380
+So, this is a sequence of elements
+
+7
+00:00:24,380 --> 00:00:28,350
+and for each element what should be done. Allow it,
+
+8
+00:00:28,640 --> 00:00:37,000
+if it's only an odd number. Print the element out to the console. Do a cube of the number.
+
+9
+00:00:37,370 --> 00:00:43,820
+So, for each element in this stream, we specified what needs to be done with it.
+
+10
+00:00:43,880 --> 00:00:50,480
+We used numbers.stream() to convert a list into a stream and then we looked at a couple of important
+
+11
+00:00:50,480 --> 00:00:52,170
+methods on the stream.
+
+12
+00:00:52,220 --> 00:00:57,470
+We looked at filter which allows us to specify a condition. Only if
+
+13
+00:00:57,470 --> 00:01:01,830
+that condition is matched, then the element would go further.
+
+14
+00:01:02,060 --> 00:01:05,550
+Otherwise, this element would be filtered out.
+
+15
+00:01:05,570 --> 00:01:12,410
+So, if I have a list of numbers and I would want to allow only even numbers to go through or odd numbers
+
+16
+00:01:12,410 --> 00:01:18,830
+to go through, then I can define a filter specifying what is the condition that needs to be checked on
+
+17
+00:01:18,830 --> 00:01:23,940
+the number. forEach is used to consume an element.
+
+18
+00:01:23,950 --> 00:01:27,010
+You take an element and print it.
+
+19
+00:01:27,110 --> 00:01:30,480
+That's what this specific thing helps us to do.
+
+20
+00:01:30,600 --> 00:01:35,540
+We use map to map one value to another value.
+
+21
+00:01:35,540 --> 00:01:41,780
+So over here, we took the number and we did a cube of it, number * number * number.
+
+22
+00:01:41,810 --> 00:01:45,530
+The other things which we looked at were Lambda Expressions.
+
+23
+00:01:45,530 --> 00:01:55,170
+You can see that filter, over here, uses a lambda expression. The map over here, uses another lambda expression.
+
+24
+00:01:55,170 --> 00:02:02,720
+Over here, we are using a lambda expression to take a course and append the course.length() to it.
+
+25
+00:02:02,900 --> 00:02:09,490
+We learnt that lambda expression is nothing but a simplified representation of a method.
+
+26
+00:02:09,530 --> 00:02:16,070
+So, this lambda expression over here which takes a number and returns if it's even, is similar to the method
+
+27
+00:02:16,100 --> 00:02:23,120
+which we wrote in here. It takes a parameter called number and it returns if that specific number is
+
+28
+00:02:23,360 --> 00:02:30,810
+even. So, instead of writing this much amount of code, we would write a simple lambda expression.
+
+29
+00:02:30,860 --> 00:02:38,350
+We also looked at Method References. Until now, we have used method references to call static methods.
+
+30
+00:02:38,570 --> 00:02:42,490
+println is a static method on System.out.
+
+31
+00:02:42,810 --> 00:02:49,910
+So, we are saying, on the element call System.out.println element. And we use the method reference
+
+32
+00:02:49,910 --> 00:02:56,130
+to specify that. We also created method references using custom static methods.
+
+33
+00:02:56,210 --> 00:03:00,470
+We created a method called isEven and we use the class name
+
+34
+00:03:00,470 --> 00:03:06,380
+: : isEven to call it. If you have not started doing the hands-on yet, I would recommend you to get
+
+35
+00:03:06,380 --> 00:03:11,000
+your hands dirty and write as many functional programs as possible.
+
+36
+00:03:11,000 --> 00:03:12,350
+I'll see you in the next section.
+
+37
+00:03:12,360 --> 00:03:13,190
+Until then, bye bye.
