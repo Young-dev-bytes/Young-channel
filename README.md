@@ -1,5 +1,5 @@
 this is a test
-```yaml```
+```yaml
 kubectl describe pod job-1a581d5343514efab422ec0e6cc8151a-pytorch-job-master-0 -n sft-test
 
 Name:             job-1a581d5343514efab422ec0e6cc8151a-pytorch-job-master-0
@@ -162,4 +162,4 @@ Tolerations:                 node.kubernetes.io/not-ready:NoExecute op=Exists fo
 Events:                      <none>
 
 
-```yaml```
+```
