@@ -306,3 +306,287 @@ Allocated resources:
 Events:                        <none>
 
 ```
+
+
+```yaml
+apiVersion: batch.volcano.sh/v1alpha1
+kind: Job
+metadata:
+  creationTimestamp: '2024-06-21T01:29:40Z'
+  generation: 1
+  labels:
+    athena-job-name: job-935c127c2ed0469ebce913a15e250ce6
+    athena-task-type: sft
+  managedFields:
+  - apiVersion: batch.volcano.sh/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:athena-job-name: {}
+          f:athena-task-type: {}
+      f:spec:
+        .: {}
+        f:minAvailable: {}
+        f:plugins:
+          .: {}
+          f:pytorch: {}
+          f:svc: {}
+        f:policies: {}
+        f:priorityClassName: {}
+        f:queue: {}
+        f:schedulerName: {}
+        f:tasks: {}
+    manager: Kubernetes Java Client
+    operation: Update
+    time: '2024-06-21T01:29:40Z'
+  name: job-935c127c2ed0469ebce913a15e250ce6
+  namespace: sft-test
+  resourceVersion: '11793222'
+  uid: 9318c91c-3971-4ae1-b96a-b31ada01fc8f
+spec:
+  minAvailable: 2
+  plugins:
+    pytorch:
+    - --master=pytorch-job-master
+    - --worker=pytorch-job-worker
+    - --port=14729
+    svc:
+    - publish-not-ready-addresses=disable
+    - --disable-network-policy=disable
+  policies:
+  - action: TerminateJob
+    events:
+    - PodFailed
+    - PodEvicted
+    - Unknown
+  priorityClassName: low-priority-nonpreempting
+  queue: sft
+  schedulerName: volcano
+  tasks:
+  - name: pytorch-job-master
+    replicas: 1
+    template:
+      metadata:
+        labels:
+          athena-job-name: job-935c127c2ed0469ebce913a15e250ce6
+          athena-task-type: sft
+      spec:
+        containers:
+        - command:
+          - /bin/bash
+          - -c
+          - |-
+            echo "nameserver 10.96.0.10
+            search sft-test.svc.cluster.local svc.cluster.local cluster.local" >  /etc/resolv.conf
+            mkdir -p /var/run/sshd
+            /usr/sbin/sshd
+            source ~/.bashrc
+            conda activate flash
+            nvidia-smi
+            bash /opt/code/LLM-Pruner/fastchat/fastchat_dp.sh /opt/input/model 2 2 2.0E-5 3 true false 6 'cosine' 0.1 1250 2048 true 200 100 10 '<|im_start|>' '<|im_end|>' 'qwen_7b' true '/opt/input/data/multi_train'
+          env:
+          - name: JOB_ID
+            value: 935c127c2ed0469ebce913a15e250ce6
+          image: harbor.test.hihonor.com/base-image/fastchat-deepspeed-lite:v2.1
+          imagePullPolicy: Always
+          name: pytorch-job-master-container-0
+          resources:
+            limits:
+              cpu: '60'
+              memory: 536870912k
+              nvidia.com/gpu: '8'
+          securityContext:
+            capabilities:
+              add:
+              - IPC_LOCK
+            privileged: true
+          volumeMounts:
+          - mountPath: /opt/share/code
+            name: 935c127c2ed0469ebce913a15e250ce6-share-algo
+          - mountPath: /opt/code
+            name: 935c127c2ed0469ebce913a15e250ce6-algo
+          - mountPath: /opt/output
+            name: 935c127c2ed0469ebce913a15e250ce6-output
+          - mountPath: /opt/input/data/multi_train
+            name: 935c127c2ed0469ebce913a15e250ce6-sft-dataset-nas
+            readOnly: true
+          - mountPath: /opt/input/model
+            name: 935c127c2ed0469ebce913a15e250ce6-qwen-7b-20240516-v1
+          - mountPath: /dev/shm
+            name: cache-volume
+          workingDir: /opt/code
+        dnsPolicy: ClusterFirstWithHostNet
+        hostNetwork: true
+        initContainers:
+        - args:
+          - -c
+          - 'cp /opt/share/code/custimize_sft_test_06_V1_935c127c2ed0469ebce913a15e250ce6.tar.gz
+            /opt/code  && tar -xvf /opt/code/custimize_sft_test_06_V1_935c127c2ed0469ebce913a15e250ce6.tar.gz
+            --strip-components=1 -C /opt/code '
+          command:
+          - /bin/sh
+          image: harbor.test.hihonor.com/library/ubuntu-init:18.04
+          imagePullPolicy: Always
+          name: athena-init-container
+          resources:
+            limits:
+              cpu: 500m
+              memory: 50Mi
+            requests:
+              cpu: 100m
+              memory: 10Mi
+          volumeMounts:
+          - mountPath: /opt/share/code
+            name: 935c127c2ed0469ebce913a15e250ce6-share-algo
+          - mountPath: /opt/code
+            name: 935c127c2ed0469ebce913a15e250ce6-algo
+          - mountPath: /opt/output
+            name: 935c127c2ed0469ebce913a15e250ce6-output
+          - mountPath: /opt/input/data/multi_train
+            name: 935c127c2ed0469ebce913a15e250ce6-sft-dataset-nas
+            readOnly: true
+          - mountPath: /opt/input/model
+            name: 935c127c2ed0469ebce913a15e250ce6-qwen-7b-20240516-v1
+          - mountPath: /dev/shm
+            name: cache-volume
+          workingDir: /opt/code
+        nodeSelector:
+          volcano.scheduler/queue: sft
+        restartPolicy: Never
+        terminationGracePeriodSeconds: 0
+        volumes:
+        - name: 935c127c2ed0469ebce913a15e250ce6-share-algo
+          persistentVolumeClaim:
+            claimName: 935c127c2ed0469ebce913a15e250ce6-share-algo
+        - name: 935c127c2ed0469ebce913a15e250ce6-algo
+          persistentVolumeClaim:
+            claimName: 935c127c2ed0469ebce913a15e250ce6-algo
+        - name: 935c127c2ed0469ebce913a15e250ce6-output
+          persistentVolumeClaim:
+            claimName: 935c127c2ed0469ebce913a15e250ce6-output
+        - name: 935c127c2ed0469ebce913a15e250ce6-sft-dataset-nas
+          nfs:
+            path: /finetune/datasets/bbb5c0faa8d60aee7e9001ec362b2123/multi_train
+            readOnly: true
+            server: 10.69.179.245
+        - name: 935c127c2ed0469ebce913a15e250ce6-qwen-7b-20240516-v1
+          persistentVolumeClaim:
+            claimName: 935c127c2ed0469ebce913a15e250ce6-qwen-7b-20240516-v1
+        - emptyDir:
+            medium: Memory
+          name: cache-volume
+  - name: pytorch-job-worker
+    replicas: 1
+    template:
+      metadata:
+        labels:
+          athena-job-name: job-935c127c2ed0469ebce913a15e250ce6
+          athena-task-type: sft
+      spec:
+        containers:
+        - command:
+          - /bin/bash
+          - -c
+          - |-
+            echo "nameserver 10.96.0.10
+            search sft-test.svc.cluster.local svc.cluster.local cluster.local" >  /etc/resolv.conf
+            mkdir -p /var/run/sshd
+            /usr/sbin/sshd
+            source ~/.bashrc
+            conda activate flash
+            nvidia-smi
+            bash /opt/code/LLM-Pruner/fastchat/fastchat_dp.sh /opt/input/model 2 2 2.0E-5 3 true false 6 'cosine' 0.1 1250 2048 true 200 100 10 '<|im_start|>' '<|im_end|>' 'qwen_7b' true '/opt/input/data/multi_train'
+          env:
+          - name: JOB_ID
+            value: 935c127c2ed0469ebce913a15e250ce6
+          image: harbor.test.hihonor.com/base-image/fastchat-deepspeed-lite:v2.1
+          imagePullPolicy: Always
+          name: pytorch-job-worker-container-1
+          resources:
+            limits:
+              cpu: '60'
+              memory: 536870912k
+              nvidia.com/gpu: '8'
+          securityContext:
+            capabilities:
+              add:
+              - IPC_LOCK
+            privileged: true
+          volumeMounts:
+          - mountPath: /opt/share/code
+            name: 935c127c2ed0469ebce913a15e250ce6-share-algo
+          - mountPath: /opt/code
+            name: 935c127c2ed0469ebce913a15e250ce6-algo
+          - mountPath: /opt/output
+            name: 935c127c2ed0469ebce913a15e250ce6-output
+          - mountPath: /opt/input/data/multi_train
+            name: 935c127c2ed0469ebce913a15e250ce6-sft-dataset-nas
+            readOnly: true
+          - mountPath: /opt/input/model
+            name: 935c127c2ed0469ebce913a15e250ce6-qwen-7b-20240516-v1
+          - mountPath: /dev/shm
+            name: cache-volume
+          workingDir: /opt/code
+        dnsPolicy: ClusterFirstWithHostNet
+        hostNetwork: true
+        initContainers:
+        - args:
+          - -c
+          - 'cp /opt/share/code/custimize_sft_test_06_V1_935c127c2ed0469ebce913a15e250ce6.tar.gz
+            /opt/code  && tar -xvf /opt/code/custimize_sft_test_06_V1_935c127c2ed0469ebce913a15e250ce6.tar.gz
+            --strip-components=1 -C /opt/code '
+          command:
+          - /bin/sh
+          image: harbor.test.hihonor.com/library/ubuntu-init:18.04
+          imagePullPolicy: Always
+          name: athena-init-container
+          resources:
+            limits:
+              cpu: 500m
+              memory: 50Mi
+            requests:
+              cpu: 100m
+              memory: 10Mi
+          volumeMounts:
+          - mountPath: /opt/share/code
+            name: 935c127c2ed0469ebce913a15e250ce6-share-algo
+          - mountPath: /opt/code
+            name: 935c127c2ed0469ebce913a15e250ce6-algo
+          - mountPath: /opt/output
+            name: 935c127c2ed0469ebce913a15e250ce6-output
+          - mountPath: /opt/input/data/multi_train
+            name: 935c127c2ed0469ebce913a15e250ce6-sft-dataset-nas
+            readOnly: true
+          - mountPath: /opt/input/model
+            name: 935c127c2ed0469ebce913a15e250ce6-qwen-7b-20240516-v1
+          - mountPath: /dev/shm
+            name: cache-volume
+          workingDir: /opt/code
+        nodeSelector:
+          volcano.scheduler/queue: sft
+        restartPolicy: Never
+        terminationGracePeriodSeconds: 0
+        volumes:
+        - name: 935c127c2ed0469ebce913a15e250ce6-share-algo
+          persistentVolumeClaim:
+            claimName: 935c127c2ed0469ebce913a15e250ce6-share-algo
+        - name: 935c127c2ed0469ebce913a15e250ce6-algo
+          persistentVolumeClaim:
+            claimName: 935c127c2ed0469ebce913a15e250ce6-algo
+        - name: 935c127c2ed0469ebce913a15e250ce6-output
+          persistentVolumeClaim:
+            claimName: 935c127c2ed0469ebce913a15e250ce6-output
+        - name: 935c127c2ed0469ebce913a15e250ce6-sft-dataset-nas
+          nfs:
+            path: /finetune/datasets/bbb5c0faa8d60aee7e9001ec362b2123/multi_train
+            readOnly: true
+            server: 10.69.179.245
+        - name: 935c127c2ed0469ebce913a15e250ce6-qwen-7b-20240516-v1
+          persistentVolumeClaim:
+            claimName: 935c127c2ed0469ebce913a15e250ce6-qwen-7b-20240516-v1
+        - emptyDir:
+            medium: Memory
+          name: cache-volume
+```
