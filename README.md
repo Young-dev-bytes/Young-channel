@@ -590,3 +590,177 @@ spec:
             medium: Memory
           name: cache-volume
 ```
+
+```python
+import os
+import argparse
+import gradio as gr
+from gradio.themes.utils import colors
+
+from tab_entity_extraction import build_entity_extraction_tab
+from tab_event_extraction import build_event_extraction_tab
+from tab_screen_comprehension import build_screen_comprehension_tab
+from tab_abstract_semantic_extraction import build_abstract_semantic_extraction_tab
+from tab_picture_edit import build_picture_edit_tab
+from tab_about_us import build_about_us_tab
+
+# if __name__ == "__main__":
+
+
+# 设置临时目录路径
+os.environ['GRADIO_TEMP_DIR'] = '/mnt/nas/mm/ie_env/tmp'
+parser = argparse.ArgumentParser()
+parser.add_argument("--private", default=False, action='store_true')
+parser.add_argument("--port", default=11300, type=int)
+args = parser.parse_args()
+
+theme=gr.themes.Soft(primary_hue=colors.gray, neutral_hue=colors.neutral)
+js_func = """
+function refresh() {
+    const url = new URL(window.location);
+
+    if (url.searchParams.get('__theme') !== 'dark') {
+        url.searchParams.set('__theme', 'dark');
+        window.location.href = url.href;
+    }
+}
+"""
+with gr.Blocks(theme=theme,js=js_func) as demo:
+    gr.Markdown("""荣耀智慧大模型demo平台""")
+    with gr.Tabs(elem_classes="tab-buttons") as tabs:
+        with gr.TabItem("实体提取", elem_id="chat", id=1):
+            build_entity_extraction_tab()
+
+        with gr.TabItem("事件提取", elem_id="chat", id=2):
+            build_event_extraction_tab()
+        
+        with gr.TabItem("屏幕理解", elem_id="info", id=3):
+            build_screen_comprehension_tab()
+
+        with gr.TabItem("抽象语义提取", elem_id="info", id=4):
+            build_abstract_semantic_extraction_tab()
+
+        with gr.TabItem("指令图像编辑", elem_id="info", id=5):
+            build_picture_edit_tab()
+
+        with gr.TabItem("About Us", elem_id="info", id=0):
+            build_about_us_tab()
+
+if args.private:
+    demo.queue().launch(share=False, server_name="127.0.0.1", server_port=args.port, max_threads=1)
+else:
+    demo.queue().launch(share=True, server_name="0.0.0.0", server_port=args.port, max_threads=1)
+
+
+
+
+
+def build_entity_extraction_tab():
+    with gr.Row():
+        with gr.Column(scale=3):
+            imagebox = gr.Image(
+                type='filepath', 
+                interactive=True,
+                sources=["upload", "clipboard"]
+            )
+            with gr.Accordion("level 1", open=False ,visible=True):
+                gr.Examples(
+                    examples=[
+                        ['examples/entity_extraction/level_1_event_1.jpg'],
+                        ['examples/entity_extraction/level_1_event_3.jpg'],
+                        ['examples/entity_extraction/level_1_post_2.jpg'],
+                    ],
+                inputs=[imagebox],
+                outputs=[imagebox],
+                cache_examples=False)
+
+            with gr.Accordion("level 2", open=False ,visible=True):
+                gr.Examples(
+                    examples=[
+                        ['examples/entity_extraction/level_2_event_1.jpg'],
+                        ['examples/entity_extraction/level_2_post_1.jpg'],
+                        ['examples/entity_extraction/level_2_post_2.jpg'],
+                    ],
+                inputs=[imagebox],
+                outputs=[imagebox],
+                cache_examples=False)
+    
+            with gr.Accordion("level 3", open=False ,visible=True):
+                gr.Examples(
+                    examples=[
+                        ['examples/entity_extraction/level_3_post_3.jpg'],
+                        ['examples/entity_extraction/level_3_post_1.jpg'],
+                        ['examples/entity_extraction/level_3_post_2.jpg'],
+                    ],
+                inputs=[imagebox],
+                outputs=[imagebox],
+                cache_examples=False)
+            chat_max_output_tokens, chat_num_beams, \
+                chat_repetition_penalty, chat_do_sample = build_control_panel()
+
+        with gr.Column(scale=9):
+            chat_states = [gr.State([]) for _ in range(num_chatbots)]
+            model_selectors = [None] * num_chatbots
+            chatbots = [None] * num_chatbots
+            json_viewers = [None] * num_chatbots
+
+            with gr.Row():    
+                for i in range(num_chatbots):
+                    with gr.Column(scale=3):
+                        chat_states[i] = gr.State()
+                        model_selectors[i], chatbots[i], json_viewers[i] = build_single_chatbot(i)
+
+            with gr.Row():
+                with gr.Column(scale=8):
+                    chat_textbox = gr.Textbox(
+                        value="请从当前输入的图片中进行实体提取，注意不同title的图片关注返回的实体类型不一样，请注意区分。不得返回每种title图片关注之外的实体。结果以List存储一个或多个map的方式进行返回。",
+                        lines=5,
+                        show_label=False,
+                        visible=True)
+
+                with gr.Column(scale=2, min_width=100):
+                    submit_btn = gr.Button(value="Submit", variant="primary",
+                                        visible=True)
+                    regenerate_btn = gr.Button(value="🔄 Regenerate",
+                                            interactive=True)
+                    
+                    clear_btn = gr.Button(value="🗑️  Clear history",
+                                        interactive=False)
+        def change_textbox(text):
+            prompts = [
+                    "请从当前输入的图片中进行实体提取，注意不同title的图片关注返回的实体类型不一样，请注意区分。不得返回每种title图片关注之外的实体。结果以List存储一个或多个map的方式进行返回。",
+                    "请从当前输入的图片中提取作品名，时间，地址3种实体并存储到字典中，针对没有出现的实体，请用''进行值的替换。每种实体如涉及多个实体值，实体值用列表罗列，结果以json形式输出",
+                    # "请从当前输入的图片中提取实体，结果以List存储一个或多个map的方式进行返回。"
+                ]
+            for i in prompts:
+                if i != text:
+                    return gr.Textbox(
+                        value=i,
+                        lines=5,
+                        show_label=False,
+                        visible=True)
+
+        regenerate_btn.click(change_textbox, chat_textbox, chat_textbox)
+        parameter_list = [
+                chat_max_output_tokens, chat_repetition_penalty,
+                chat_num_beams, chat_do_sample
+            ]
+
+        submit_btn.click(
+            add_text,
+            [chat_textbox] + model_selectors,
+            chatbots + [chat_textbox]
+        ).then(
+            predict, 
+            model_selectors + chatbots + [imagebox],
+            chatbots + json_viewers)
+
+    with gr.Row():
+        gr.Markdown(
+        """
+            ### Model Author: 杨  赫(00031743)
+            ### Demo Author: 黄逸嘉(00031952)、张晟辉(00032043)
+        """)
+
+
+```
