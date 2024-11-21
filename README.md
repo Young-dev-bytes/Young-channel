@@ -761,6 +761,56 @@ def build_entity_extraction_tab():
             ### Model Author: 杨  赫(00031743)
             ### Demo Author: 黄逸嘉(00031952)、张晟辉(00032043)
         """)
+---------------------------------------------------------------------------------------------------------------------
 
+
+Introduction.
+😄 Today I'm gonna recommend some awesome vscode extensions that will improve your productivity.
+I will show you the must-have extensions for beginners. so you will see which extensions I'm using. If you are ready, let's get started. 
+🤔 Before we start writting a single line of code, we first need to install a special tool, called a code editor. And a code editor is essentially a special software that allows us to write programming code like javascript, HTML and CSS in a very easy way. so now in this video, I will guide you through installing the very best code editor in the world. And I will also show you how to set it up a little bit with some special settings, color themes and extensions.
+The code editor that we're going to use is called visual/ˈvɪʒuəl/ studio/ˈstuːdioʊ/ code from Microsoft/ˈmaɪkrəsɔːft/ And this is the very best code editor for web development in the world. So actually every developer that I know right now uses this code editor/ˈedɪtər/.
+So to download it, just go to code.visualstudio.com or to make it even easier, you can just Google vscode. And it should be this very first one. And of course, vscode is available for free and for all platforms out there. And so please just go head right now and download the installer for your own system.
+After managed to install vscode. once you open up the code editor, it should look something like this. And we will start by installing an extension. And an extension for vscode is basically just a small piece of functionality that we can download and which makes the editor a little bit better. So we can basically customize the editor to our needs. So you can think of it a little bit like Google Chrome/kroʊm/ extensions. so it's the same concept. 
+
+Prettier.  /ˈprɪtiər/
+😉  The first one we're going to install for now is called prettier. So just search for prettier. And then it's probably going to be this first result here. because prettier is an extremely popular extension. You see it has over 12 million downloads right now. And just go ahead and click install here and then enable it. And probably you will have to also reload this vscode window. Now what this extension does is to automatically format your code whenever you save it. So now let's come down here to this settings icon, then choose settings from here so that we can now tweak/twiːk/ a couple of settings. And let's actually start with two settings that are related to the prettier extension we just installed. So just come here to the search bar. So searching for the setting name is actually the easiest way of finding them. So just type here, default formatter. And so here, we actually need to set it to prettier. I already have it set, of course, but you will have to go through this list and find prettier somewhere here. choose prettier code formatter.
+finishing installed prettier
+👏  Okay, And so now vscode knows that it should use that prettier extension we just installed to format your code. Now, when should it actually format your code?  Well, we need to set another set thing for that, which is the format on safe setting. So it's this on here, you need to check this checkbox so that prettier will automatically format your file each time that you save it.
+👏  Okay, another one that is very important is the auto safe setting. So auto safe, we need to set it to onFocusChange. And what this will do is to automatically save your files as you go to another tab or as you leave the window completely.
+👏  And so this is very important so that you never lose your edits and you don't have to manually save your files all the time.
+finishing format save and auto save
+
+One monakai.
+👉 And now, let's talk about colors. So basically we can customize /ˈkʌstəmaɪz/ vscode with a color theme, which will then change the colors of the code editor itself and also of the code. So it will basically highlight different parts of the code with different colors. Now, this is just a thing of personal preference /ˈprefrəns/. 
+👉 So you can just use the theme that already comes automatically by default with vscode. But I choose to install a special theme that I believe makes it very easy to read the code. So a color theme is basically just another extension that we need to install. And this one is called One Monokai.
+👉 So this very first one here, and as you can see down here, it will give our code these kinds of colors, and also the vscode editor itself will have this blue color that you can see already here in this window. you can set the color theme using this option here.
+👉  And you can also experiment /ɪkˈsperɪmənt/ with some other themes, of course, down here, again, in the settings icon. And then here in color theme, you can choose one of these light themes or one of these dark themes.
+👉 So vscode already comes with a bunch of /ə bʌntʃ əv/ themes pre-installed basically. And so you can try them out as well. Or if you have another preference, you can also install any other theme that you would like.
+finishing one monakai
+
+Image preview.
+🗾 And the next extension that I want to introduce is called, Image preview. So it's this one and I already have it installed. So I just need to click on enable. Okay. So that's the first one. And what this one is going to do is that here in our HTML, it now displays this small image preview here in this gutter as it's called. So here we have this one and then this image here is also right here where we declare it. So where we include it in our code, and this can be extremely helpful sometimes. So that's why I really wanted to show you this one.
+
+Color highlight.
+🎨 The next one that I want to show you is called color highlight. So it's this one here and again, I already have it installed. I just enable it. And actually this one, I cannot show you yet what it looks like, because it will only be relevant in CSS. But trust me that this extension is really, really helpful for visualizing colors in CSS.
+
+Auto rename tag. 
+🔖  Next up is an extension called auto rename tag. So this one, and you see it's an extremely popular one, once again. So you have to download it and enable it. And then what happens here is that, when we changed the name of an element, let's say we actually wanted to make this one a div, then you see it automatically also changes the closing one. So the closing tag.
+👉 Okay. And this again is extremely helpful it makes our life writing HTML a bit easier, because trust me, we need to do this all the time, like changing the element name.
+👉 Okay. Now another thing that we need to do, or at least that we can do if we want, is to go back to our settings and then turn back on this setting that we deactivated at the beginning of the section. So that's the auto close tag. So let's enable this back because I think at this point you will no longer make the mistake of forgetting a closing tag. And so now we can allow vscode to do that work for us. So for example, if we wanted to write a paragraph/ˈpærəɡræf/ here. Then now you see HTML automatically close that element for us.
+
+Live server.
+💡 Okay. and now, we are going to install the most important and the most useful one of all, and that is called live server. So it's this one here, live server with almost 12 million downloads and this one is popular for a reason. So, I just click enable here and, so when I go now to my HTML and let's close this one down. So close down the sidebar. Now down here in this bar, we should have now this go live button.
+✊🏽 Okay. So hopefully after installing this live server extension, you can also see this button down here in this status bar. So when I now click this, then it starting and we get this message that server is started at this port number here. Let's close that. And you see it, that it opened a new tab, which contains our page, right? So basically it looks exactly the same, but there is one very big difference.
+✊🏽 So, let's say we wanted to change this here. I'm going to call it JONAS CODE. And now, look closely what happens here as I save this file. So I hit command S now, or control S on windows. And you see what happened. It automatically reloaded the page without us having to do anything. So all we did was save to code and what will then happen is that this page here gets automatically updated. So all the changes that we did here will basically get injected into this page. And, now, we can then see the reflection of our changes immediately.
+👍 So I put it back now. I hit again, command or control S to save it and immediately you see it going back to what it was before. Now if we wanted to stop this connection, once we are done developing, all we have to do is to click down here on this icon here where it says port 5500.
+👏 And by the way, this port number is exactly what we have here. Okay. So just for the sake of curiosity, this one here means that it's a local host server. So basically it's like you have now a web server on your own computer running. And then we have actually this code running at this port number. And so this port, it's basically like a sub address of your web server. So of the local local host server, but this doesn't really matter.
+🤞 What matters is that this now works and it is really, really helpful for our development workflow. Now, if for some reason you could not make this work on your computer, then of course don't worry. So you can still do it the old way. So basically the way we have been doing it all along, up until this point. So you can just open up the file from your file system like we did, and then keep refreshing it manually.
+🙌 Right. But we, right now, no longer need this tab here because we now have our live connection. So we have our live server serving up this page whenever we do some edits.
+
+All right. And with that we are now ready to tackle or final less two coding challenges in this HTML fundamental section.
+
+
+eslint materials icon theme
 
 ```
